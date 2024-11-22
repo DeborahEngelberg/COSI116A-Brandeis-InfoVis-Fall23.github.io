@@ -3,10 +3,97 @@ body {
 	padding: 0 10px;
 	font: 18px/1.5 -apple-system, BlinkMacSystemFont, "avenir next",avenir, "Segoe UI", "lucida grande", "helvetica neue", helvetica, "Fira Sans",roboto, noto, "Droid Sans", cantarell, oxygen, ubuntu, "franklin gothic medium", "century gothic", "Liberation Sans",
 	sans-serif;
+	color: #fff;
+}
+
+[data-tab-content]{
+	display: none;
+}
+
+.active[data-tab-content]{
+	display: block;
+}
+
+.tabs{
+	display: flex;
+	justify-content: space-around;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+.tab{
+	cursor: pointer;
+	padding: 10px;
+}
+
+.tab.active{
+	text-decoration: underline;
+}
+
+.tab:hover{
+	text-decoration: underline;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border: 1px solid #444;
+  z-index: 10;
+}
+
+.dropdown-menu li {
+  padding: 8px 16px;
+  text-align: center;
+}
+
+.dropdown-menu li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu li:hover {
+  background-color: #555;
+}
+
+.dropdown-menu li div{
+	width: 125px;
+	height: 50px;
+	cursor: pointer;
+	color: #fff;
+	text-decoration: none;
+	box-sizing: border-box;
+}
+
+.dropdown-menu li div:hover{
+	background-color: #555;
+}
+
+.dropdown:hover .dropdown-menu{
+	display: block;
 }
 
 h1, h2, h3 {
-	line-height: 1.2
+	line-height: 1.2;
+	/* Font adjusted with help from https://www.w3schools.com/css/css3_fonts.asp 8*/
+	font-family: 'Kaisei Decol', sans-serif;
+	color:#fff;
 }
 
 /* Your text should be in a nice narrow column */
