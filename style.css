@@ -1,4 +1,4 @@
-/* General formatting */
+/* General formatting. Kaisei Decol font is used for banner tabs, and raleway is for most writing on page. inter is used for bar charts. */
 body {
 	padding: 0 10px;
 	font: 18px/1.5 -apple-system, BlinkMacSystemFont, "avenir next",avenir, "Segoe UI", "lucida grande", "helvetica neue", helvetica, "Fira Sans",roboto, noto, "Droid Sans", cantarell, oxygen, ubuntu, "franklin gothic medium", "century gothic", "Liberation Sans",
@@ -16,7 +16,7 @@ body {
 
 .tabs{
 	display: flex;
-	justify-content: space-around;
+	justify-content: flex-end;
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
