@@ -12,21 +12,21 @@
   </style>
   <meta charset="utf-8">
   <!-- Font -->
-   <link href="https://fonts.googleapis.com/css2?family=Kaisei+Decol&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Kaisei+Decol&display=swap" rel="stylesheet">
   
   <!-- Script -->
-   <script src="js/script.js" defer></script>
+  <script src="js/script.js" defer></script>
 
   <!-- Title -->
   <title>Project Team 13: Topic, COSI 116A F23</title>
   
   <!-- CSS Styling -->
   <link rel="stylesheet" href="style.css">
- 
+
   <!-- Favicons -->
-  <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="Images/logo-only-dark.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="Images/logo-only-dark.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="Images/logo-only-dark.png">
   <link rel="manifest" href="favicons/site.webmanifest">
   <link rel="shortcut icon" href="favicons/favicon.ico">
   <meta name="msapplication-TileColor" content="#da532c">
@@ -35,13 +35,16 @@
 </head>
 
 <!-- Main page content -->
-<body>
+<nav>
+  <a data-tab-target="#about" class="logo">
+    <img src="Images/logo-only-light.png" alt="Logo" width="150" height="150">
+  </a>
   <ul class="tabs">
     <li data-tab-target="#about" class="active tab">ABOUT</li>
     <li class="tab dropdown">
       VISUALIZATION
       <ul class="dropdown-menu">
-        <li><div data-tab-target="#page1">Visualization 1</li>
+        <li><a href="page1.html">Visualization 1</a></li>
         <li><div data-tab-target="#page2">Visualization 2</li>
         <li><div data-tab-target="#page3">Visualization 3</li>
       </ul>
@@ -49,7 +52,8 @@
 
     <li data-tab-target="#team" class="tab">TEAM</li>
   </ul>
-
+</nav>
+<body>
   <div id="page1" data-tab-content>
     <h1>Visualization 1</h1>
     <p>This is visualization 1 content.</p>
@@ -66,16 +70,14 @@
 
   <div class="tab-content">
     <div id ="about" data-tab-content class ="active">
-      <h1>About</h1>
-      <p>This is the About page</p>
+      <!-- <h1>About</h1>
+      <p>This is the About page</p> -->
       <!-- Your writeup goes here -->
       <div class = "content-column">
       
         <h1>Project Team 13: Topic: Worldwide Deaths, COSI 116A F23</h1>
         
-        <p><strong>Mackenzie Chung</strong>, <strong>Debbie Engelberg</strong>, 
-        <strong>Noam Reiner</strong>,
-        <strong>Cameron Sherman</strong></p>
+        <p><strong>Mackenzie Chung</strong>, <strong>Debbie Engelberg</strong>,<strong>Noam Reiner</strong>,<strong>Cameron Sherman</strong></p>
         
         <p>Project-long Course Project as part of COSI 116A: Information Visualization</a>, taught by <a href="https://cs.brandeis.edu/~dylan/">Prof. Dylan Cashman</a>, <a href="https://cs.brandeis.edu/">Brandeis University</a>.</p>
         

@@ -1,4 +1,11 @@
 /* General formatting */
+nav {
+	padding: 0;
+	margin: 0;
+	display: flex;
+	justify-content: space-between;
+}
+
 body {
 	padding: 0 10px;
 	font: 18px/1.5 -apple-system, BlinkMacSystemFont, "avenir next",avenir, "Segoe UI", "lucida grande", "helvetica neue", helvetica, "Fira Sans",roboto, noto, "Droid Sans", cantarell, oxygen, ubuntu, "franklin gothic medium", "century gothic", "Liberation Sans",
@@ -14,25 +21,43 @@ body {
 	display: block;
 }
 
-.tabs{
-	display: flex;
-	justify-content: space-around;
+.tabs {
 	list-style-type: none;
-	margin: 0;
+	margin-top: 5%;
+	margin-right: 10%;
 	padding: 0;
+	display: flex;
+	float: right;
 }
 
-.tab{
+.tab {
+	margin: 0 10px;
 	cursor: pointer;
 	padding: 10px;
+	/* text-decoration: underline solid transparent; */
+	color: grey;
+	transition: color 0.3s ease ;
+	
 }
 
-.tab.active{
+.tab.active {
 	text-decoration: underline;
+	color: white;
 }
 
-.tab:hover{
-	text-decoration: underline;
+.tab:hover {
+	color: white;
+	/* text-decoration: underline; */
+}
+
+.logo {
+	display:flex;
+	padding: 0;
+	margin-left: 10%;
+	float: left;
+}
+.logo:hover {
+	cursor: pointer;
 }
 
 .dropdown {
@@ -164,3 +189,4 @@ h1, h2, h3 {
 		box-shadow:4px 4px 10px rgba(0,0,0,0.8);
 	}
 }
+/* ABOUT */
