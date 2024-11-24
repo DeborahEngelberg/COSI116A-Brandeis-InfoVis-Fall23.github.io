@@ -1,3 +1,4 @@
+/* General formatting. Kaisei Decol font is used for banner tabs, and raleway is for most writing on page. inter is used for bar charts. */
 /* General formatting */
 nav {
 	padding: 0;
@@ -132,7 +133,25 @@ h1, h2, h3 {
   width: 100%;
   height: 100%;
 }
+/* team page font edits below */
 
+#team {
+	font-family: 'Raleway', sans-serif; 
+  }
+  
+  #team h1, #team p, #team ul {
+	color: #fff; 
+	line-height: 1.6; 
+  }
+  
+  #team h1 {
+	font-weight: 700; 
+  }
+  
+  #team p {
+	font-weight: 400;
+  }
+  
 /* Fork on GitHub ribbon via https://codepo8.github.io/css-fork-on-github-ribbon/# */  
 #forkongithub a{
 	background:#00F;
