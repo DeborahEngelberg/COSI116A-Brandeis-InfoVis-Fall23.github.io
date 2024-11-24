@@ -54,6 +54,7 @@ body {
 .logo {
 	display:flex;
 	padding: 0;
+	margin-top: 2%;
 	margin-left: 10%;
 	float: left;
 }
