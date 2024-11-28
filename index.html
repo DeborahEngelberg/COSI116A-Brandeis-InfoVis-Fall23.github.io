@@ -6,15 +6,6 @@
 <head>
 
   <!-- Source: https://www.w3schools.com/html/html_images_background.asp -->
-  <style>
-    body {
-      background-image: url('Images/Background.png');
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
-      background-attachment: fixed;
-    }
-  </style>
   <meta charset="utf-8">
   <!-- Font -->
   <!-- commented this out for now. we want to use this font in some places throughout the site <link href="https://fonts.googleapis.com/css2?family=Kaisei+Decol&display=swap" rel="stylesheet">-->
@@ -49,7 +40,7 @@
     <li class="tab dropdown">
       VISUALIZATION
       <ul class="dropdown-menu">
-        <li><a href="page1.html">Visualization 1</a></li>
+        <li><a href="Visualization1/vis1.html">Visualization 1</a></li>
         <li><a href="visualization2/vis2.html">Visualization 2</a></li>
         <li> <div data-tab-target="#page3">Visualization 3</div></li>
       </ul>
@@ -60,11 +51,10 @@
   </ul>
 </nav>
 
+
 <body>
-  <div id="page1" data-tab-content>
-    <h1>Visualization 1</h1>
-    <p>This is visualization 1 content.</p>
-  </div>
+  
+  <!-- <div id="navbar-container"></div> -->
   <div id="page2" data-tab-content>
     <h1>Visualization 2</h1>
     <p>This is visualization 2 content.</p>
@@ -202,6 +192,7 @@
   <!-- Scripts at the end avoid need for dealing with async, defer, or onload event handlers -->
   <script src="lib/d3.v4/d3.v4.js"></script>
   <script src="js/visualization.js"></script>
+  <script src="Navbar/loadnavbar.js"></script>
 </body>
 
 </html>
