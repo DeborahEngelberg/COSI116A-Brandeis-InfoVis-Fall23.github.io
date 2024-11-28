@@ -229,3 +229,32 @@ h1, h2, h3 {
 }
 
 /* ABOUT */
+
+
+/* MAP */
+#map {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+	/* Map colors */
+	fill: #fff;
+	stroke: #333;
+
+}
+
+#map path {
+	cursor: pointer;
+}
+
+#map path:hover {
+	fill: blue;
+}
+
+.map-holder {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+}
