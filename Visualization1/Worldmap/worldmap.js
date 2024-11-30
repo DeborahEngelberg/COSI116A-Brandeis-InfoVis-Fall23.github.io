@@ -1,5 +1,5 @@
-const width = 1000;
-const height = 600;
+const width = window.innerWidth;
+const height = window.innerHeight;
 
 const svg = d3.select("#map")
   .append("svg")
@@ -7,10 +7,11 @@ const svg = d3.select("#map")
   .attr("height", height);
 
 const projection = d3.geoMercator()
-  .scale(150)
+  .scale((width / 640) * 100) // Adjust scale dynamically based on width
   .translate([width / 2, height / 2]);
 
 const path = d3.geoPath().projection(projection);
+
 
 // Create a tooltip (for displaying country names and data)
 const tooltip = d3.select("body").append("div")

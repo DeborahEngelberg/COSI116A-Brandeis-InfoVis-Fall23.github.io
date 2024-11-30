@@ -11,20 +11,23 @@
 <body>
     <div id="navbar-container"></div>
     <div class="vis-holder">
-        <div class="map-holder" id="map"></div>
+        <h1 id="main-title">Worldwide Deaths by Cause</h1>
+        <div id="map"></div>
     </div>
-    <div id="year-container" style="position: absolute; top: 165px; left: 500px;">
+
+    <div id="year-container">
         <label for="year">Year: |</label>
         <select id="year"></select>
     </div>
-    <div id="cause-container" style="position: absolute; top: 165px; left: 1000px;">
+    <div id="cause-container">
         <label for="cause">Cause of Death:</label>
         <select id="cause"></select>
     </div>
-
-
-    <div id="map" class="map-holder"></div>
-
+    <div id="color-container">
+        <label for="color">Color:</label>
+        <input type="color" id="color" value="#4292c6">
+    </div>
+    <div id="legend-container"></div>
 
     <script src="../lib/d3.v4/d3.v4.js"></script>
     <script src="https://unpkg.com/topojson-client@3"></script>
