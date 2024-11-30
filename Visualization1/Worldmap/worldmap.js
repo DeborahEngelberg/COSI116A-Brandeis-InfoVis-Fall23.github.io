@@ -7,7 +7,7 @@ const svg = d3.select("#map")
   .attr("height", height);
 
 const projection = d3.geoMercator()
-  .scale((width / 640) * 100) // Adjust scale dynamically based on width
+  .scale(Math.min(width, height) / 2.5)
   .translate([width / 2, height / 2]);
 
 const path = d3.geoPath().projection(projection);
@@ -18,8 +18,8 @@ const tooltip = d3.select("body").append("div")
   .attr("class", "tooltip")
   .style("opacity", 0);
 
-  // Load the data
-  d3.queue()
+// Load the data
+d3.queue()
   .defer(d3.json, "../Worldmap/geo.json")
   .defer(d3.csv, "../data/alc00-09.csv")
   .defer(d3.csv, "../data/alc09-19.csv")
@@ -91,7 +91,7 @@ function ready(error, geoData, data00_09, data09_19, data80_99) {
         // console.log("Country:", d.properties.name, "Value:", value); 
         return value ? colorScale(value) : "#ccc";
       })
-      .on("mouseover", function(d) {
+      .on("mouseover", function (d) {
         tooltip.transition()
           .duration(200)
           .style("opacity", .9);
@@ -99,7 +99,7 @@ function ready(error, geoData, data00_09, data09_19, data80_99) {
           .style("left", (d3.event.pageX) + "px")
           .style("top", (d3.event.pageY - 28) + "px");
       })
-      .on("mouseout", function(d) {
+      .on("mouseout", function (d) {
         tooltip.transition()
           .duration(500)
           .style("opacity", 0);
@@ -120,7 +120,7 @@ function ready(error, geoData, data00_09, data09_19, data80_99) {
       .attr("y", -20)
       .attr("text-anchor", "start")
       .text("Pure Alcohol Consumption (liters per capita)");
-      
+
     // Define a linear gradient -- DECIDE WHETHER TO USE THIS OR NOT, MAY BE DIFFICULT TO READ
     const defs = svg.append("defs");
 
@@ -145,7 +145,7 @@ function ready(error, geoData, data00_09, data09_19, data80_99) {
 
     // Create an axis for the legend
     const legendAxis = d3.axisBottom(legendScale)
-    .tickValues(d3.range(0, maxValue + 1, Math.floor(maxValue / 5))); //More customizable tick marks
+      .tickValues(d3.range(0, maxValue + 1, Math.floor(maxValue / 5))); //More customizable tick marks
 
     const legendData = colorScale.range().map(d => {
       const extent = colorScale.invertExtent(d);
@@ -168,13 +168,12 @@ function ready(error, geoData, data00_09, data09_19, data80_99) {
   // Set default year to 2019
   updateMap("2019");
 
-  d3.select("#year-select").on("change", function() {
+  d3.select("#year-select").on("change", function () {
     const selectedYear = d3.select(this).property("value");
     //Reset map & legend when year is changed
-    svg.selectAll(".country").remove(); 
-    svg.selectAll(".legend").remove(); 
+    svg.selectAll(".country").remove();
+    svg.selectAll(".legend").remove();
     updateMap(selectedYear); // Update map with the selected year
   });
 }
 
-  
