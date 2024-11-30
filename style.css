@@ -83,7 +83,7 @@ nav {
 .dropdown-menu {
   display: none;
   position: absolute;
-  top: 100%;
+  top: 70%;
   left: 50%;
   transform: translateX(-50%);
   background-color: #333;
@@ -250,6 +250,7 @@ h1, h2, h3 {
 
 .map-holder {
 	display: flex;
+	padding: 10px;
 	justify-content: center;
 	align-items: center;
 	width: 100%;
@@ -262,12 +263,15 @@ h1, h2, h3 {
 	padding: 8px;
 	font: 12px sans-serif;
 	background: rgb(0, 0, 0);
-	/* border: 10px; */
 	border-radius: 8px;
 	pointer-events: none;
 }
 
 
+/* LEGEND */
 .legend text {
-    fill: #ef0000; /* Change the font color for the numbers in the legend */
+	stroke: #d5e7fe;
+	fill: #d5e7fe; 
+	font-size: medium;
+	
 }

@@ -90,8 +90,6 @@ function ready(error, geoData, data00_09, data09_19, data80_99) {
         // console.log("Country:", d.properties.name, "Value:", value); 
         return value ? colorScale(value) : "#ccc";
       })
-      .style("stroke", "black")
-      .style("stroke-width", "0.5px")
       .on("mouseover", function(d) {
         tooltip.transition()
           .duration(200)
@@ -108,20 +106,45 @@ function ready(error, geoData, data00_09, data09_19, data80_99) {
 
     // Create a legend
     const legendWidth = 300;
-    const legendHeight = 20;
+    const legendHeight = 25;
 
     const legend = svg.append("g")
       .attr("class", "legend")
-      .attr("transform", `translate(${width - legendWidth - 20},${height - legendHeight - 20})`);
+      .attr("transform", `translate(${width - legendWidth - 90},${height - legendHeight - 90})`);
+
+    // Title for the legend
+    legend.append("text")
+      .attr("class", "legend-title")
+      .attr("x", 0)
+      .attr("y", -20)
+      .attr("text-anchor", "start")
+      .text("Pure Alcohol Consumption (liters per capita)");
+      
+    // Define a linear gradient -- DECIDE WHETHER TO USE THIS OR NOT, MAY BE DIFFICULT TO READ
+    const defs = svg.append("defs");
+
+    const linearGradient = defs.append("linearGradient")
+      .attr("id", "legend-gradient");
+
+    linearGradient.selectAll("stop")
+      .data(colorScale.ticks().map((t, i, n) => ({
+        offset: `${100 * i / n.length}%`,
+        color: colorScale(t)
+      })))
+      .enter().append("stop")
+      .attr("offset", d => d.offset)
+      .attr("stop-color", d => d.color);
+
 
     // Create a scale for the legend
+    const maxValue = Math.floor(d3.max(Object.values(data)));
     const legendScale = d3.scaleLinear()
       .domain([0, d3.max(Object.values(data))])
       .range([0, legendWidth]);
 
     // Create an axis for the legend
     const legendAxis = d3.axisBottom(legendScale)
-      .ticks(5);
+    .tickValues(d3.range(0, maxValue + 1, Math.floor(maxValue / 5))); //More customizable tick marks
 
     const legendData = colorScale.range().map(d => {
       const extent = colorScale.invertExtent(d);
@@ -133,19 +156,9 @@ function ready(error, geoData, data00_09, data09_19, data80_99) {
     legend.selectAll("rect")
       .data(legendData)
       .enter().append("rect")
-      .attr("x", d => {
-        const x = legendScale(d[0]);
-        // console.log("Legend rect x:", x); 
-        return x;
-      })
-      .attr("y", 0)
-      .attr("width", d => {
-        const width = legendScale(d[1]) - legendScale(d[0]);
-        // console.log("Legend rect width:", width);
-        return width;
-      })
+      .attr("width", legendWidth)
       .attr("height", legendHeight)
-      .style("fill", d => colorScale(d[0]));
+      .style("fill", "url(#legend-gradient)");
     legend.append("g")
       .attr("transform", `translate(0,${legendHeight})`)
       .call(legendAxis);
