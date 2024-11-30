@@ -1,0 +1,24 @@
+/* MAP */
+.map-title {
+    text-align: center;
+    font-size: 1.5em;
+    margin-top: 2%;
+    font-weight: bold;
+    
+}
+
+/* LEGEND */
+.legend text {
+	stroke: #d5e7fe;
+	fill: #d5e7fe; 
+	font-size: medium;
+	
+}
+
+/* OPTION BUTTON */
+#year-select {
+    padding: 5px 10px;
+    font-size: large;
+    cursor: pointer;
+    border-radius: 10px;
+}
