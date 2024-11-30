@@ -3,10 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Interactive Data Visualization</title>
+    <link rel="stylesheet" href="../style.css">
+    <title>Visualization 3</title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
+    
+    <div id="map-container">
+        <div id="map"></div>
+    </div>
+
+    <div id="navbar-container"></div>
+    <div class="vis-holder">
+        <div class="map-holder" id="map-container">
+            <svg id="vis-svg"></svg>
+        </div>
+    </div>
+   
+    <script src="../lib/d3.v4/d3.v4.js"></script>
+    <script src="https://unpkg.com/topojson-client@3"></script>
+    <script src="../Navbar/loadnavbar.js"></script>
+    <script src="visualization3.js"></script>
+
+
+    <div id="summary">
+        <p>Select a country to see the data summary.</p>
+    </div>
     <div class="controls">
         <label for="country-select">Select Country:</label>
         <select id="country-select"></select>
@@ -19,16 +42,13 @@
             <option value="alcohol">Alcohol Consumption</option>
             <!-- Add more data types here -->
         </select>
-    </div>
-    <div id="map-container">
-        <div id="map"></div>
-    </div>
-    <div id="summary">
-        <p>Select a country to see the data summary.</p>
-    </div>
 
-    <script src="https://d3js.org/d3.v6.min.js"></script>
-    <script src="https://unpkg.com/topojson-client@3"></script>
-    <script src="visualization.js"></script>
+        
+    </div>
 </body>
+
+
+
+
+
 </html>
