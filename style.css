@@ -270,3 +270,32 @@ h1, h2, h3 {
 .legend text {
     fill: #ef0000; /* Change the font color for the numbers in the legend */
 }
+
+.dropdown-container {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    z-index: 1000; /* Keeps it on top of the map */
+}
+
+#year-container {
+    top: 50px;
+    left: 100px;
+}
+
+#cause-container {
+    top: 50px;
+    left: 300px;
+}
+
+
+select {
+    margin-left: 10px;
+    background-color: #222;
+    color: white;
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+}
