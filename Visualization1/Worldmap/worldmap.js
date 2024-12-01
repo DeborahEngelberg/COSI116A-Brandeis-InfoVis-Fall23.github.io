@@ -1,5 +1,5 @@
-const width = window.innerWidth;
-const height = window.innerHeight;
+const width = 1000;
+const height = 600;
 
 const svg = d3.select("#map")
   .append("svg")
@@ -7,7 +7,6 @@ const svg = d3.select("#map")
   .attr("height", height);
 
 const projection = d3.geoMercator()
-  .scale(Math.min(width, height) / 2.5)
   .translate([width / 2, height / 2]);
 
 const path = d3.geoPath().projection(projection);
@@ -23,7 +22,6 @@ d3.queue()
   .defer(d3.json, "../Worldmap/geo.json")
   .defer(d3.csv, "../data/alc00-09.csv")
   .defer(d3.csv, "../data/alc09-19.csv")
-  .defer(d3.csv, "../data/alc80-99.csv")
   .await(ready);
 
 function ready(error, geoData, data00_09, data09_19, data80_99) {
@@ -53,15 +51,7 @@ function ready(error, geoData, data00_09, data09_19, data80_99) {
           console.log("In the 2000-2009 area");
         }
       }
-    } else if (year >= 1980 && year <= 1999) { // NOTE: Data from 80-99 causes error w/ <rect> attribute
-      for (const d of data80_99) {
-        if (d["Beverage Types"] && d["Beverage Types"].trim() === "All types") {
-          data[d["Countries, territories and areas"].trim()] = +d[` ${year}`];
-
-          console.log("In the 1980-1999 area");
-        }
-      }
-    }
+    } 
 
     // console.log("Processed Data:", data);
 
@@ -121,22 +111,6 @@ function ready(error, geoData, data00_09, data09_19, data80_99) {
       .attr("text-anchor", "start")
       .text("Pure Alcohol Consumption (liters per capita)");
 
-    // Define a linear gradient -- DECIDE WHETHER TO USE THIS OR NOT, MAY BE DIFFICULT TO READ
-    const defs = svg.append("defs");
-
-    const linearGradient = defs.append("linearGradient")
-      .attr("id", "legend-gradient");
-
-    linearGradient.selectAll("stop")
-      .data(colorScale.ticks().map((t, i, n) => ({
-        offset: `${100 * i / n.length}%`,
-        color: colorScale(t)
-      })))
-      .enter().append("stop")
-      .attr("offset", d => d.offset)
-      .attr("stop-color", d => d.color);
-
-
     // Create a scale for the legend
     const maxValue = Math.floor(d3.max(Object.values(data)));
     const legendScale = d3.scaleLinear()
@@ -157,9 +131,19 @@ function ready(error, geoData, data00_09, data09_19, data80_99) {
     legend.selectAll("rect")
       .data(legendData)
       .enter().append("rect")
-      .attr("width", legendWidth)
+      .attr("x", d => {
+        const x = legendScale(d[0]);
+        // console.log("Legend rect x:", x); 
+        return x;
+      })
+      .attr("y", 0)
+      .attr("width", d => {
+        const width = legendScale(d[1]) - legendScale(d[0]);
+        // console.log("Legend rect width:", width);
+        return width;
+      })
       .attr("height", legendHeight)
-      .style("fill", "url(#legend-gradient)");
+      .style("fill", d => colorScale(d[0]));
     legend.append("g")
       .attr("transform", `translate(0,${legendHeight})`)
       .call(legendAxis);
