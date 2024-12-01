@@ -1,5 +1,4 @@
 /* General formatting. Kaisei Decol font is used for banner tabs, and raleway is for most writing on page. inter is used for bar charts. */
-/* General formatting */
 
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Kaisei+Decol&display=swap');
@@ -236,7 +235,6 @@ h3 {
 	padding: 8px;
 	font: 12px sans-serif;
 	background: rgb(0, 0, 0);
-	/* border: 10px; */
 	border-radius: 8px;
 	pointer-events: none;
 }
@@ -249,7 +247,6 @@ h3 {
 	border-radius: 5px;
 	color: white;
 	z-index: 1000;
-	/* Keeps it on top of the map */
 }
 
 #year-container {
@@ -257,6 +254,7 @@ h3 {
 	top: 15%;
 	left: 30%;
 	transform: translate(-50%, -50%);
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
 }
 
 #cause-container {
@@ -264,6 +262,7 @@ h3 {
 	top: 15%;
 	left: 80%;
 	transform: translate(-50%, -50%);
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
 }
 
 #year-container,
@@ -272,23 +271,19 @@ h3 {
 	font-size: 16px;
 	color: white;
 	background-color: rgba(27, 31, 38, 0.72);
-	/* Highlight with 72% opacity */
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
 	padding: 10px;
-	/* Add some padding to make the highlight more visible */
 	border-radius: 5px;
-	/* Optional: adds rounded corners */
 }
 
 #year-container select,
 #cause-container select {
 	font-family: 'Kaisei Decol', sans-serif;
 	background-color: rgba(27, 31, 38, 0.72);
-	/* Highlight for dropdown */
 	color: white;
 	border: none;
 	padding: 5px;
 	border-radius: 5px;
-	/* Optional */
 }
 
 #color-container {
@@ -300,6 +295,7 @@ h3 {
 	font-size: 16px;
 	color: white;
 	background-color: rgba(27, 31, 38, 0.72);
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
 	padding: 10px;
 	border-radius: 5px;
 }
