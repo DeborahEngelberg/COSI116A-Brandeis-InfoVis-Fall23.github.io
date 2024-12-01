@@ -1,0 +1,63 @@
+/* MAP */
+.map-title {
+    text-align: center;
+    font-size: 30px;
+    margin-top: 2%;
+    font-weight: regular;
+    padding: 5px 10px;
+    font-family: 'Raleway';
+    
+}
+
+/* LEGEND */
+.legend text {
+	stroke: #d5e7fe;
+	fill: #d5e7fe; 
+	font-size: 30px;
+	
+}
+
+/* OPTION BUTTON */
+#year-select {
+    padding: 5px 10px;
+    font-size: 30px;
+    cursor: pointer;
+    border-radius: 10px;
+    background: transparent;
+    color: lightgrey;
+    font-family: 'Raleway';
+    border-color: transparent;
+}
+
+#country-select {
+    padding: 5px 10px;
+    font-size: 30px;
+    cursor: pointer;
+    border-radius: 10px;
+    background: transparent;
+    color: lightgrey;
+    border-color: transparent;
+    font-family: 'Raleway';
+}
+
+
+#data-type-select {
+    padding: 5px 10px;
+    font-size: 30px;
+    cursor: pointer;
+    border-radius: 10px;
+    background: transparent;
+    color: lightgrey;
+    border-color: transparent;
+    font-family: 'Raleway';
+    
+}
+#map-container{
+    margin-top: 50px;
+}
+
+.selected {
+    fill: pink;
+    stroke: red;
+    opacity: 5;
+  }

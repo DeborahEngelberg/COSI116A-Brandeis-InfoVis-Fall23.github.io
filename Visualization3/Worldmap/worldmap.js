@@ -12,6 +12,7 @@ const projection = d3.geoMercator()
 
 const path = d3.geoPath().projection(projection);
 
+
 // Create a tooltip (for displaying country names and data)
 const tooltip = d3.select("body").append("div")
   .attr("class", "tooltip")
@@ -23,9 +24,11 @@ const tooltip = d3.select("body").append("div")
   .defer(d3.csv, "../data/alc00-09.csv")
   .defer(d3.csv, "../data/alc09-19.csv")
   .defer(d3.csv, "../data/alc80-99.csv")
+  .defer(d3.csv, "../data/birth-death.csv")
+  .defer(d3.csv, "../data/cause_of_deaths.csv")
   .await(ready);
 
-function ready(error, geoData, data00_09, data09_19, data80_99) {
+function ready(error, geoData, data00_09, data09_19, data80_99, finaldata) {
   if (error) {
     console.error("Error loading the data:", error);
     return;
@@ -34,8 +37,13 @@ function ready(error, geoData, data00_09, data09_19, data80_99) {
   // Function to update the map based on the selected year
   function updateMap(year) {
     const data = {};
+    //for alc00-09.csv, alc09-19, alc80-99 country columns are labeled "Countries, territories and areas"
+    //for birth-death.csv country columns are labeled "Entity"
+    // for cause_of_deaths.csv country columns are labeled "Country/Territory"
+    // for final_data.csv country columns are labeled "Country"
+    // Get the data for the selected year
 
-    //Get the data for the selected year
+
     if (year >= 2010 && year <= 2019) {
       for (const d of data09_19) {
         if (d["Beverage Types"] && d["Beverage Types"].trim() === "All types") {
@@ -61,25 +69,22 @@ function ready(error, geoData, data00_09, data09_19, data80_99) {
         }
       }
     }
-
-    // console.log("Processed Data:", data);
-
+    //the above puts together the data for the selected year, but I want to put together the data for the selected year, country, and data type.
+    //i would assume its done as separating into three sections. each section starts with identifying the type of data we are looking at. then inside of that section we look at the year and the country. 
+    
     // Create a color scale
+  
+    
+    
     const colorScale = d3.scaleQuantize()
       .domain([0, d3.max(Object.values(data))])
       .range([
-        "#f7fbff",
-        "#deebf7",
-        "#c6dbef",
-        "#9ecae1",
-        "#6baed6",
-        "#4292c6",
-        "#2171b5",
-        "#08519c",
-        "#08306b"
+        "#F2B15F, #FFFFFF"
+         //however, once a country is clicked. all other countries should turn white
       ]);
+      
 
-    // Create a map
+    // Create a map. if country is clicked, then add the color. 
     svg.selectAll(".country")
       .data(geoData.features)
       .enter().append("path")
@@ -87,11 +92,21 @@ function ready(error, geoData, data00_09, data09_19, data80_99) {
       .attr("d", path)
       .style("fill", d => {
         const value = data[d.properties.name];
-        // console.log("Country:", d.properties.name, "Value:", value); 
         return value ? colorScale(value) : "#ccc";
       })
-      .style("stroke", "black")
+      .style("stroke", "grey")
       .style("stroke-width", "0.5px")
+      .on("mousedown", function(d){
+        tooltip.transition()
+          .duration(90000)
+          .style("opacity", 0);
+          
+        tooltip.html(d.properties.name + "<br/>" + year + ": " + (data[d.properties.name] || "No data"))
+          .style("left", (d3.event.pageX) + "px")
+          .style("top", (d3.event.pageY - 28) + "px");
+          
+      }) //needs to be so that when something is clicked, it will highlight that country and then that country outline will pop up below with a sentence or two summarizing the averages etc. 
+      
       .on("mouseover", function(d) {
         tooltip.transition()
           .duration(200)
@@ -100,36 +115,18 @@ function ready(error, geoData, data00_09, data09_19, data80_99) {
           .style("left", (d3.event.pageX) + "px")
           .style("top", (d3.event.pageY - 28) + "px");
       })
+      
       .on("mouseout", function(d) {
         tooltip.transition()
           .duration(500)
           .style("opacity", 0);
       });
 
-    // Create a legend
-    const legendWidth = 300;
-    const legendHeight = 20;
+   
 
     const legend = svg.append("g")
       .attr("class", "legend")
       .attr("transform", `translate(${width - legendWidth - 20},${height - legendHeight - 20})`);
-
-    // Create a scale for the legend
-    const legendScale = d3.scaleLinear()
-      .domain([0, d3.max(Object.values(data))])
-      .range([0, legendWidth]);
-
-    // Create an axis for the legend
-    const legendAxis = d3.axisBottom(legendScale)
-      .ticks(5);
-
-    const legendData = colorScale.range().map(d => {
-      const extent = colorScale.invertExtent(d);
-      if (!extent[0]) extent[0] = legendScale.domain()[0];
-      if (!extent[1]) extent[1] = legendScale.domain()[1];
-      return extent;
-    });
-
     legend.selectAll("rect")
       .data(legendData)
       .enter().append("rect")
@@ -160,6 +157,19 @@ function ready(error, geoData, data00_09, data09_19, data80_99) {
     svg.selectAll(".country").remove(); 
     svg.selectAll(".legend").remove(); 
     updateMap(selectedYear); // Update map with the selected year
+  });
+  d3.select("#country-select").on("change", function() {
+    const selectedCountry = d3.select(this).property("value");
+    //Reset map & legend when country is changed
+    svg.selectAll(".country").remove(); 
+    svg.selectAll(".legend").remove(); 
+    
+    updateMap(selectedCountry); // Update map with the selected country
+  });
+  d3.select("#data-type-select").on("change", function() {
+    const selectedDataType = d3.select(this).property("value");
+    //Reset map & legend when datatype is changed 
+    updateMap(selectedDataType); // Update map with the selected datatype
   });
 }
 
