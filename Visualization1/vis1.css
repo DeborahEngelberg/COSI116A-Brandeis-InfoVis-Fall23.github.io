@@ -18,17 +18,10 @@
 
 /* LEGEND */
 .legend text {
-<<<<<<< HEAD
     stroke: #d5e7fe;
     fill: #d5e7fe;
     font-size: medium;
 
-=======
-	stroke: #d5e7fe; 
-	fill: #d5e7fe; 
-	font-size: medium;
-	
->>>>>>> 0f7cac7 (edited map, added visual encodings to vis3.)
 }
 
 /* OPTION BUTTON */
