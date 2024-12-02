@@ -353,7 +353,65 @@ select {
 	bottom:1px;
 	top:auto;
 }
+<<<<<<< HEAD
 #forkongithub {
+=======
+@media screen and (min-width:1000px){
+	#forkongithub{
+		position:fixed;
+		display:block;
+		top:0;
+		right:0;
+		width:200px;
+		overflow:hidden;
+		height:200px;
+		z-index:9999;
+	}
+	#forkongithub a{
+		width:200px;
+		position:absolute;
+		top:60px;
+		right:-60px;
+		transform:rotate(45deg);
+		-webkit-transform:rotate(45deg);
+		-ms-transform:rotate(45deg);
+		-moz-transform:rotate(45deg);
+		-o-transform:rotate(45deg);
+		box-shadow:4px 4px 10px rgba(0,0,0,0.8);
+	}
+}
+
+/* ABOUT */
+
+
+/* MAP */
+#map {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+	/* Map colors (Initially w/o data)*/
+	fill: #ffffff;
+	stroke: #333;
+
+}
+
+#map path {
+	cursor: pointer;
+}
+
+.map-holder {
+	display: flex;
+	padding: 10px;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	
+}
+
+.tooltip {
+>>>>>>> 0f7cac7 (edited map, added visual encodings to vis3.)
 	position: absolute;
 	top: 10px;
 	left: 10px;

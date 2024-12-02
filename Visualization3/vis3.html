@@ -2,53 +2,82 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <script src="../Navbar/loadnavbar.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="vis3.css">
+    <script src="../lib/d3.v4/d3.v4.js"></script>
     <title>Visualization 3</title>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
 </head>
-
+      <!-- Idea is as follows: user can either input what country they want to look at, -->
+      <!-- alternatively, they can also click on any country to get that countrys info -->
 <body>
-    
-    <div id="map-container">
-        <div id="map"></div>
-    </div>
-
     <div id="navbar-container"></div>
     <div class="vis-holder">
+          
+        
+    <div class="map-title">
+        <label for="country-select">Country:</label>
+        <select id="country-select">
+            <option value="Albania">Albania</option>
+            <option value="Austria">Austria</option>
+            <!-- Currently being hardcoded but i want to take the countries straight out of the csv -->
+        </select>
+
+        <label for="year-select">Year:</label>
+        <select id="year-select">
+            <option value="2019">2019</option>
+                <option value="2018">2018</option>
+                <option value="2017">2017</option>
+                <option value="2016">2016</option>
+                <option value="2015">2015</option>
+                <option value="2014">2014</option>
+                <option value="2013">2013</option>
+                <option value="2012">2012</option>
+                <option value="2011">2011</option>
+                <option value="2010">2010</option>
+                <option value="2009">2009</option>
+                <option value="2008">2008</option>
+                <option value="2007">2007</option>
+                <option value="2006">2006</option>
+                <option value="2005">2005</option>
+                <option value="2004">2004</option>
+                <option value="2003">2003</option>
+                <option value="2002">2002</option>
+                <option value="2001">2001</option>
+                <option value="2000">2000</option>
+        </select>
+
+        <label for="data-type-select">Data Type:</label>
+        <select id="data-type-select">
+            <option value="alcohol">Alcohol Consumption</option>
+            <option value="birth-death">Birth and Death rates</option>
+            <option value="cause_of_death">Causes of Death</option>
+        </select>
+    
+        <div id="map-container">
+            <div id="map"></div>
+        </div>
         <div class="map-holder" id="map-container">
             <svg id="vis-svg"></svg>
         </div>
     </div>
-   
-    <script src="../lib/d3.v4/d3.v4.js"></script>
-    <script src="https://unpkg.com/topojson-client@3"></script>
-    <script src="../Navbar/loadnavbar.js"></script>
-    <script src="visualization3.js"></script>
+        
+        <div class="barchart-holder" id="barchart"></div>
 
-
-    <div id="summary">
-        <p>Select a country to see the data summary.</p>
-    </div>
-    <div class="controls">
-        <label for="country-select">Select Country:</label>
-        <select id="country-select"></select>
-
-        <label for="year-select">Select Year:</label>
-        <select id="year-select"></select>
-
-        <label for="data-type-select">Select Data Type:</label>
-        <select id="data-type-select">
-            <option value="alcohol">Alcohol Consumption</option>
-            <!-- Add more data types here -->
-        </select>
 
         
+        <script src="https://unpkg.com/topojson-client@3"></script>
+        <script src="Worldmap/worldmap.js"></script>
+        <script src="barchart.js"></script>
+        
     </div>
+</div>
+</div>
+
+    
 </body>
-
-
-
 
 
 </html>
