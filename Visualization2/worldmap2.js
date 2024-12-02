@@ -41,7 +41,7 @@ let currentColor = "#4292c6";
 
 // Load data
 d3.queue()
-  .defer(d3.json, "../Worldmap/geo.json") // Ensure path to geo.json is correct
+  .defer(d3.json, "../Visualization2/geo.json")
   .defer(d3.csv, "../data/cause_of_deaths.csv") // Update path for cause_of_deaths.csv
   .await((error, loadedGeoData, loadedData) => {
     if (error) {

@@ -19,7 +19,7 @@ const tooltip = d3.select("body").append("div")
 
 // Load the data
 d3.queue()
-  .defer(d3.json, "../Worldmap/geo.json")
+  .defer(d3.json, "../Visualization1/Worldmap/geo.json")
   .defer(d3.csv, "../data/alc00-09.csv")
   .defer(d3.csv, "../data/alc09-19.csv")
   .await(ready);
