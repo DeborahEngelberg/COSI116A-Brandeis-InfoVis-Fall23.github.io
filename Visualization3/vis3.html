@@ -10,24 +10,69 @@
     <title>Visualization 3</title>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
 </head>
-      <!-- Idea is as follows: user can either input what country they want to look at, -->
-      <!-- alternatively, they can also click on any country to get that countrys info -->
 <body>
     <div id="navbar-container"></div>
     <div class="vis-holder">
-          
-        
-    <div class="map-title">
-        <label for="country-select">Country:</label>
-        <select id="country-select">
-            <option value="Albania">Albania</option>
-            <option value="Austria">Austria</option>
-            <!-- Currently being hardcoded but i want to take the countries straight out of the csv -->
-        </select>
+        <div class="map-title">
+            <label for="country-select">Country:</label>
+            <select id="country-select">
+                <!-- Dynamically populated country options -->
+                <script>
+                    const countries = [
+                        "Afghanistan", "Albania", "Algeria", "Andorra", "Angola", 
+                        "Antigua and Barbuda", "Argentina", "Armenia", "Australia", 
+                        "Austria", "Azerbaijan", "Bahamas", "Bahrain", "Bangladesh", 
+                        "Barbados", "Belarus", "Belgium", "Belize", "Benin", "Bhutan", 
+                        "Bolivia", "Bosnia and Herzegovina", "Botswana", "Brazil", 
+                        "Bulgaria", "Burkina Faso", "Burundi", "Cambodia", "Cameroon", 
+                        "Canada", "Central African Republic", "Chad", "Chile", "China", 
+                        "Colombia", "Comoros", "Congo", "Cook Islands", "Costa Rica", 
+                        "Cote d'Ivoire", "Croatia", "Cuba", "Cyprus", "Czechia", 
+                        "Denmark", "Djibouti", "Dominica", "Dominican Republic", 
+                        "Ecuador", "Egypt", "El Salvador", "Equatorial Guinea", 
+                        "Eritrea", "Estonia", "Eswatini", "Ethiopia", "Fiji", 
+                        "Finland", "France", "Gabon", "Gambia", "Georgia", "Germany", 
+                        "Ghana", "Greece", "Grenada", "Guatemala", "Guinea", 
+                        "Guinea-Bissau", "Guyana", "Haiti", "Honduras", "Hungary", 
+                        "Iceland", "India", "Indonesia", "Iran", "Iraq", "Ireland", 
+                        "Israel", "Italy", "Jamaica", "Japan", "Jordan", 
+                        "Kazakhstan", "Kenya", "Kiribati", "Kuwait", "Kyrgyzstan", 
+                        "Laos", "Latvia", "Lebanon", "Lesotho", "Liberia", "Libya", 
+                        "Lithuania", "Luxembourg", "Madagascar", "Malawi", "Malaysia", 
+                        "Maldives", "Mali", "Malta", "Mauritania", "Mauritius", 
+                        "Mexico", "Micronesia", "Mongolia", "Montenegro", "Morocco", 
+                        "Mozambique", "Myanmar", "Namibia", "Nauru", "Nepal", 
+                        "Netherlands", "New Zealand", "Nicaragua", "Niger", "Nigeria", 
+                        "Niue", "North Macedonia", "Norway", "Oman", "Pakistan", 
+                        "Panama", "Papua New Guinea", "Paraguay", "Peru", 
+                        "Philippines", "Poland", "Portugal", "Qatar", "Romania", 
+                        "Russia", "Rwanda", "Saint Kitts and Nevis", "Saint Lucia", 
+                        "Saint Vincent and the Grenadines", "Samoa", 
+                        "Sao Tome and Principe", "Saudi Arabia", "Senegal", "Serbia", 
+                        "Seychelles", "Sierra Leone", "Singapore", "Slovakia", 
+                        "Slovenia", "Solomon Islands", "Somalia", "South Africa", 
+                        "South Korea", "Spain", "Sri Lanka", "Sudan", "Suriname", 
+                        "Sweden", "Switzerland", "Syria", "Tajikistan", "Tanzania", 
+                        "Thailand", "Togo", "Tonga", "Trinidad and Tobago", "Tunisia", 
+                        "Turkey", "Turkmenistan", "Tuvalu", "Uganda", "Ukraine", 
+                        "United Arab Emirates", "United Kingdom", "Uruguay", 
+                        "Uzbekistan", "Vanuatu", "Venezuela", "Vietnam", "Yemen", 
+                        "Zambia", "Zimbabwe"
+                    ];
 
-        <label for="year-select">Year:</label>
-        <select id="year-select">
-            <option value="2019">2019</option>
+                    const countrySelect = document.getElementById("country-select");
+                    countries.forEach(country => {
+                        const option = document.createElement("option");
+                        option.value = country;
+                        option.textContent = country;
+                        countrySelect.appendChild(option);
+                    });
+                </script>
+            </select>
+
+            <label for="year-select">Year:</label>
+            <select id="year-select">
+                <option value="2019">2019</option>
                 <option value="2018">2018</option>
                 <option value="2017">2017</option>
                 <option value="2016">2016</option>
@@ -47,37 +92,28 @@
                 <option value="2002">2002</option>
                 <option value="2001">2001</option>
                 <option value="2000">2000</option>
-        </select>
+            </select>
 
-        <label for="data-type-select">Data Type:</label>
-        <select id="data-type-select">
-            <option value="alcohol">Alcohol Consumption</option>
-            <option value="birth-death">Birth and Death rates</option>
-            <option value="cause_of_death">Causes of Death</option>
-        </select>
-    
-        <div id="map-container">
-            <div id="map"></div>
+            <label for="data-type-select">Data Type:</label>
+            <select id="data-type-select">
+                <option value="alcohol">Alcohol Consumption</option>
+                <option value="birth-death">Birth and Death rates</option>
+                <option value="cause_of_death">Causes of Death</option>
+            </select>
+
+            <div id="map-container">
+                <div id="map"></div>
+            </div>
+            <div class="map-holder" id="map-container">
+                <svg id="vis-svg"></svg>
+            </div>
         </div>
-        <div class="map-holder" id="map-container">
-            <svg id="vis-svg"></svg>
-        </div>
-    </div>
-        
+
         <div class="barchart-holder" id="barchart"></div>
 
-
-        
         <script src="https://unpkg.com/topojson-client@3"></script>
         <script src="Worldmap/worldmap.js"></script>
         <script src="barchart.js"></script>
-        
     </div>
-</div>
-</div>
-
-    
 </body>
-
-
 </html>

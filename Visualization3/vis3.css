@@ -6,14 +6,14 @@
     font-weight: regular;
     padding: 5px 10px;
     font-family: 'Raleway';
-    
+    gap: 10px;
 }
 
 /* LEGEND */
 .legend text {
 	stroke: #d5e7fe;
 	fill: #d5e7fe; 
-	font-size: 30px;
+	font-size: 0px;
 	
 }
 
@@ -61,3 +61,4 @@
     stroke: red;
     opacity: 5;
   }
+  
