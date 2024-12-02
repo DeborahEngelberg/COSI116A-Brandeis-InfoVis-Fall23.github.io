@@ -16,47 +16,46 @@
         <div class="map-title">
             <label for="country-select">Country:</label>
             <select id="country-select">
-                <!-- Dynamically populated country options -->
                 <script>
                     const countries = [
-                        "Afghanistan", "Albania", "Algeria", "Andorra", "Angola", 
-                        "Antigua and Barbuda", "Argentina", "Armenia", "Australia", 
-                        "Austria", "Azerbaijan", "Bahamas", "Bahrain", "Bangladesh", 
-                        "Barbados", "Belarus", "Belgium", "Belize", "Benin", "Bhutan", 
-                        "Bolivia", "Bosnia and Herzegovina", "Botswana", "Brazil", 
-                        "Bulgaria", "Burkina Faso", "Burundi", "Cambodia", "Cameroon", 
-                        "Canada", "Central African Republic", "Chad", "Chile", "China", 
-                        "Colombia", "Comoros", "Congo", "Cook Islands", "Costa Rica", 
-                        "Cote d'Ivoire", "Croatia", "Cuba", "Cyprus", "Czechia", 
-                        "Denmark", "Djibouti", "Dominica", "Dominican Republic", 
-                        "Ecuador", "Egypt", "El Salvador", "Equatorial Guinea", 
-                        "Eritrea", "Estonia", "Eswatini", "Ethiopia", "Fiji", 
-                        "Finland", "France", "Gabon", "Gambia", "Georgia", "Germany", 
-                        "Ghana", "Greece", "Grenada", "Guatemala", "Guinea", 
-                        "Guinea-Bissau", "Guyana", "Haiti", "Honduras", "Hungary", 
-                        "Iceland", "India", "Indonesia", "Iran", "Iraq", "Ireland", 
-                        "Israel", "Italy", "Jamaica", "Japan", "Jordan", 
-                        "Kazakhstan", "Kenya", "Kiribati", "Kuwait", "Kyrgyzstan", 
-                        "Laos", "Latvia", "Lebanon", "Lesotho", "Liberia", "Libya", 
-                        "Lithuania", "Luxembourg", "Madagascar", "Malawi", "Malaysia", 
-                        "Maldives", "Mali", "Malta", "Mauritania", "Mauritius", 
-                        "Mexico", "Micronesia", "Mongolia", "Montenegro", "Morocco", 
-                        "Mozambique", "Myanmar", "Namibia", "Nauru", "Nepal", 
-                        "Netherlands", "New Zealand", "Nicaragua", "Niger", "Nigeria", 
-                        "Niue", "North Macedonia", "Norway", "Oman", "Pakistan", 
-                        "Panama", "Papua New Guinea", "Paraguay", "Peru", 
-                        "Philippines", "Poland", "Portugal", "Qatar", "Romania", 
-                        "Russia", "Rwanda", "Saint Kitts and Nevis", "Saint Lucia", 
-                        "Saint Vincent and the Grenadines", "Samoa", 
-                        "Sao Tome and Principe", "Saudi Arabia", "Senegal", "Serbia", 
-                        "Seychelles", "Sierra Leone", "Singapore", "Slovakia", 
-                        "Slovenia", "Solomon Islands", "Somalia", "South Africa", 
-                        "South Korea", "Spain", "Sri Lanka", "Sudan", "Suriname", 
-                        "Sweden", "Switzerland", "Syria", "Tajikistan", "Tanzania", 
-                        "Thailand", "Togo", "Tonga", "Trinidad and Tobago", "Tunisia", 
-                        "Turkey", "Turkmenistan", "Tuvalu", "Uganda", "Ukraine", 
-                        "United Arab Emirates", "United Kingdom", "Uruguay", 
-                        "Uzbekistan", "Vanuatu", "Venezuela", "Vietnam", "Yemen", 
+                        "Afghanistan", "Albania", "Algeria", "Andorra", "Angola",
+                        "Antigua and Barbuda", "Argentina", "Armenia", "Australia",
+                        "Austria", "Azerbaijan", "Bahamas", "Bahrain", "Bangladesh",
+                        "Barbados", "Belarus", "Belgium", "Belize", "Benin", "Bhutan",
+                        "Bolivia", "Bosnia and Herzegovina", "Botswana", "Brazil",
+                        "Bulgaria", "Burkina Faso", "Burundi", "Cambodia", "Cameroon",
+                        "Canada", "Central African Republic", "Chad", "Chile", "China",
+                        "Colombia", "Comoros", "Congo", "Cook Islands", "Costa Rica",
+                        "Cote d'Ivoire", "Croatia", "Cuba", "Cyprus", "Czechia",
+                        "Denmark", "Djibouti", "Dominica", "Dominican Republic",
+                        "Ecuador", "Egypt", "El Salvador", "Equatorial Guinea",
+                        "Eritrea", "Estonia", "Eswatini", "Ethiopia", "Fiji",
+                        "Finland", "France", "Gabon", "Gambia", "Georgia", "Germany",
+                        "Ghana", "Greece", "Grenada", "Guatemala", "Guinea",
+                        "Guinea-Bissau", "Guyana", "Haiti", "Honduras", "Hungary",
+                        "Iceland", "India", "Indonesia", "Iran", "Iraq", "Ireland",
+                        "Israel", "Italy", "Jamaica", "Japan", "Jordan",
+                        "Kazakhstan", "Kenya", "Kiribati", "Kuwait", "Kyrgyzstan",
+                        "Laos", "Latvia", "Lebanon", "Lesotho", "Liberia", "Libya",
+                        "Lithuania", "Luxembourg", "Madagascar", "Malawi", "Malaysia",
+                        "Maldives", "Mali", "Malta", "Mauritania", "Mauritius",
+                        "Mexico", "Micronesia", "Mongolia", "Montenegro", "Morocco",
+                        "Mozambique", "Myanmar", "Namibia", "Nauru", "Nepal",
+                        "Netherlands", "New Zealand", "Nicaragua", "Niger", "Nigeria",
+                        "Niue", "North Macedonia", "Norway", "Oman", "Pakistan",
+                        "Panama", "Papua New Guinea", "Paraguay", "Peru",
+                        "Philippines", "Poland", "Portugal", "Qatar", "Romania",
+                        "Russia", "Rwanda", "Saint Kitts and Nevis", "Saint Lucia",
+                        "Saint Vincent and the Grenadines", "Samoa",
+                        "Sao Tome and Principe", "Saudi Arabia", "Senegal", "Serbia",
+                        "Seychelles", "Sierra Leone", "Singapore", "Slovakia",
+                        "Slovenia", "Solomon Islands", "Somalia", "South Africa",
+                        "South Korea", "Spain", "Sri Lanka", "Sudan", "Suriname",
+                        "Sweden", "Switzerland", "Syria", "Tajikistan", "Tanzania",
+                        "Thailand", "Togo", "Tonga", "Trinidad and Tobago", "Tunisia",
+                        "Turkey", "Turkmenistan", "Tuvalu", "Uganda", "Ukraine",
+                        "United Arab Emirates", "United Kingdom", "Uruguay",
+                        "Uzbekistan", "Vanuatu", "Venezuela", "Vietnam", "Yemen",
                         "Zambia", "Zimbabwe"
                     ];
 
@@ -78,20 +77,6 @@
                 <option value="2016">2016</option>
                 <option value="2015">2015</option>
                 <option value="2014">2014</option>
-                <option value="2013">2013</option>
-                <option value="2012">2012</option>
-                <option value="2011">2011</option>
-                <option value="2010">2010</option>
-                <option value="2009">2009</option>
-                <option value="2008">2008</option>
-                <option value="2007">2007</option>
-                <option value="2006">2006</option>
-                <option value="2005">2005</option>
-                <option value="2004">2004</option>
-                <option value="2003">2003</option>
-                <option value="2002">2002</option>
-                <option value="2001">2001</option>
-                <option value="2000">2000</option>
             </select>
 
             <label for="data-type-select">Data Type:</label>
@@ -107,13 +92,13 @@
             <div class="map-holder" id="map-container">
                 <svg id="vis-svg"></svg>
             </div>
+            <div id="data-summary" class="data-summary">
+                <!-- Placeholder for displaying the summary sentence -->
+            </div>
         </div>
-
-        <div class="barchart-holder" id="barchart"></div>
 
         <script src="https://unpkg.com/topojson-client@3"></script>
         <script src="Worldmap/worldmap.js"></script>
-        <script src="barchart.js"></script>
     </div>
 </body>
 </html>
