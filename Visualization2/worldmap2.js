@@ -18,19 +18,16 @@ const projection = d3.geoMercator()
 
 const path = d3.geoPath().projection(projection);
 
-// Create a tooltip
+// Create a tooltip div that is hidden by default
 const tooltip = d3.select("body").append("div")
   .attr("class", "tooltip")
+  .style("position", "absolute")
+  .style("background", "rgba(0, 0, 0, 0.8)")
+  .style("color", "#fff")
+  .style("padding", "5px 10px")
+  .style("border-radius", "4px")
+  .style("pointer-events", "none")
   .style("opacity", 0);
-
-// Debounce function to limit the frequency of updates
-function debounce(func, delay) {
-  let timeout;
-  return function (...args) {
-    clearTimeout(timeout);
-    timeout = setTimeout(() => func.apply(this, args), delay);
-  };
-}
 
 // Store global variables for years, causes, and current color
 let years = [];
@@ -39,10 +36,17 @@ let geoData = [];
 let data = [];
 let currentColor = "#4292c6";
 
+// Declare a global variable to store the current cause data
+let currentCauseData = {};
+
 // Load data
 d3.queue()
   .defer(d3.json, "../Visualization2/geo.json")
-  .defer(d3.csv, "../data/cause_of_deaths.csv") // Update path for cause_of_deaths.csv
+  .defer(d3.csv, "../data/cause_of_deaths.csv", function (d) {
+    // Parse 'Year' as integer
+    d.Year = parseInt(d.Year);
+    return d;
+  })
   .await((error, loadedGeoData, loadedData) => {
     if (error) {
       console.error("Error loading data:", error);
@@ -62,6 +66,15 @@ d3.queue()
     updateMap(years[0], causes[0]);
   });
 
+// Debounce function to limit the frequency of updates
+function debounce(func, delay) {
+  let timeout;
+  return function (...args) {
+    clearTimeout(timeout);
+    timeout = setTimeout(() => func.apply(this, args), delay);
+  };
+}
+
 function initializeDropdowns() {
   // Populate the year dropdown
   d3.select("#year")
@@ -69,7 +82,7 @@ function initializeDropdowns() {
     .data(years)
     .enter()
     .append("option")
-    .text(d => d)
+    .text(d => d) // d is now an integer
     .attr("value", d => d);
 
   // Populate the cause dropdown
@@ -131,7 +144,7 @@ function updateColorsOnly(baseColor) {
   const filteredData = data.filter(d => d.Year == selectedYear);
   const causeData = {};
   filteredData.forEach(d => {
-    causeData[d.Country] = +d[selectedCause];
+    causeData[d.Country.trim().toLowerCase()] = +d[selectedCause] || 0;
   });
 
   const colorScale = d3.scaleLinear()
@@ -139,9 +152,9 @@ function updateColorsOnly(baseColor) {
     .range(["#ffffff", baseColor]);
 
   // Update only the colors of the countries
-  svg.selectAll(".country")
+  svg.selectAll(".Country")
     .style("fill", d => {
-      const countryName = d.properties?.name;
+      const countryName = d.properties && d.properties.name ? d.properties.name.toLowerCase() : null;
       const value = countryName ? causeData[countryName] : null;
       return value ? colorScale(value) : "#ccc"; // Default grey for no data
     });
@@ -155,44 +168,51 @@ function updateColorsOnly(baseColor) {
 function updateMap(selectedYear, selectedCause, baseColor = currentColor) {
   const filteredData = data.filter(d => d.Year == selectedYear);
   const causeData = {};
+
+  // Normalize country names in the data
   filteredData.forEach(d => {
-    causeData[d.Country] = +d[selectedCause];
+    causeData[d.Country.trim().toLowerCase()] = +d[selectedCause] || 0;
   });
+
+  // Store the causeData globally
+  currentCauseData = causeData;
 
   const colorScale = d3.scaleLinear()
     .domain([0, d3.max(Object.values(causeData))])
     .range(["#ffffff", baseColor]);
 
   // Update countries
-  const countries = svg.selectAll(".country")
+  const countries = svg.selectAll(".Country")
     .data(geoData.features);
 
   countries.enter()
     .append("path")
-    .attr("class", "country")
+    .attr("class", "Country")
     .merge(countries)
     .attr("d", path)
     .style("fill", d => {
-      const countryName = d.properties?.name;
+      const countryName = d.properties && d.properties.name ? d.properties.name.toLowerCase() : null;
       const value = countryName ? causeData[countryName] : null;
       return value ? colorScale(value) : "#ccc";
     })
     .style("stroke", "black")
     .style("stroke-width", "0.5px")
-    .on("mouseover", function (event, d) {
-      const countryName = d.properties?.name || "Unknown";
-      const value = countryName ? causeData[countryName] : "No data";
+    .on("mouseover", function (d) {
+      const countryName = d.properties && d.properties.name ? d.properties.name.toLowerCase() : null;
+      const value = countryName ? currentCauseData[countryName] : null;
+
       tooltip.transition()
         .duration(200)
         .style("opacity", 0.9);
-      tooltip.html(`${countryName}<br>${selectedCause}: ${value}`)
-        .style("left", (event.pageX) + "px")
-        .style("top", (event.pageY - 28) + "px");
+
+      tooltip.html(
+        `${d.properties && d.properties.sovereignt ? d.properties.sovereignt : 'Unknown'}<br/>${value !== null && value !== undefined ? value : "No data"}`
+      )
+        .style("left", `${d3.event.pageX}px`)
+        .style("top", `${d3.event.pageY - 28}px`);
     })
     .on("mouseout", function () {
-      tooltip.transition()
-        .duration(500)
-        .style("opacity", 0);
+      tooltip.transition().duration(500).style("opacity", 0);
     });
 
   countries.exit().remove();
@@ -212,5 +232,5 @@ window.addEventListener("resize", () => {
   projection
     .scale(calculateScale())
     .translate([width / 2, height / 2.2]);
-  svg.selectAll(".country").attr("d", path);
+  svg.selectAll(".Country").attr("d", path);
 });
