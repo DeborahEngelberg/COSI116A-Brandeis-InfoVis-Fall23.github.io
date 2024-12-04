@@ -24,7 +24,7 @@ const tooltip = d3.select("body").append("div")
 
 // Load the data
 d3.queue()
-  .defer(d3.json, "../Worldmap/geo.json")
+  .defer(d3.json, "../Visualization3/Worldmap/geo.json")
   .defer(d3.csv, "../data/final_data.csv") // Load the dataset
   .await(ready);
 
