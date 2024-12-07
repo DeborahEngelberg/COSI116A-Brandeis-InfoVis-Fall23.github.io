@@ -11,12 +11,28 @@ const svg = d3.select("#map")
   .attr("width", width)
   .attr("height", height);
 
+// Create a group for the map elements
+const mapGroup = svg.append("g")
+  .attr("class", "map-group"); // Add a class for debugging
+
 // Create the projection and path generator
 const projection = d3.geoMercator()
-  .scale(calculateScale()) // Dynamically scale based on viewport dimensions
+  .scale(calculateScale())
   .translate([width / 2, height / 2.2]); // Center the map and adjust vertically
 
-const path = d3.geoPath().projection(projection);
+const path = d3.geoPath().projection(projection); // Ensure global accessibility of `path`
+
+// Define zoom behavior
+const zoom = d3.zoom()
+  .scaleExtent([1, 8]) // Limit zoom scale
+  .on("zoom", function () {
+    mapGroup.attr("transform", d3.event.transform); // Apply zoom transformations
+  });
+
+// Apply zoom behavior to the SVG
+svg.call(zoom);
+
+
 
 // Create a tooltip div that is hidden by default
 const tooltip = d3.select("body").append("div")
@@ -43,7 +59,6 @@ let currentCauseData = {};
 d3.queue()
   .defer(d3.json, "../Visualization2/geo.json")
   .defer(d3.csv, "../data/cause_of_deaths.csv", function (d) {
-    // Parse 'Year' as integer
     d.Year = parseInt(d.Year);
     return d;
   })
@@ -66,26 +81,16 @@ d3.queue()
     updateMap(years[0], causes[0]);
   });
 
-// Debounce function to limit the frequency of updates
-function debounce(func, delay) {
-  let timeout;
-  return function (...args) {
-    clearTimeout(timeout);
-    timeout = setTimeout(() => func.apply(this, args), delay);
-  };
-}
-
+// Initialize dropdowns for year, cause, and color
 function initializeDropdowns() {
-  // Populate the year dropdown
   d3.select("#year")
     .selectAll("option")
     .data(years)
     .enter()
     .append("option")
-    .text(d => d) // d is now an integer
+    .text(d => d)
     .attr("value", d => d);
 
-  // Populate the cause dropdown
   d3.select("#cause")
     .selectAll("option")
     .data(causes)
@@ -94,7 +99,6 @@ function initializeDropdowns() {
     .text(d => d)
     .attr("value", d => d);
 
-  // Set up event listeners
   d3.select("#year").on("change", function () {
     const selectedYear = d3.select(this).property("value");
     const selectedCause = d3.select("#cause").property("value");
@@ -107,82 +111,37 @@ function initializeDropdowns() {
     updateMap(selectedYear, selectedCause, currentColor);
   });
 
-  // Set up the color input event listener
   d3.select("#color").on("input", debounce(() => {
     currentColor = d3.select("#color").property("value");
     updateColorsOnly(currentColor);
   }, 100));
 }
 
-function updateLegend(min, max, baseColor) {
-  const legendContainer = d3.select("#legend-container");
-
-  // Clear any existing legend
-  legendContainer.selectAll("*").remove();
-
-  // Add min label
-  legendContainer.append("span")
-    .attr("class", "legend-label")
-    .text(min);
-
-  // Create the color gradient bar
-  legendContainer.append("div")
-    .attr("class", "legend-bar")
-    .style("background", `linear-gradient(to right, #ffffff, ${baseColor})`);
-
-  // Add max label
-  legendContainer.append("span")
-    .attr("class", "legend-label")
-    .text(max);
+// Debounce function to limit update frequency
+function debounce(func, delay) {
+  let timeout;
+  return function (...args) {
+    clearTimeout(timeout);
+    timeout = setTimeout(() => func.apply(this, args), delay);
+  };
 }
 
-// Update colors only (avoid full re-render)
-function updateColorsOnly(baseColor) {
-  const selectedYear = d3.select("#year").property("value");
-  const selectedCause = d3.select("#cause").property("value");
-
-  const filteredData = data.filter(d => d.Year == selectedYear);
-  const causeData = {};
-  filteredData.forEach(d => {
-    causeData[d.Country.trim().toLowerCase()] = +d[selectedCause] || 0;
-  });
-
-  const colorScale = d3.scaleLinear()
-    .domain([0, d3.max(Object.values(causeData))])
-    .range(["#ffffff", baseColor]);
-
-  // Update only the colors of the countries
-  svg.selectAll(".Country")
-    .style("fill", d => {
-      const countryName = d.properties && d.properties.name ? d.properties.name.toLowerCase() : null;
-      const value = countryName ? causeData[countryName] : null;
-      return value ? colorScale(value) : "#ccc"; // Default grey for no data
-    });
-
-  // Update legend
-  const minValue = 0;
-  const maxValue = d3.max(Object.values(causeData));
-  updateLegend(minValue, maxValue, baseColor);
-}
-
+// Update the map visualization
 function updateMap(selectedYear, selectedCause, baseColor = currentColor) {
   const filteredData = data.filter(d => d.Year == selectedYear);
   const causeData = {};
 
-  // Normalize country names in the data
   filteredData.forEach(d => {
     causeData[d.Country.trim().toLowerCase()] = +d[selectedCause] || 0;
   });
 
-  // Store the causeData globally
   currentCauseData = causeData;
 
   const colorScale = d3.scaleLinear()
     .domain([0, d3.max(Object.values(causeData))])
     .range(["#ffffff", baseColor]);
 
-  // Update countries
-  const countries = svg.selectAll(".Country")
+  const countries = mapGroup.selectAll(".Country")
     .data(geoData.features);
 
   countries.enter()
@@ -208,6 +167,7 @@ function updateMap(selectedYear, selectedCause, baseColor = currentColor) {
       tooltip.html(
         `${d.properties && d.properties.sovereignt ? d.properties.sovereignt : 'Unknown'}<br/>${value !== null && value !== undefined ? value : "No data"}`
       )
+        // Use d3.event.pageX and d3.event.pageY instead of event.pageX and event.pageY
         .style("left", `${d3.event.pageX}px`)
         .style("top", `${d3.event.pageY - 28}px`);
     })
@@ -215,9 +175,9 @@ function updateMap(selectedYear, selectedCause, baseColor = currentColor) {
       tooltip.transition().duration(500).style("opacity", 0);
     });
 
+
   countries.exit().remove();
 
-  // Update legend
   const minValue = 0;
   const maxValue = d3.max(Object.values(causeData));
   updateLegend(minValue, maxValue, baseColor);
@@ -234,3 +194,49 @@ window.addEventListener("resize", () => {
     .translate([width / 2, height / 2.2]);
   svg.selectAll(".Country").attr("d", path);
 });
+
+// Update only the colors of the countries
+function updateColorsOnly(baseColor) {
+  const selectedYear = d3.select("#year").property("value");
+  const selectedCause = d3.select("#cause").property("value");
+
+  const filteredData = data.filter(d => d.Year == selectedYear);
+  const causeData = {};
+  filteredData.forEach(d => {
+    causeData[d.Country.trim().toLowerCase()] = +d[selectedCause] || 0;
+  });
+
+  const colorScale = d3.scaleLinear()
+    .domain([0, d3.max(Object.values(causeData))])
+    .range(["#ffffff", baseColor]);
+
+  mapGroup.selectAll(".Country")
+    .style("fill", d => {
+      const countryName = d.properties && d.properties.name ? d.properties.name.toLowerCase() : null;
+      const value = countryName ? causeData[countryName] : null;
+      return value ? colorScale(value) : "#ccc";
+    });
+
+  const minValue = 0;
+  const maxValue = d3.max(Object.values(causeData));
+  updateLegend(minValue, maxValue, baseColor);
+}
+
+// Update legend
+function updateLegend(min, max, baseColor) {
+  const legendContainer = d3.select("#legend-container");
+
+  legendContainer.selectAll("*").remove();
+
+  legendContainer.append("span")
+    .attr("class", "legend-label")
+    .text(min);
+
+  legendContainer.append("div")
+    .attr("class", "legend-bar")
+    .style("background", `linear-gradient(to right, #ffffff, ${baseColor})`);
+
+  legendContainer.append("span")
+    .attr("class", "legend-label")
+    .text(max);
+}
