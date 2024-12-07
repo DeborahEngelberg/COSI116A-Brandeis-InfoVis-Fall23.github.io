@@ -18,46 +18,38 @@
             <select id="country-select">
                 <script>
                     const countries = [
-                        "Afghanistan", "Albania", "Algeria", "Andorra", "Angola",
-                        "Antigua and Barbuda", "Argentina", "Armenia", "Australia",
-                        "Austria", "Azerbaijan", "Bahamas", "Bahrain", "Bangladesh",
-                        "Barbados", "Belarus", "Belgium", "Belize", "Benin", "Bhutan",
-                        "Bolivia", "Bosnia and Herzegovina", "Botswana", "Brazil",
-                        "Bulgaria", "Burkina Faso", "Burundi", "Cambodia", "Cameroon",
-                        "Canada", "Central African Republic", "Chad", "Chile", "China",
-                        "Colombia", "Comoros", "Congo", "Cook Islands", "Costa Rica",
-                        "Cote d'Ivoire", "Croatia", "Cuba", "Cyprus", "Czechia",
-                        "Denmark", "Djibouti", "Dominica", "Dominican Republic",
-                        "Ecuador", "Egypt", "El Salvador", "Equatorial Guinea",
-                        "Eritrea", "Estonia", "Eswatini", "Ethiopia", "Fiji",
-                        "Finland", "France", "Gabon", "Gambia", "Georgia", "Germany",
-                        "Ghana", "Greece", "Grenada", "Guatemala", "Guinea",
-                        "Guinea-Bissau", "Guyana", "Haiti", "Honduras", "Hungary",
-                        "Iceland", "India", "Indonesia", "Iran", "Iraq", "Ireland",
-                        "Israel", "Italy", "Jamaica", "Japan", "Jordan",
-                        "Kazakhstan", "Kenya", "Kiribati", "Kuwait", "Kyrgyzstan",
-                        "Laos", "Latvia", "Lebanon", "Lesotho", "Liberia", "Libya",
-                        "Lithuania", "Luxembourg", "Madagascar", "Malawi", "Malaysia",
-                        "Maldives", "Mali", "Malta", "Mauritania", "Mauritius",
-                        "Mexico", "Micronesia", "Mongolia", "Montenegro", "Morocco",
-                        "Mozambique", "Myanmar", "Namibia", "Nauru", "Nepal",
-                        "Netherlands", "New Zealand", "Nicaragua", "Niger", "Nigeria",
-                        "Niue", "North Macedonia", "Norway", "Oman", "Pakistan",
-                        "Panama", "Papua New Guinea", "Paraguay", "Peru",
-                        "Philippines", "Poland", "Portugal", "Qatar", "Romania",
-                        "Russia", "Rwanda", "Saint Kitts and Nevis", "Saint Lucia",
-                        "Saint Vincent and the Grenadines", "Samoa",
-                        "Sao Tome and Principe", "Saudi Arabia", "Senegal", "Serbia",
-                        "Seychelles", "Sierra Leone", "Singapore", "Slovakia",
-                        "Slovenia", "Solomon Islands", "Somalia", "South Africa",
-                        "South Korea", "Spain", "Sri Lanka", "Sudan", "Suriname",
-                        "Sweden", "Switzerland", "Syria", "Tajikistan", "Tanzania",
-                        "Thailand", "Togo", "Tonga", "Trinidad and Tobago", "Tunisia",
-                        "Turkey", "Turkmenistan", "Tuvalu", "Uganda", "Ukraine",
-                        "United Arab Emirates", "United Kingdom", "Uruguay",
-                        "Uzbekistan", "Vanuatu", "Venezuela", "Vietnam", "Yemen",
-                        "Zambia", "Zimbabwe"
-                    ];
+                        'Afghanistan', 'Albania', 'Algeria', 'Angola', 'Argentina', 'Armenia', 
+                        'Australia', 'Austria', 'Azerbaijan', 'Bahamas', 'Bangladesh', 'Belarus', 
+                        'Belgium', 'Belize', 'Benin', 'Bhutan', 'Bolivia', 'Bosnia and Herz.', 
+                        'Botswana', 'Brazil', 'Brunei', 'Bulgaria', 'Burkina Faso', 'Burundi', 
+                        'Cambodia', 'Cameroon', 'Canada', 'Central African Rep.', 'Chad', 'Chile', 
+                        'China', 'Colombia', 'Congo', 'Costa Rica', 'Croatia', 'Cuba', 'Cyprus', 
+                        'Czechia', "Côte d'Ivoire", 'Dem. Rep. Congo', 'Denmark', 'Djibouti', 
+                        'Dominican Rep.', 'Ecuador', 'Egypt', 'El Salvador', 'Eq. Guinea', 
+                        'Eritrea', 'Estonia', 'Ethiopia', 'Falkland Is.', 'Fiji', 'Finland', 
+                        'France', 'Gabon', 'Gambia', 'Georgia', 'Germany', 'Ghana', 'Greece', 
+                        'Greenland', 'Guatemala', 'Guinea', 'Guinea-Bissau', 'Guyana', 'Haiti', 
+                        'Honduras', 'Hungary', 'Iceland', 'India', 'Indonesia', 'Iran', 'Iraq', 
+                        'Ireland', 'Israel', 'Italy', 'Jamaica', 'Japan', 'Jordan', 'Kazakhstan', 
+                        'Kenya', 'Kosovo', 'Kuwait', 'Kyrgyzstan', 'Laos', 'Latvia', 'Lebanon', 
+                        'Lesotho', 'Liberia', 'Libya', 'Lithuania', 'Luxembourg', 'Madagascar', 
+                        'Malawi', 'Malaysia', 'Mali', 'Mauritania', 'Mexico', 'Moldova', 
+                        'Mongolia', 'Montenegro', 'Morocco', 'Mozambique', 'Myanmar', 'N. Cyprus', 
+                        'Namibia', 'Nepal', 'Netherlands', 'New Caledonia', 'New Zealand', 
+                        'Nicaragua', 'Niger', 'Nigeria', 'North Korea', 'North Macedonia', 
+                        'Norway', 'Oman', 'Pakistan', 'Palestine', 'Panama', 'Papua New Guinea', 
+                        'Paraguay', 'Peru', 'Philippines', 'Poland', 'Portugal', 'Puerto Rico', 
+                        'Qatar', 'Romania', 'Russia', 'Rwanda', 'S. Sudan', 'Saudi Arabia', 
+                        'Senegal', 'Serbia', 'Sierra Leone', 'Slovakia', 'Slovenia', 'Solomon Is.', 
+                        'Somalia', 'Somaliland', 'South Africa', 'South Korea', 'Spain', 
+                        'Sri Lanka', 'Sudan', 'Suriname', 'Sweden', 'Switzerland', 'Syria', 
+                        'Taiwan', 'Tajikistan', 'Tanzania', 'Thailand', 'Timor-Leste', 'Togo', 
+                        'Trinidad and Tobago', 'Tunisia', 'Turkey', 'Turkmenistan', 'Uganda', 
+                        'Ukraine', 'United Arab Emirates', 'United Kingdom', 'United States of America', 
+                        'Uruguay', 'Uzbekistan', 'Vanuatu', 'Venezuela', 'Vietnam', 'W. Sahara', 
+                        'Yemen', 'Zambia', 'Zimbabwe', 'eSwatini'
+                        ];
+
 
                     const countrySelect = document.getElementById("country-select");
                     countries.forEach(country => {
@@ -93,8 +85,8 @@
                 <svg id="vis-svg"></svg>
             </div>
             <div id="data-summary" class="data-summary">
-                <!-- Placeholder for displaying the summary sentence -->
-            </div>
+                <p id="summary-text"></p> 
+            </div>            
         </div>
 
         <script src="https://unpkg.com/topojson-client@3"></script>

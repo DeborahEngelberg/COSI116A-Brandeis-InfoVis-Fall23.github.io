@@ -25,7 +25,7 @@ const tooltip = d3.select("body").append("div")
 // Load the data
 d3.queue()
   .defer(d3.json, "../Visualization3/Worldmap/geo.json")
-  .defer(d3.csv, "../data/final_data.csv") // Load the dataset
+  .defer(d3.csv, "../data/combined_data.csv") // Load the dataset
   .await(ready);
 
 function ready(error, geoData, data) {
@@ -60,7 +60,7 @@ function ready(error, geoData, data) {
   // Update map when dropdown changes
   d3.selectAll("#country-select, #year-select, #data-type-select").on("change", function () {
     const country = d3.select("#country-select").property("value");
-    const year = d3.select("#year-select").property("value");
+    const year = d3.select("#year-select").property("value"); //i think we need to change it to match the data cols
     const dataType = d3.select("#data-type-select").property("value");
     updateHighlight(country, geoData);
     updateSummary(country, year, dataType, data);
@@ -78,11 +78,16 @@ function updateSummary(country, year, dataType, data) {
   // Find the corresponding data row
   const row = data.find(d => d.Country === country && d.Year === year && d.DataType === dataType);
 
+  //text to display
+  const summaryText = document.getElementById("summary-text");
+
   if (row) {
     const value = row.Value || "No data available";
     const unit = dataType === "alcohol" ? "liters of pure alcohol" : "units";
-    dataSummary.text(`In ${year}, ${dataType}, recorded per capita (15+ years) consumption was ${value} ${unit}.`);
+    summaryText.textContent = `In ${year}, ${country} recorded ${value} ${unit} for ${dataType}.`;
   } else {
-    dataSummary.text(`No data available for ${country} in ${year} for ${dataType}.`);
+    summaryText.textContent = `No data available for ${country} in ${year} for ${dataType}.`;
   }
+
 }
+
