@@ -32,7 +32,6 @@ As a group, we quickly decided that we wanted to implement a map visualization i
 For the data cleaning we used Python's Panadas library. We combined four datasets: one on causes of death and three on alcohol consumption. For the cause of death data, we cleaned unnecessary columns, filled null cells, added a total count column, and standardized data types. The alcohol consumption datasets were reformatted and aligned, ensuring consistency for merging. After integrating the datasets by year and country. For interaction with the Json of the map, we added alpha-2 countries codes.
 
 * Link to data cleanning: [Google Colab - Data Cleaning](https://colab.research.google.com/drive/1CXzDcB9EuiBlps0GL37_qgG_ykGpNrow?usp=sharing)
-
 <br />
 
 #### <ins> Step 3 - Implemeting The Visualization </ins>
