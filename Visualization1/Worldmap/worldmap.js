@@ -96,12 +96,12 @@ function ready(error, geoData, data00_09, data09_19, data80_99) {
       });
 
     // Create a legend
-    const legendWidth = 300;
-    const legendHeight = 25;
+    const legendWidth = 25;
+    const legendHeight = 300;
 
     const legend = svg.append("g")
       .attr("class", "legend")
-      .attr("transform", `translate(${width - legendWidth - 90},${height - legendHeight - 90})`);
+      .attr("transform", `translate(${legendWidth },${legendHeight - 100})`);
 
     // Title for the legend
     legend.append("text")
@@ -109,16 +109,16 @@ function ready(error, geoData, data00_09, data09_19, data80_99) {
       .attr("x", 0)
       .attr("y", -20)
       .attr("text-anchor", "start")
-      .text("Pure Alcohol Consumption (liters per capita)");
+      .text("Legend");
 
     // Create a scale for the legend
     const maxValue = Math.floor(d3.max(Object.values(data)));
     const legendScale = d3.scaleLinear()
       .domain([0, d3.max(Object.values(data))])
-      .range([0, legendWidth]);
+      .range([legendHeight, 0]);
 
     // Create an axis for the legend
-    const legendAxis = d3.axisBottom(legendScale)
+    const legendAxis = d3.axisRight(legendScale)
       .tickValues(d3.range(0, maxValue + 1, Math.floor(maxValue / 5))); //More customizable tick marks
 
     const legendData = colorScale.range().map(d => {
@@ -131,33 +131,30 @@ function ready(error, geoData, data00_09, data09_19, data80_99) {
     legend.selectAll("rect")
       .data(legendData)
       .enter().append("rect")
-      .attr("x", d => {
-        const x = legendScale(d[0]);
-        // console.log("Legend rect x:", x); 
-        return x;
-      })
-      .attr("y", 0)
-      .attr("width", d => {
-        const width = legendScale(d[1]) - legendScale(d[0]);
-        // console.log("Legend rect width:", width);
-        return width;
-      })
-      .attr("height", legendHeight)
+      .attr("x", 0)
+      .attr("y", d => legendScale(d[1]))
+      .attr("width", legendWidth)
+      .attr("height", d => legendScale(d[0]) - legendScale(d[1]))
       .style("fill", d => colorScale(d[0]));
+    
     legend.append("g")
-      .attr("transform", `translate(0,${legendHeight})`)
+      .attr("class", "legend-axis")
+      .attr("transform", `translate(${legendWidth},0)`)
       .call(legendAxis);
   }
 
-  // Set default year to 2019
-  updateMap("2019");
+  // Set default year to 2000
+  updateMap("2000");
 
-  d3.select("#year-select").on("change", function () {
+  // Update map with the range slider
+  d3.select("#yearRange").on("input", function () {
     const selectedYear = d3.select(this).property("value");
-    //Reset map & legend when year is changed
     svg.selectAll(".country").remove();
     svg.selectAll(".legend").remove();
     updateMap(selectedYear); // Update map with the selected year
+    d3.select("#yearTitle").text(selectedYear); // Update the title
   });
+
+  
 }
 

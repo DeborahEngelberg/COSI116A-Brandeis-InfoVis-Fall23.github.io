@@ -19,7 +19,6 @@
 /* LEGEND */
 .legend text {
     stroke: #d5e7fe;
-    fill: #d5e7fe;
     font-size: medium;
 
 }
@@ -41,3 +40,130 @@
 svg {
     display: block;
 } */
+
+/* BRUSHIING & LINKING CHARTS */
+.chart-container {
+    display: flex;
+    /* flex-wrap: wrap; */
+    justify-content: space-between;
+}
+
+.chart {
+    width: 48%; /* Adjust the width as needed */
+    margin: 1%;
+    min-width: 300px
+}
+
+/* Optional: Add some styling to the charts */
+#bargraph, #linechart {
+    border: 1px solid #ccc;
+    padding: 10px;
+    background-color: #f9f9f9;
+}
+
+/* LINE CHART */
+.point {
+    fill: white;
+    stroke: #69b3a2;
+    stroke-width: 3;
+  }
+  
+  .linePath {
+    fill: none;
+    stroke: black;
+    stroke-width: 1.5;
+  }
+  
+  .axisLabel {
+    fill: #475d7c;
+  }
+  
+.linechart-holder {
+    width: 50%;
+    height: 50%;
+    flex: 0 0 50%;
+}
+
+.axisLabel {
+    stroke:#61a9e7
+}
+
+.text {
+    fill: #ffffff;
+}
+
+
+
+
+
+
+
+
+/* TIMELINE */
+/* Credit to W3 tutorials on Range Sliders: https://www.w3schools.com/howto/howto_js_rangeslider.asp */
+span {
+    color: #2472bf;
+    font-size: 1.5em;
+}
+
+.slider {
+    -webkit-appearance: none;
+    width: 50%;
+    height: 5px;
+    /* border-radius: 5px;   */
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%; 
+    background:#2171b5;
+    cursor: pointer;
+  }
+  
+  .slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  /* Slider Ticks */
+
+  .slider-container {
+    position: relative;
+    width: 100%;
+    margin: 20px 0;
+}
+
+  .slider-ticks {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    width: 100%;
+    top: 20px;
+}
+
+.slider-ticks span {
+    font-size: 0.8em;
+    color: #2472bf;
+}
+
+/* .slider-ticks .tick {
+    width: 1px;
+    height: 10px;
+    background: #fff;
+    position: absolute;
+    bottom: 0;
+} */
+
