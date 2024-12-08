@@ -1,0 +1,3202 @@
+[
+  {
+    "year": 2000,
+    "causes": "Total",
+    "deaths": 343832491.2
+  },
+  {
+    "year": 2001,
+    "causes": "Total",
+    "deaths": 345102806.9
+  },
+  {
+    "year": 2002,
+    "causes": "Total",
+    "deaths": 346925451.6
+  },
+  {
+    "year": 2003,
+    "causes": "Total",
+    "deaths": 348706421
+  },
+  {
+    "year": 2004,
+    "causes": "Total",
+    "deaths": 349910864.9
+  },
+  {
+    "year": 2005,
+    "causes": "Total",
+    "deaths": 350896072.7
+  },
+  {
+    "year": 2006,
+    "causes": "Total",
+    "deaths": 350486053.8
+  },
+  {
+    "year": 2007,
+    "causes": "Total",
+    "deaths": 351371944.9
+  },
+  {
+    "year": 2008,
+    "causes": "Total",
+    "deaths": 354952440.3
+  },
+  {
+    "year": 2009,
+    "causes": "Total",
+    "deaths": 356340678
+  },
+  {
+    "year": 2010,
+    "causes": "Total",
+    "deaths": 356957986.1
+  },
+  {
+    "year": 2011,
+    "causes": "Total",
+    "deaths": 358993178
+  },
+  {
+    "year": 2012,
+    "causes": "Total",
+    "deaths": 360137486.9
+  },
+  {
+    "year": 2013,
+    "causes": "Total",
+    "deaths": 362158512
+  },
+  {
+    "year": 2014,
+    "causes": "Total",
+    "deaths": 365374431.1
+  },
+  {
+    "year": 2015,
+    "causes": "Total",
+    "deaths": 370103172.3
+  },
+  {
+    "year": 2016,
+    "causes": "Total",
+    "deaths": 373392916
+  },
+  {
+    "year": 2017,
+    "causes": "Total",
+    "deaths": 378579817
+  },
+  {
+    "year": 2018,
+    "causes": "Total",
+    "deaths": 379851002.5
+  },
+  {
+    "year": 2019,
+    "causes": "Total",
+    "deaths": 383800340.2
+  },
+  {
+    "year": 2000,
+    "causes": "Meningitis",
+    "deaths": 385994
+  },
+  {
+    "year": 2001,
+    "causes": "Meningitis",
+    "deaths": 379912
+  },
+  {
+    "year": 2002,
+    "causes": "Meningitis",
+    "deaths": 372298
+  },
+  {
+    "year": 2003,
+    "causes": "Meningitis",
+    "deaths": 369171
+  },
+  {
+    "year": 2004,
+    "causes": "Meningitis",
+    "deaths": 363462
+  },
+  {
+    "year": 2005,
+    "causes": "Meningitis",
+    "deaths": 361809
+  },
+  {
+    "year": 2006,
+    "causes": "Meningitis",
+    "deaths": 358973
+  },
+  {
+    "year": 2007,
+    "causes": "Meningitis",
+    "deaths": 352747
+  },
+  {
+    "year": 2008,
+    "causes": "Meningitis",
+    "deaths": 343452
+  },
+  {
+    "year": 2009,
+    "causes": "Meningitis",
+    "deaths": 336868
+  },
+  {
+    "year": 2010,
+    "causes": "Meningitis",
+    "deaths": 326778
+  },
+  {
+    "year": 2011,
+    "causes": "Meningitis",
+    "deaths": 312733
+  },
+  {
+    "year": 2012,
+    "causes": "Meningitis",
+    "deaths": 300091
+  },
+  {
+    "year": 2013,
+    "causes": "Meningitis",
+    "deaths": 289502
+  },
+  {
+    "year": 2014,
+    "causes": "Meningitis",
+    "deaths": 280438
+  },
+  {
+    "year": 2015,
+    "causes": "Meningitis",
+    "deaths": 267789
+  },
+  {
+    "year": 2016,
+    "causes": "Meningitis",
+    "deaths": 261246
+  },
+  {
+    "year": 2017,
+    "causes": "Meningitis",
+    "deaths": 250132
+  },
+  {
+    "year": 2018,
+    "causes": "Meningitis",
+    "deaths": 241666
+  },
+  {
+    "year": 2019,
+    "causes": "Meningitis",
+    "deaths": 236084
+  },
+  {
+    "year": 2000,
+    "causes": "Alzheimer's Disease and Other Dementias",
+    "deaths": 786615
+  },
+  {
+    "year": 2001,
+    "causes": "Alzheimer's Disease and Other Dementias",
+    "deaths": 814526
+  },
+  {
+    "year": 2002,
+    "causes": "Alzheimer's Disease and Other Dementias",
+    "deaths": 845695
+  },
+  {
+    "year": 2003,
+    "causes": "Alzheimer's Disease and Other Dementias",
+    "deaths": 877011
+  },
+  {
+    "year": 2004,
+    "causes": "Alzheimer's Disease and Other Dementias",
+    "deaths": 909148
+  },
+  {
+    "year": 2005,
+    "causes": "Alzheimer's Disease and Other Dementias",
+    "deaths": 945619
+  },
+  {
+    "year": 2006,
+    "causes": "Alzheimer's Disease and Other Dementias",
+    "deaths": 982308
+  },
+  {
+    "year": 2007,
+    "causes": "Alzheimer's Disease and Other Dementias",
+    "deaths": 1022057
+  },
+  {
+    "year": 2008,
+    "causes": "Alzheimer's Disease and Other Dementias",
+    "deaths": 1065297
+  },
+  {
+    "year": 2009,
+    "causes": "Alzheimer's Disease and Other Dementias",
+    "deaths": 1109405
+  },
+  {
+    "year": 2010,
+    "causes": "Alzheimer's Disease and Other Dementias",
+    "deaths": 1155944
+  },
+  {
+    "year": 2011,
+    "causes": "Alzheimer's Disease and Other Dementias",
+    "deaths": 1201138
+  },
+  {
+    "year": 2012,
+    "causes": "Alzheimer's Disease and Other Dementias",
+    "deaths": 1247515
+  },
+  {
+    "year": 2013,
+    "causes": "Alzheimer's Disease and Other Dementias",
+    "deaths": 1294701
+  },
+  {
+    "year": 2014,
+    "causes": "Alzheimer's Disease and Other Dementias",
+    "deaths": 1343756
+  },
+  {
+    "year": 2015,
+    "causes": "Alzheimer's Disease and Other Dementias",
+    "deaths": 1394942
+  },
+  {
+    "year": 2016,
+    "causes": "Alzheimer's Disease and Other Dementias",
+    "deaths": 1451840
+  },
+  {
+    "year": 2017,
+    "causes": "Alzheimer's Disease and Other Dementias",
+    "deaths": 1509646
+  },
+  {
+    "year": 2018,
+    "causes": "Alzheimer's Disease and Other Dementias",
+    "deaths": 1568617
+  },
+  {
+    "year": 2019,
+    "causes": "Alzheimer's Disease and Other Dementias",
+    "deaths": 1622426
+  },
+  {
+    "year": 2000,
+    "causes": "Parkinson's Disease",
+    "deaths": 198545
+  },
+  {
+    "year": 2001,
+    "causes": "Parkinson's Disease",
+    "deaths": 206194
+  },
+  {
+    "year": 2002,
+    "causes": "Parkinson's Disease",
+    "deaths": 214930
+  },
+  {
+    "year": 2003,
+    "causes": "Parkinson's Disease",
+    "deaths": 222256
+  },
+  {
+    "year": 2004,
+    "causes": "Parkinson's Disease",
+    "deaths": 227695
+  },
+  {
+    "year": 2005,
+    "causes": "Parkinson's Disease",
+    "deaths": 236498
+  },
+  {
+    "year": 2006,
+    "causes": "Parkinson's Disease",
+    "deaths": 242749
+  },
+  {
+    "year": 2007,
+    "causes": "Parkinson's Disease",
+    "deaths": 250475
+  },
+  {
+    "year": 2008,
+    "causes": "Parkinson's Disease",
+    "deaths": 260382
+  },
+  {
+    "year": 2009,
+    "causes": "Parkinson's Disease",
+    "deaths": 267738
+  },
+  {
+    "year": 2010,
+    "causes": "Parkinson's Disease",
+    "deaths": 276188
+  },
+  {
+    "year": 2011,
+    "causes": "Parkinson's Disease",
+    "deaths": 284488
+  },
+  {
+    "year": 2012,
+    "causes": "Parkinson's Disease",
+    "deaths": 293123
+  },
+  {
+    "year": 2013,
+    "causes": "Parkinson's Disease",
+    "deaths": 303488
+  },
+  {
+    "year": 2014,
+    "causes": "Parkinson's Disease",
+    "deaths": 312928
+  },
+  {
+    "year": 2015,
+    "causes": "Parkinson's Disease",
+    "deaths": 321782
+  },
+  {
+    "year": 2016,
+    "causes": "Parkinson's Disease",
+    "deaths": 330736
+  },
+  {
+    "year": 2017,
+    "causes": "Parkinson's Disease",
+    "deaths": 339343
+  },
+  {
+    "year": 2018,
+    "causes": "Parkinson's Disease",
+    "deaths": 351322
+  },
+  {
+    "year": 2019,
+    "causes": "Parkinson's Disease",
+    "deaths": 362702
+  },
+  {
+    "year": 2000,
+    "causes": "Nutritional Deficiencies",
+    "deaths": 568454
+  },
+  {
+    "year": 2001,
+    "causes": "Nutritional Deficiencies",
+    "deaths": 542565
+  },
+  {
+    "year": 2002,
+    "causes": "Nutritional Deficiencies",
+    "deaths": 517754
+  },
+  {
+    "year": 2003,
+    "causes": "Nutritional Deficiencies",
+    "deaths": 417264
+  },
+  {
+    "year": 2004,
+    "causes": "Nutritional Deficiencies",
+    "deaths": 393952
+  },
+  {
+    "year": 2005,
+    "causes": "Nutritional Deficiencies",
+    "deaths": 376740
+  },
+  {
+    "year": 2006,
+    "causes": "Nutritional Deficiencies",
+    "deaths": 362476
+  },
+  {
+    "year": 2007,
+    "causes": "Nutritional Deficiencies",
+    "deaths": 347407
+  },
+  {
+    "year": 2008,
+    "causes": "Nutritional Deficiencies",
+    "deaths": 335623
+  },
+  {
+    "year": 2009,
+    "causes": "Nutritional Deficiencies",
+    "deaths": 322879
+  },
+  {
+    "year": 2010,
+    "causes": "Nutritional Deficiencies",
+    "deaths": 322187
+  },
+  {
+    "year": 2011,
+    "causes": "Nutritional Deficiencies",
+    "deaths": 314327
+  },
+  {
+    "year": 2012,
+    "causes": "Nutritional Deficiencies",
+    "deaths": 298117
+  },
+  {
+    "year": 2013,
+    "causes": "Nutritional Deficiencies",
+    "deaths": 291451
+  },
+  {
+    "year": 2014,
+    "causes": "Nutritional Deficiencies",
+    "deaths": 284578
+  },
+  {
+    "year": 2015,
+    "causes": "Nutritional Deficiencies",
+    "deaths": 278793
+  },
+  {
+    "year": 2016,
+    "causes": "Nutritional Deficiencies",
+    "deaths": 273191
+  },
+  {
+    "year": 2017,
+    "causes": "Nutritional Deficiencies",
+    "deaths": 267463
+  },
+  {
+    "year": 2018,
+    "causes": "Nutritional Deficiencies",
+    "deaths": 258094
+  },
+  {
+    "year": 2019,
+    "causes": "Nutritional Deficiencies",
+    "deaths": 251411
+  },
+  {
+    "year": 2000,
+    "causes": "Malaria",
+    "deaths": 882055
+  },
+  {
+    "year": 2001,
+    "causes": "Malaria",
+    "deaths": 912709
+  },
+  {
+    "year": 2002,
+    "causes": "Malaria",
+    "deaths": 929195
+  },
+  {
+    "year": 2003,
+    "causes": "Malaria",
+    "deaths": 959654
+  },
+  {
+    "year": 2004,
+    "causes": "Malaria",
+    "deaths": 960784
+  },
+  {
+    "year": 2005,
+    "causes": "Malaria",
+    "deaths": 940540
+  },
+  {
+    "year": 2006,
+    "causes": "Malaria",
+    "deaths": 941746
+  },
+  {
+    "year": 2007,
+    "causes": "Malaria",
+    "deaths": 940193
+  },
+  {
+    "year": 2008,
+    "causes": "Malaria",
+    "deaths": 932910
+  },
+  {
+    "year": 2009,
+    "causes": "Malaria",
+    "deaths": 917796
+  },
+  {
+    "year": 2010,
+    "causes": "Malaria",
+    "deaths": 909814
+  },
+  {
+    "year": 2011,
+    "causes": "Malaria",
+    "deaths": 868564
+  },
+  {
+    "year": 2012,
+    "causes": "Malaria",
+    "deaths": 806183
+  },
+  {
+    "year": 2013,
+    "causes": "Malaria",
+    "deaths": 751776
+  },
+  {
+    "year": 2014,
+    "causes": "Malaria",
+    "deaths": 724324
+  },
+  {
+    "year": 2015,
+    "causes": "Malaria",
+    "deaths": 702890
+  },
+  {
+    "year": 2016,
+    "causes": "Malaria",
+    "deaths": 660364
+  },
+  {
+    "year": 2017,
+    "causes": "Malaria",
+    "deaths": 629653
+  },
+  {
+    "year": 2018,
+    "causes": "Malaria",
+    "deaths": 631568
+  },
+  {
+    "year": 2019,
+    "causes": "Malaria",
+    "deaths": 643201
+  },
+  {
+    "year": 2000,
+    "causes": "Drowning",
+    "deaths": 387627
+  },
+  {
+    "year": 2001,
+    "causes": "Drowning",
+    "deaths": 375917
+  },
+  {
+    "year": 2002,
+    "causes": "Drowning",
+    "deaths": 361967
+  },
+  {
+    "year": 2003,
+    "causes": "Drowning",
+    "deaths": 347745
+  },
+  {
+    "year": 2004,
+    "causes": "Drowning",
+    "deaths": 338417
+  },
+  {
+    "year": 2005,
+    "causes": "Drowning",
+    "deaths": 332705
+  },
+  {
+    "year": 2006,
+    "causes": "Drowning",
+    "deaths": 319875
+  },
+  {
+    "year": 2007,
+    "causes": "Drowning",
+    "deaths": 311889
+  },
+  {
+    "year": 2008,
+    "causes": "Drowning",
+    "deaths": 304870
+  },
+  {
+    "year": 2009,
+    "causes": "Drowning",
+    "deaths": 296871
+  },
+  {
+    "year": 2010,
+    "causes": "Drowning",
+    "deaths": 290831
+  },
+  {
+    "year": 2011,
+    "causes": "Drowning",
+    "deaths": 281106
+  },
+  {
+    "year": 2012,
+    "causes": "Drowning",
+    "deaths": 275585
+  },
+  {
+    "year": 2013,
+    "causes": "Drowning",
+    "deaths": 266827
+  },
+  {
+    "year": 2014,
+    "causes": "Drowning",
+    "deaths": 258489
+  },
+  {
+    "year": 2015,
+    "causes": "Drowning",
+    "deaths": 254237
+  },
+  {
+    "year": 2016,
+    "causes": "Drowning",
+    "deaths": 248811
+  },
+  {
+    "year": 2017,
+    "causes": "Drowning",
+    "deaths": 241842
+  },
+  {
+    "year": 2018,
+    "causes": "Drowning",
+    "deaths": 240266
+  },
+  {
+    "year": 2019,
+    "causes": "Drowning",
+    "deaths": 237069
+  },
+  {
+    "year": 2000,
+    "causes": "Interpersonal Violence",
+    "deaths": 450393
+  },
+  {
+    "year": 2001,
+    "causes": "Interpersonal Violence",
+    "deaths": 451206
+  },
+  {
+    "year": 2002,
+    "causes": "Interpersonal Violence",
+    "deaths": 462331
+  },
+  {
+    "year": 2003,
+    "causes": "Interpersonal Violence",
+    "deaths": 446701
+  },
+  {
+    "year": 2004,
+    "causes": "Interpersonal Violence",
+    "deaths": 440855
+  },
+  {
+    "year": 2005,
+    "causes": "Interpersonal Violence",
+    "deaths": 435946
+  },
+  {
+    "year": 2006,
+    "causes": "Interpersonal Violence",
+    "deaths": 427355
+  },
+  {
+    "year": 2007,
+    "causes": "Interpersonal Violence",
+    "deaths": 420025
+  },
+  {
+    "year": 2008,
+    "causes": "Interpersonal Violence",
+    "deaths": 422800
+  },
+  {
+    "year": 2009,
+    "causes": "Interpersonal Violence",
+    "deaths": 422750
+  },
+  {
+    "year": 2010,
+    "causes": "Interpersonal Violence",
+    "deaths": 417449
+  },
+  {
+    "year": 2011,
+    "causes": "Interpersonal Violence",
+    "deaths": 413880
+  },
+  {
+    "year": 2012,
+    "causes": "Interpersonal Violence",
+    "deaths": 417694
+  },
+  {
+    "year": 2013,
+    "causes": "Interpersonal Violence",
+    "deaths": 415620
+  },
+  {
+    "year": 2014,
+    "causes": "Interpersonal Violence",
+    "deaths": 413371
+  },
+  {
+    "year": 2015,
+    "causes": "Interpersonal Violence",
+    "deaths": 416362
+  },
+  {
+    "year": 2016,
+    "causes": "Interpersonal Violence",
+    "deaths": 412500
+  },
+  {
+    "year": 2017,
+    "causes": "Interpersonal Violence",
+    "deaths": 417143
+  },
+  {
+    "year": 2018,
+    "causes": "Interpersonal Violence",
+    "deaths": 419249
+  },
+  {
+    "year": 2019,
+    "causes": "Interpersonal Violence",
+    "deaths": 414157
+  },
+  {
+    "year": 2000,
+    "causes": "Maternal Disorders",
+    "deaths": 287027
+  },
+  {
+    "year": 2001,
+    "causes": "Maternal Disorders",
+    "deaths": 282455
+  },
+  {
+    "year": 2002,
+    "causes": "Maternal Disorders",
+    "deaths": 276253
+  },
+  {
+    "year": 2003,
+    "causes": "Maternal Disorders",
+    "deaths": 269425
+  },
+  {
+    "year": 2004,
+    "causes": "Maternal Disorders",
+    "deaths": 265279
+  },
+  {
+    "year": 2005,
+    "causes": "Maternal Disorders",
+    "deaths": 264407
+  },
+  {
+    "year": 2006,
+    "causes": "Maternal Disorders",
+    "deaths": 259261
+  },
+  {
+    "year": 2007,
+    "causes": "Maternal Disorders",
+    "deaths": 252551
+  },
+  {
+    "year": 2008,
+    "causes": "Maternal Disorders",
+    "deaths": 247899
+  },
+  {
+    "year": 2009,
+    "causes": "Maternal Disorders",
+    "deaths": 244175
+  },
+  {
+    "year": 2010,
+    "causes": "Maternal Disorders",
+    "deaths": 239749
+  },
+  {
+    "year": 2011,
+    "causes": "Maternal Disorders",
+    "deaths": 234669
+  },
+  {
+    "year": 2012,
+    "causes": "Maternal Disorders",
+    "deaths": 227177
+  },
+  {
+    "year": 2013,
+    "causes": "Maternal Disorders",
+    "deaths": 223473
+  },
+  {
+    "year": 2014,
+    "causes": "Maternal Disorders",
+    "deaths": 214881
+  },
+  {
+    "year": 2015,
+    "causes": "Maternal Disorders",
+    "deaths": 208450
+  },
+  {
+    "year": 2016,
+    "causes": "Maternal Disorders",
+    "deaths": 203737
+  },
+  {
+    "year": 2017,
+    "causes": "Maternal Disorders",
+    "deaths": 199197
+  },
+  {
+    "year": 2018,
+    "causes": "Maternal Disorders",
+    "deaths": 198069
+  },
+  {
+    "year": 2019,
+    "causes": "Maternal Disorders",
+    "deaths": 196306
+  },
+  {
+    "year": 2000,
+    "causes": "HIV/AIDS",
+    "deaths": 1559389
+  },
+  {
+    "year": 2001,
+    "causes": "HIV/AIDS",
+    "deaths": 1662064
+  },
+  {
+    "year": 2002,
+    "causes": "HIV/AIDS",
+    "deaths": 1746104
+  },
+  {
+    "year": 2003,
+    "causes": "HIV/AIDS",
+    "deaths": 1808445
+  },
+  {
+    "year": 2004,
+    "causes": "HIV/AIDS",
+    "deaths": 1842954
+  },
+  {
+    "year": 2005,
+    "causes": "HIV/AIDS",
+    "deaths": 1832074
+  },
+  {
+    "year": 2006,
+    "causes": "HIV/AIDS",
+    "deaths": 1767868
+  },
+  {
+    "year": 2007,
+    "causes": "HIV/AIDS",
+    "deaths": 1669306
+  },
+  {
+    "year": 2008,
+    "causes": "HIV/AIDS",
+    "deaths": 1559499
+  },
+  {
+    "year": 2009,
+    "causes": "HIV/AIDS",
+    "deaths": 1453258
+  },
+  {
+    "year": 2010,
+    "causes": "HIV/AIDS",
+    "deaths": 1364619
+  },
+  {
+    "year": 2011,
+    "causes": "HIV/AIDS",
+    "deaths": 1283719
+  },
+  {
+    "year": 2012,
+    "causes": "HIV/AIDS",
+    "deaths": 1198698
+  },
+  {
+    "year": 2013,
+    "causes": "HIV/AIDS",
+    "deaths": 1126196
+  },
+  {
+    "year": 2014,
+    "causes": "HIV/AIDS",
+    "deaths": 1072970
+  },
+  {
+    "year": 2015,
+    "causes": "HIV/AIDS",
+    "deaths": 1029667
+  },
+  {
+    "year": 2016,
+    "causes": "HIV/AIDS",
+    "deaths": 996098
+  },
+  {
+    "year": 2017,
+    "causes": "HIV/AIDS",
+    "deaths": 947006
+  },
+  {
+    "year": 2018,
+    "causes": "HIV/AIDS",
+    "deaths": 892341
+  },
+  {
+    "year": 2019,
+    "causes": "HIV/AIDS",
+    "deaths": 863056
+  },
+  {
+    "year": 2000,
+    "causes": "Drug Use Disorders",
+    "deaths": 89690
+  },
+  {
+    "year": 2001,
+    "causes": "Drug Use Disorders",
+    "deaths": 87325
+  },
+  {
+    "year": 2002,
+    "causes": "Drug Use Disorders",
+    "deaths": 84750
+  },
+  {
+    "year": 2003,
+    "causes": "Drug Use Disorders",
+    "deaths": 82250
+  },
+  {
+    "year": 2004,
+    "causes": "Drug Use Disorders",
+    "deaths": 81843
+  },
+  {
+    "year": 2005,
+    "causes": "Drug Use Disorders",
+    "deaths": 84990
+  },
+  {
+    "year": 2006,
+    "causes": "Drug Use Disorders",
+    "deaths": 85421
+  },
+  {
+    "year": 2007,
+    "causes": "Drug Use Disorders",
+    "deaths": 85962
+  },
+  {
+    "year": 2008,
+    "causes": "Drug Use Disorders",
+    "deaths": 87077
+  },
+  {
+    "year": 2009,
+    "causes": "Drug Use Disorders",
+    "deaths": 87025
+  },
+  {
+    "year": 2010,
+    "causes": "Drug Use Disorders",
+    "deaths": 88079
+  },
+  {
+    "year": 2011,
+    "causes": "Drug Use Disorders",
+    "deaths": 89322
+  },
+  {
+    "year": 2012,
+    "causes": "Drug Use Disorders",
+    "deaths": 90934
+  },
+  {
+    "year": 2013,
+    "causes": "Drug Use Disorders",
+    "deaths": 94562
+  },
+  {
+    "year": 2014,
+    "causes": "Drug Use Disorders",
+    "deaths": 99295
+  },
+  {
+    "year": 2015,
+    "causes": "Drug Use Disorders",
+    "deaths": 105401
+  },
+  {
+    "year": 2016,
+    "causes": "Drug Use Disorders",
+    "deaths": 112875
+  },
+  {
+    "year": 2017,
+    "causes": "Drug Use Disorders",
+    "deaths": 118324
+  },
+  {
+    "year": 2018,
+    "causes": "Drug Use Disorders",
+    "deaths": 123095
+  },
+  {
+    "year": 2019,
+    "causes": "Drug Use Disorders",
+    "deaths": 128048
+  },
+  {
+    "year": 2000,
+    "causes": "Tuberculosis",
+    "deaths": 1714428
+  },
+  {
+    "year": 2001,
+    "causes": "Tuberculosis",
+    "deaths": 1682360
+  },
+  {
+    "year": 2002,
+    "causes": "Tuberculosis",
+    "deaths": 1649490
+  },
+  {
+    "year": 2003,
+    "causes": "Tuberculosis",
+    "deaths": 1612262
+  },
+  {
+    "year": 2004,
+    "causes": "Tuberculosis",
+    "deaths": 1558519
+  },
+  {
+    "year": 2005,
+    "causes": "Tuberculosis",
+    "deaths": 1532479
+  },
+  {
+    "year": 2006,
+    "causes": "Tuberculosis",
+    "deaths": 1499369
+  },
+  {
+    "year": 2007,
+    "causes": "Tuberculosis",
+    "deaths": 1470117
+  },
+  {
+    "year": 2008,
+    "causes": "Tuberculosis",
+    "deaths": 1447516
+  },
+  {
+    "year": 2009,
+    "causes": "Tuberculosis",
+    "deaths": 1405491
+  },
+  {
+    "year": 2010,
+    "causes": "Tuberculosis",
+    "deaths": 1364942
+  },
+  {
+    "year": 2011,
+    "causes": "Tuberculosis",
+    "deaths": 1331697
+  },
+  {
+    "year": 2012,
+    "causes": "Tuberculosis",
+    "deaths": 1318198
+  },
+  {
+    "year": 2013,
+    "causes": "Tuberculosis",
+    "deaths": 1307485
+  },
+  {
+    "year": 2014,
+    "causes": "Tuberculosis",
+    "deaths": 1294816
+  },
+  {
+    "year": 2015,
+    "causes": "Tuberculosis",
+    "deaths": 1267556
+  },
+  {
+    "year": 2016,
+    "causes": "Tuberculosis",
+    "deaths": 1249524
+  },
+  {
+    "year": 2017,
+    "causes": "Tuberculosis",
+    "deaths": 1231689
+  },
+  {
+    "year": 2018,
+    "causes": "Tuberculosis",
+    "deaths": 1204916
+  },
+  {
+    "year": 2019,
+    "causes": "Tuberculosis",
+    "deaths": 1179234
+  },
+  {
+    "year": 2000,
+    "causes": "Cardiovascular Diseases",
+    "deaths": 13957078
+  },
+  {
+    "year": 2001,
+    "causes": "Cardiovascular Diseases",
+    "deaths": 14185571
+  },
+  {
+    "year": 2002,
+    "causes": "Cardiovascular Diseases",
+    "deaths": 14501696
+  },
+  {
+    "year": 2003,
+    "causes": "Cardiovascular Diseases",
+    "deaths": 14710723
+  },
+  {
+    "year": 2004,
+    "causes": "Cardiovascular Diseases",
+    "deaths": 14745985
+  },
+  {
+    "year": 2005,
+    "causes": "Cardiovascular Diseases",
+    "deaths": 14995528
+  },
+  {
+    "year": 2006,
+    "causes": "Cardiovascular Diseases",
+    "deaths": 14991661
+  },
+  {
+    "year": 2007,
+    "causes": "Cardiovascular Diseases",
+    "deaths": 15117363
+  },
+  {
+    "year": 2008,
+    "causes": "Cardiovascular Diseases",
+    "deaths": 15402070
+  },
+  {
+    "year": 2009,
+    "causes": "Cardiovascular Diseases",
+    "deaths": 15552545
+  },
+  {
+    "year": 2010,
+    "causes": "Cardiovascular Diseases",
+    "deaths": 15838151
+  },
+  {
+    "year": 2011,
+    "causes": "Cardiovascular Diseases",
+    "deaths": 16038263
+  },
+  {
+    "year": 2012,
+    "causes": "Cardiovascular Diseases",
+    "deaths": 16245243
+  },
+  {
+    "year": 2013,
+    "causes": "Cardiovascular Diseases",
+    "deaths": 16490053
+  },
+  {
+    "year": 2014,
+    "causes": "Cardiovascular Diseases",
+    "deaths": 16715810
+  },
+  {
+    "year": 2015,
+    "causes": "Cardiovascular Diseases",
+    "deaths": 17089707
+  },
+  {
+    "year": 2016,
+    "causes": "Cardiovascular Diseases",
+    "deaths": 17398709
+  },
+  {
+    "year": 2017,
+    "causes": "Cardiovascular Diseases",
+    "deaths": 17685890
+  },
+  {
+    "year": 2018,
+    "causes": "Cardiovascular Diseases",
+    "deaths": 18113910
+  },
+  {
+    "year": 2019,
+    "causes": "Cardiovascular Diseases",
+    "deaths": 18552218
+  },
+  {
+    "year": 2000,
+    "causes": "Lower Respiratory Infections",
+    "deaths": 2895698
+  },
+  {
+    "year": 2001,
+    "causes": "Lower Respiratory Infections",
+    "deaths": 2830457
+  },
+  {
+    "year": 2002,
+    "causes": "Lower Respiratory Infections",
+    "deaths": 2788706
+  },
+  {
+    "year": 2003,
+    "causes": "Lower Respiratory Infections",
+    "deaths": 2746549
+  },
+  {
+    "year": 2004,
+    "causes": "Lower Respiratory Infections",
+    "deaths": 2697064
+  },
+  {
+    "year": 2005,
+    "causes": "Lower Respiratory Infections",
+    "deaths": 2677818
+  },
+  {
+    "year": 2006,
+    "causes": "Lower Respiratory Infections",
+    "deaths": 2645926
+  },
+  {
+    "year": 2007,
+    "causes": "Lower Respiratory Infections",
+    "deaths": 2617221
+  },
+  {
+    "year": 2008,
+    "causes": "Lower Respiratory Infections",
+    "deaths": 2603124
+  },
+  {
+    "year": 2009,
+    "causes": "Lower Respiratory Infections",
+    "deaths": 2571405
+  },
+  {
+    "year": 2010,
+    "causes": "Lower Respiratory Infections",
+    "deaths": 2545622
+  },
+  {
+    "year": 2011,
+    "causes": "Lower Respiratory Infections",
+    "deaths": 2527899
+  },
+  {
+    "year": 2012,
+    "causes": "Lower Respiratory Infections",
+    "deaths": 2526051
+  },
+  {
+    "year": 2013,
+    "causes": "Lower Respiratory Infections",
+    "deaths": 2537037
+  },
+  {
+    "year": 2014,
+    "causes": "Lower Respiratory Infections",
+    "deaths": 2532104
+  },
+  {
+    "year": 2015,
+    "causes": "Lower Respiratory Infections",
+    "deaths": 2533068
+  },
+  {
+    "year": 2016,
+    "causes": "Lower Respiratory Infections",
+    "deaths": 2516135
+  },
+  {
+    "year": 2017,
+    "causes": "Lower Respiratory Infections",
+    "deaths": 2487918
+  },
+  {
+    "year": 2018,
+    "causes": "Lower Respiratory Infections",
+    "deaths": 2486438
+  },
+  {
+    "year": 2019,
+    "causes": "Lower Respiratory Infections",
+    "deaths": 2491472
+  },
+  {
+    "year": 2000,
+    "causes": "Neonatal Disorders",
+    "deaths": 2739290
+  },
+  {
+    "year": 2001,
+    "causes": "Neonatal Disorders",
+    "deaths": 2710195
+  },
+  {
+    "year": 2002,
+    "causes": "Neonatal Disorders",
+    "deaths": 2691320
+  },
+  {
+    "year": 2003,
+    "causes": "Neonatal Disorders",
+    "deaths": 2671242
+  },
+  {
+    "year": 2004,
+    "causes": "Neonatal Disorders",
+    "deaths": 2647814
+  },
+  {
+    "year": 2005,
+    "causes": "Neonatal Disorders",
+    "deaths": 2620556
+  },
+  {
+    "year": 2006,
+    "causes": "Neonatal Disorders",
+    "deaths": 2587061
+  },
+  {
+    "year": 2007,
+    "causes": "Neonatal Disorders",
+    "deaths": 2549184
+  },
+  {
+    "year": 2008,
+    "causes": "Neonatal Disorders",
+    "deaths": 2515772
+  },
+  {
+    "year": 2009,
+    "causes": "Neonatal Disorders",
+    "deaths": 2475066
+  },
+  {
+    "year": 2010,
+    "causes": "Neonatal Disorders",
+    "deaths": 2428939
+  },
+  {
+    "year": 2011,
+    "causes": "Neonatal Disorders",
+    "deaths": 2383664
+  },
+  {
+    "year": 2012,
+    "causes": "Neonatal Disorders",
+    "deaths": 2339979
+  },
+  {
+    "year": 2013,
+    "causes": "Neonatal Disorders",
+    "deaths": 2299343
+  },
+  {
+    "year": 2014,
+    "causes": "Neonatal Disorders",
+    "deaths": 2237472
+  },
+  {
+    "year": 2015,
+    "causes": "Neonatal Disorders",
+    "deaths": 2183143
+  },
+  {
+    "year": 2016,
+    "causes": "Neonatal Disorders",
+    "deaths": 2099079
+  },
+  {
+    "year": 2017,
+    "causes": "Neonatal Disorders",
+    "deaths": 2014896
+  },
+  {
+    "year": 2018,
+    "causes": "Neonatal Disorders",
+    "deaths": 1942350
+  },
+  {
+    "year": 2019,
+    "causes": "Neonatal Disorders",
+    "deaths": 1881372
+  },
+  {
+    "year": 2000,
+    "causes": "Alcohol Use Disorders",
+    "deaths": 166094
+  },
+  {
+    "year": 2001,
+    "causes": "Alcohol Use Disorders",
+    "deaths": 170787
+  },
+  {
+    "year": 2002,
+    "causes": "Alcohol Use Disorders",
+    "deaths": 175317
+  },
+  {
+    "year": 2003,
+    "causes": "Alcohol Use Disorders",
+    "deaths": 178889
+  },
+  {
+    "year": 2004,
+    "causes": "Alcohol Use Disorders",
+    "deaths": 180491
+  },
+  {
+    "year": 2005,
+    "causes": "Alcohol Use Disorders",
+    "deaths": 181704
+  },
+  {
+    "year": 2006,
+    "causes": "Alcohol Use Disorders",
+    "deaths": 177747
+  },
+  {
+    "year": 2007,
+    "causes": "Alcohol Use Disorders",
+    "deaths": 174006
+  },
+  {
+    "year": 2008,
+    "causes": "Alcohol Use Disorders",
+    "deaths": 171613
+  },
+  {
+    "year": 2009,
+    "causes": "Alcohol Use Disorders",
+    "deaths": 166736
+  },
+  {
+    "year": 2010,
+    "causes": "Alcohol Use Disorders",
+    "deaths": 164313
+  },
+  {
+    "year": 2011,
+    "causes": "Alcohol Use Disorders",
+    "deaths": 161372
+  },
+  {
+    "year": 2012,
+    "causes": "Alcohol Use Disorders",
+    "deaths": 159381
+  },
+  {
+    "year": 2013,
+    "causes": "Alcohol Use Disorders",
+    "deaths": 158848
+  },
+  {
+    "year": 2014,
+    "causes": "Alcohol Use Disorders",
+    "deaths": 159291
+  },
+  {
+    "year": 2015,
+    "causes": "Alcohol Use Disorders",
+    "deaths": 160713
+  },
+  {
+    "year": 2016,
+    "causes": "Alcohol Use Disorders",
+    "deaths": 162047
+  },
+  {
+    "year": 2017,
+    "causes": "Alcohol Use Disorders",
+    "deaths": 162599
+  },
+  {
+    "year": 2018,
+    "causes": "Alcohol Use Disorders",
+    "deaths": 165462
+  },
+  {
+    "year": 2019,
+    "causes": "Alcohol Use Disorders",
+    "deaths": 167932
+  },
+  {
+    "year": 2000,
+    "causes": "Self-harm",
+    "deaths": 839249
+  },
+  {
+    "year": 2001,
+    "causes": "Self-harm",
+    "deaths": 820745
+  },
+  {
+    "year": 2002,
+    "causes": "Self-harm",
+    "deaths": 811199
+  },
+  {
+    "year": 2003,
+    "causes": "Self-harm",
+    "deaths": 814533
+  },
+  {
+    "year": 2004,
+    "causes": "Self-harm",
+    "deaths": 819290
+  },
+  {
+    "year": 2005,
+    "causes": "Self-harm",
+    "deaths": 826133
+  },
+  {
+    "year": 2006,
+    "causes": "Self-harm",
+    "deaths": 814138
+  },
+  {
+    "year": 2007,
+    "causes": "Self-harm",
+    "deaths": 802521
+  },
+  {
+    "year": 2008,
+    "causes": "Self-harm",
+    "deaths": 797570
+  },
+  {
+    "year": 2009,
+    "causes": "Self-harm",
+    "deaths": 785883
+  },
+  {
+    "year": 2010,
+    "causes": "Self-harm",
+    "deaths": 784456
+  },
+  {
+    "year": 2011,
+    "causes": "Self-harm",
+    "deaths": 777218
+  },
+  {
+    "year": 2012,
+    "causes": "Self-harm",
+    "deaths": 767020
+  },
+  {
+    "year": 2013,
+    "causes": "Self-harm",
+    "deaths": 755568
+  },
+  {
+    "year": 2014,
+    "causes": "Self-harm",
+    "deaths": 744751
+  },
+  {
+    "year": 2015,
+    "causes": "Self-harm",
+    "deaths": 742648
+  },
+  {
+    "year": 2016,
+    "causes": "Self-harm",
+    "deaths": 742925
+  },
+  {
+    "year": 2017,
+    "causes": "Self-harm",
+    "deaths": 743620
+  },
+  {
+    "year": 2018,
+    "causes": "Self-harm",
+    "deaths": 755125
+  },
+  {
+    "year": 2019,
+    "causes": "Self-harm",
+    "deaths": 758697
+  },
+  {
+    "year": 2000,
+    "causes": "Exposure to Forces of Nature",
+    "deaths": 8918
+  },
+  {
+    "year": 2001,
+    "causes": "Exposure to Forces of Nature",
+    "deaths": 29497
+  },
+  {
+    "year": 2002,
+    "causes": "Exposure to Forces of Nature",
+    "deaths": 8908
+  },
+  {
+    "year": 2003,
+    "causes": "Exposure to Forces of Nature",
+    "deaths": 35474
+  },
+  {
+    "year": 2004,
+    "causes": "Exposure to Forces of Nature",
+    "deaths": 242430
+  },
+  {
+    "year": 2005,
+    "causes": "Exposure to Forces of Nature",
+    "deaths": 88718
+  },
+  {
+    "year": 2006,
+    "causes": "Exposure to Forces of Nature",
+    "deaths": 19918
+  },
+  {
+    "year": 2007,
+    "causes": "Exposure to Forces of Nature",
+    "deaths": 16200
+  },
+  {
+    "year": 2008,
+    "causes": "Exposure to Forces of Nature",
+    "deaths": 235751
+  },
+  {
+    "year": 2009,
+    "causes": "Exposure to Forces of Nature",
+    "deaths": 10975
+  },
+  {
+    "year": 2010,
+    "causes": "Exposure to Forces of Nature",
+    "deaths": 241002
+  },
+  {
+    "year": 2011,
+    "causes": "Exposure to Forces of Nature",
+    "deaths": 31850
+  },
+  {
+    "year": 2012,
+    "causes": "Exposure to Forces of Nature",
+    "deaths": 8959
+  },
+  {
+    "year": 2013,
+    "causes": "Exposure to Forces of Nature",
+    "deaths": 26906
+  },
+  {
+    "year": 2014,
+    "causes": "Exposure to Forces of Nature",
+    "deaths": 7412
+  },
+  {
+    "year": 2015,
+    "causes": "Exposure to Forces of Nature",
+    "deaths": 15583
+  },
+  {
+    "year": 2016,
+    "causes": "Exposure to Forces of Nature",
+    "deaths": 8672
+  },
+  {
+    "year": 2017,
+    "causes": "Exposure to Forces of Nature",
+    "deaths": 13309
+  },
+  {
+    "year": 2018,
+    "causes": "Exposure to Forces of Nature",
+    "deaths": 11082
+  },
+  {
+    "year": 2019,
+    "causes": "Exposure to Forces of Nature",
+    "deaths": 6072
+  },
+  {
+    "year": 2000,
+    "causes": "Diarrheal Diseases",
+    "deaths": 2440570
+  },
+  {
+    "year": 2001,
+    "causes": "Diarrheal Diseases",
+    "deaths": 2378465
+  },
+  {
+    "year": 2002,
+    "causes": "Diarrheal Diseases",
+    "deaths": 2312641
+  },
+  {
+    "year": 2003,
+    "causes": "Diarrheal Diseases",
+    "deaths": 2242961
+  },
+  {
+    "year": 2004,
+    "causes": "Diarrheal Diseases",
+    "deaths": 2166496
+  },
+  {
+    "year": 2005,
+    "causes": "Diarrheal Diseases",
+    "deaths": 2125961
+  },
+  {
+    "year": 2006,
+    "causes": "Diarrheal Diseases",
+    "deaths": 2109339
+  },
+  {
+    "year": 2007,
+    "causes": "Diarrheal Diseases",
+    "deaths": 2076357
+  },
+  {
+    "year": 2008,
+    "causes": "Diarrheal Diseases",
+    "deaths": 2044769
+  },
+  {
+    "year": 2009,
+    "causes": "Diarrheal Diseases",
+    "deaths": 1977248
+  },
+  {
+    "year": 2010,
+    "causes": "Diarrheal Diseases",
+    "deaths": 1928704
+  },
+  {
+    "year": 2011,
+    "causes": "Diarrheal Diseases",
+    "deaths": 1902762
+  },
+  {
+    "year": 2012,
+    "causes": "Diarrheal Diseases",
+    "deaths": 1834769
+  },
+  {
+    "year": 2013,
+    "causes": "Diarrheal Diseases",
+    "deaths": 1788081
+  },
+  {
+    "year": 2014,
+    "causes": "Diarrheal Diseases",
+    "deaths": 1725693
+  },
+  {
+    "year": 2015,
+    "causes": "Diarrheal Diseases",
+    "deaths": 1679043
+  },
+  {
+    "year": 2016,
+    "causes": "Diarrheal Diseases",
+    "deaths": 1639826
+  },
+  {
+    "year": 2017,
+    "causes": "Diarrheal Diseases",
+    "deaths": 1632183
+  },
+  {
+    "year": 2018,
+    "causes": "Diarrheal Diseases",
+    "deaths": 1577953
+  },
+  {
+    "year": 2019,
+    "causes": "Diarrheal Diseases",
+    "deaths": 1533777
+  },
+  {
+    "year": 2000,
+    "causes": "Environmental Heat and Cold Exposure",
+    "deaths": 65450
+  },
+  {
+    "year": 2001,
+    "causes": "Environmental Heat and Cold Exposure",
+    "deaths": 66743
+  },
+  {
+    "year": 2002,
+    "causes": "Environmental Heat and Cold Exposure",
+    "deaths": 69939
+  },
+  {
+    "year": 2003,
+    "causes": "Environmental Heat and Cold Exposure",
+    "deaths": 71950
+  },
+  {
+    "year": 2004,
+    "causes": "Environmental Heat and Cold Exposure",
+    "deaths": 67144
+  },
+  {
+    "year": 2005,
+    "causes": "Environmental Heat and Cold Exposure",
+    "deaths": 68382
+  },
+  {
+    "year": 2006,
+    "causes": "Environmental Heat and Cold Exposure",
+    "deaths": 64630
+  },
+  {
+    "year": 2007,
+    "causes": "Environmental Heat and Cold Exposure",
+    "deaths": 59791
+  },
+  {
+    "year": 2008,
+    "causes": "Environmental Heat and Cold Exposure",
+    "deaths": 57763
+  },
+  {
+    "year": 2009,
+    "causes": "Environmental Heat and Cold Exposure",
+    "deaths": 54835
+  },
+  {
+    "year": 2010,
+    "causes": "Environmental Heat and Cold Exposure",
+    "deaths": 58674
+  },
+  {
+    "year": 2011,
+    "causes": "Environmental Heat and Cold Exposure",
+    "deaths": 51638
+  },
+  {
+    "year": 2012,
+    "causes": "Environmental Heat and Cold Exposure",
+    "deaths": 51418
+  },
+  {
+    "year": 2013,
+    "causes": "Environmental Heat and Cold Exposure",
+    "deaths": 49503
+  },
+  {
+    "year": 2014,
+    "causes": "Environmental Heat and Cold Exposure",
+    "deaths": 48775
+  },
+  {
+    "year": 2015,
+    "causes": "Environmental Heat and Cold Exposure",
+    "deaths": 51665
+  },
+  {
+    "year": 2016,
+    "causes": "Environmental Heat and Cold Exposure",
+    "deaths": 47495
+  },
+  {
+    "year": 2017,
+    "causes": "Environmental Heat and Cold Exposure",
+    "deaths": 46276
+  },
+  {
+    "year": 2018,
+    "causes": "Environmental Heat and Cold Exposure",
+    "deaths": 46272
+  },
+  {
+    "year": 2019,
+    "causes": "Environmental Heat and Cold Exposure",
+    "deaths": 47442
+  },
+  {
+    "year": 2000,
+    "causes": "Neoplasms",
+    "deaths": 7001927
+  },
+  {
+    "year": 2001,
+    "causes": "Neoplasms",
+    "deaths": 7114269
+  },
+  {
+    "year": 2002,
+    "causes": "Neoplasms",
+    "deaths": 7253993
+  },
+  {
+    "year": 2003,
+    "causes": "Neoplasms",
+    "deaths": 7388299
+  },
+  {
+    "year": 2004,
+    "causes": "Neoplasms",
+    "deaths": 7504504
+  },
+  {
+    "year": 2005,
+    "causes": "Neoplasms",
+    "deaths": 7653588
+  },
+  {
+    "year": 2006,
+    "causes": "Neoplasms",
+    "deaths": 7722732
+  },
+  {
+    "year": 2007,
+    "causes": "Neoplasms",
+    "deaths": 7850705
+  },
+  {
+    "year": 2008,
+    "causes": "Neoplasms",
+    "deaths": 8027173
+  },
+  {
+    "year": 2009,
+    "causes": "Neoplasms",
+    "deaths": 8167640
+  },
+  {
+    "year": 2010,
+    "causes": "Neoplasms",
+    "deaths": 8329288
+  },
+  {
+    "year": 2011,
+    "causes": "Neoplasms",
+    "deaths": 8468793
+  },
+  {
+    "year": 2012,
+    "causes": "Neoplasms",
+    "deaths": 8611952
+  },
+  {
+    "year": 2013,
+    "causes": "Neoplasms",
+    "deaths": 8757263
+  },
+  {
+    "year": 2014,
+    "causes": "Neoplasms",
+    "deaths": 8920309
+  },
+  {
+    "year": 2015,
+    "causes": "Neoplasms",
+    "deaths": 9133616
+  },
+  {
+    "year": 2016,
+    "causes": "Neoplasms",
+    "deaths": 9336894
+  },
+  {
+    "year": 2017,
+    "causes": "Neoplasms",
+    "deaths": 9529491
+  },
+  {
+    "year": 2018,
+    "causes": "Neoplasms",
+    "deaths": 9791758
+  },
+  {
+    "year": 2019,
+    "causes": "Neoplasms",
+    "deaths": 10074275
+  },
+  {
+    "year": 2000,
+    "causes": "Conflict and Terrorism",
+    "deaths": 120011
+  },
+  {
+    "year": 2001,
+    "causes": "Conflict and Terrorism",
+    "deaths": 67069
+  },
+  {
+    "year": 2002,
+    "causes": "Conflict and Terrorism",
+    "deaths": 66414
+  },
+  {
+    "year": 2003,
+    "causes": "Conflict and Terrorism",
+    "deaths": 71044
+  },
+  {
+    "year": 2004,
+    "causes": "Conflict and Terrorism",
+    "deaths": 70502
+  },
+  {
+    "year": 2005,
+    "causes": "Conflict and Terrorism",
+    "deaths": 59507
+  },
+  {
+    "year": 2006,
+    "causes": "Conflict and Terrorism",
+    "deaths": 74555
+  },
+  {
+    "year": 2007,
+    "causes": "Conflict and Terrorism",
+    "deaths": 71286
+  },
+  {
+    "year": 2008,
+    "causes": "Conflict and Terrorism",
+    "deaths": 64695
+  },
+  {
+    "year": 2009,
+    "causes": "Conflict and Terrorism",
+    "deaths": 71582
+  },
+  {
+    "year": 2010,
+    "causes": "Conflict and Terrorism",
+    "deaths": 54467
+  },
+  {
+    "year": 2011,
+    "causes": "Conflict and Terrorism",
+    "deaths": 62900
+  },
+  {
+    "year": 2012,
+    "causes": "Conflict and Terrorism",
+    "deaths": 112295
+  },
+  {
+    "year": 2013,
+    "causes": "Conflict and Terrorism",
+    "deaths": 117364
+  },
+  {
+    "year": 2014,
+    "causes": "Conflict and Terrorism",
+    "deaths": 187939
+  },
+  {
+    "year": 2015,
+    "causes": "Conflict and Terrorism",
+    "deaths": 167030
+  },
+  {
+    "year": 2016,
+    "causes": "Conflict and Terrorism",
+    "deaths": 161637
+  },
+  {
+    "year": 2017,
+    "causes": "Conflict and Terrorism",
+    "deaths": 130737
+  },
+  {
+    "year": 2018,
+    "causes": "Conflict and Terrorism",
+    "deaths": 103407
+  },
+  {
+    "year": 2019,
+    "causes": "Conflict and Terrorism",
+    "deaths": 62932
+  },
+  {
+    "year": 2000,
+    "causes": "Diabetes Mellitus",
+    "deaths": 905965
+  },
+  {
+    "year": 2001,
+    "causes": "Diabetes Mellitus",
+    "deaths": 934841
+  },
+  {
+    "year": 2002,
+    "causes": "Diabetes Mellitus",
+    "deaths": 970544
+  },
+  {
+    "year": 2003,
+    "causes": "Diabetes Mellitus",
+    "deaths": 1000276
+  },
+  {
+    "year": 2004,
+    "causes": "Diabetes Mellitus",
+    "deaths": 1018138
+  },
+  {
+    "year": 2005,
+    "causes": "Diabetes Mellitus",
+    "deaths": 1050925
+  },
+  {
+    "year": 2006,
+    "causes": "Diabetes Mellitus",
+    "deaths": 1071057
+  },
+  {
+    "year": 2007,
+    "causes": "Diabetes Mellitus",
+    "deaths": 1092777
+  },
+  {
+    "year": 2008,
+    "causes": "Diabetes Mellitus",
+    "deaths": 1122287
+  },
+  {
+    "year": 2009,
+    "causes": "Diabetes Mellitus",
+    "deaths": 1142391
+  },
+  {
+    "year": 2010,
+    "causes": "Diabetes Mellitus",
+    "deaths": 1165663
+  },
+  {
+    "year": 2011,
+    "causes": "Diabetes Mellitus",
+    "deaths": 1197995
+  },
+  {
+    "year": 2012,
+    "causes": "Diabetes Mellitus",
+    "deaths": 1236606
+  },
+  {
+    "year": 2013,
+    "causes": "Diabetes Mellitus",
+    "deaths": 1277414
+  },
+  {
+    "year": 2014,
+    "causes": "Diabetes Mellitus",
+    "deaths": 1320608
+  },
+  {
+    "year": 2015,
+    "causes": "Diabetes Mellitus",
+    "deaths": 1366100
+  },
+  {
+    "year": 2016,
+    "causes": "Diabetes Mellitus",
+    "deaths": 1412896
+  },
+  {
+    "year": 2017,
+    "causes": "Diabetes Mellitus",
+    "deaths": 1454681
+  },
+  {
+    "year": 2018,
+    "causes": "Diabetes Mellitus",
+    "deaths": 1501633
+  },
+  {
+    "year": 2019,
+    "causes": "Diabetes Mellitus",
+    "deaths": 1549593
+  },
+  {
+    "year": 2000,
+    "causes": "Chronic Kidney Disease",
+    "deaths": 814854
+  },
+  {
+    "year": 2001,
+    "causes": "Chronic Kidney Disease",
+    "deaths": 842790
+  },
+  {
+    "year": 2002,
+    "causes": "Chronic Kidney Disease",
+    "deaths": 874109
+  },
+  {
+    "year": 2003,
+    "causes": "Chronic Kidney Disease",
+    "deaths": 902200
+  },
+  {
+    "year": 2004,
+    "causes": "Chronic Kidney Disease",
+    "deaths": 922921
+  },
+  {
+    "year": 2005,
+    "causes": "Chronic Kidney Disease",
+    "deaths": 956457
+  },
+  {
+    "year": 2006,
+    "causes": "Chronic Kidney Disease",
+    "deaths": 981743
+  },
+  {
+    "year": 2007,
+    "causes": "Chronic Kidney Disease",
+    "deaths": 1010311
+  },
+  {
+    "year": 2008,
+    "causes": "Chronic Kidney Disease",
+    "deaths": 1045743
+  },
+  {
+    "year": 2009,
+    "causes": "Chronic Kidney Disease",
+    "deaths": 1074048
+  },
+  {
+    "year": 2010,
+    "causes": "Chronic Kidney Disease",
+    "deaths": 1107473
+  },
+  {
+    "year": 2011,
+    "causes": "Chronic Kidney Disease",
+    "deaths": 1143219
+  },
+  {
+    "year": 2012,
+    "causes": "Chronic Kidney Disease",
+    "deaths": 1176295
+  },
+  {
+    "year": 2013,
+    "causes": "Chronic Kidney Disease",
+    "deaths": 1214187
+  },
+  {
+    "year": 2014,
+    "causes": "Chronic Kidney Disease",
+    "deaths": 1247378
+  },
+  {
+    "year": 2015,
+    "causes": "Chronic Kidney Disease",
+    "deaths": 1286935
+  },
+  {
+    "year": 2016,
+    "causes": "Chronic Kidney Disease",
+    "deaths": 1325004
+  },
+  {
+    "year": 2017,
+    "causes": "Chronic Kidney Disease",
+    "deaths": 1351349
+  },
+  {
+    "year": 2018,
+    "causes": "Chronic Kidney Disease",
+    "deaths": 1387668
+  },
+  {
+    "year": 2019,
+    "causes": "Chronic Kidney Disease",
+    "deaths": 1426280
+  },
+  {
+    "year": 2000,
+    "causes": "Poisonings",
+    "deaths": 88799
+  },
+  {
+    "year": 2001,
+    "causes": "Poisonings",
+    "deaths": 89294
+  },
+  {
+    "year": 2002,
+    "causes": "Poisonings",
+    "deaths": 89920
+  },
+  {
+    "year": 2003,
+    "causes": "Poisonings",
+    "deaths": 90634
+  },
+  {
+    "year": 2004,
+    "causes": "Poisonings",
+    "deaths": 91455
+  },
+  {
+    "year": 2005,
+    "causes": "Poisonings",
+    "deaths": 92064
+  },
+  {
+    "year": 2006,
+    "causes": "Poisonings",
+    "deaths": 89859
+  },
+  {
+    "year": 2007,
+    "causes": "Poisonings",
+    "deaths": 88475
+  },
+  {
+    "year": 2008,
+    "causes": "Poisonings",
+    "deaths": 88687
+  },
+  {
+    "year": 2009,
+    "causes": "Poisonings",
+    "deaths": 87902
+  },
+  {
+    "year": 2010,
+    "causes": "Poisonings",
+    "deaths": 87632
+  },
+  {
+    "year": 2011,
+    "causes": "Poisonings",
+    "deaths": 86099
+  },
+  {
+    "year": 2012,
+    "causes": "Poisonings",
+    "deaths": 84595
+  },
+  {
+    "year": 2013,
+    "causes": "Poisonings",
+    "deaths": 83618
+  },
+  {
+    "year": 2014,
+    "causes": "Poisonings",
+    "deaths": 81976
+  },
+  {
+    "year": 2015,
+    "causes": "Poisonings",
+    "deaths": 80974
+  },
+  {
+    "year": 2016,
+    "causes": "Poisonings",
+    "deaths": 79951
+  },
+  {
+    "year": 2017,
+    "causes": "Poisonings",
+    "deaths": 78484
+  },
+  {
+    "year": 2018,
+    "causes": "Poisonings",
+    "deaths": 77805
+  },
+  {
+    "year": 2019,
+    "causes": "Poisonings",
+    "deaths": 77130
+  },
+  {
+    "year": 2000,
+    "causes": "Protein-Energy Malnutrition",
+    "deaths": 505874
+  },
+  {
+    "year": 2001,
+    "causes": "Protein-Energy Malnutrition",
+    "deaths": 483074
+  },
+  {
+    "year": 2002,
+    "causes": "Protein-Energy Malnutrition",
+    "deaths": 462083
+  },
+  {
+    "year": 2003,
+    "causes": "Protein-Energy Malnutrition",
+    "deaths": 365742
+  },
+  {
+    "year": 2004,
+    "causes": "Protein-Energy Malnutrition",
+    "deaths": 345527
+  },
+  {
+    "year": 2005,
+    "causes": "Protein-Energy Malnutrition",
+    "deaths": 329849
+  },
+  {
+    "year": 2006,
+    "causes": "Protein-Energy Malnutrition",
+    "deaths": 316210
+  },
+  {
+    "year": 2007,
+    "causes": "Protein-Energy Malnutrition",
+    "deaths": 302088
+  },
+  {
+    "year": 2008,
+    "causes": "Protein-Energy Malnutrition",
+    "deaths": 290690
+  },
+  {
+    "year": 2009,
+    "causes": "Protein-Energy Malnutrition",
+    "deaths": 279325
+  },
+  {
+    "year": 2010,
+    "causes": "Protein-Energy Malnutrition",
+    "deaths": 279144
+  },
+  {
+    "year": 2011,
+    "causes": "Protein-Energy Malnutrition",
+    "deaths": 271516
+  },
+  {
+    "year": 2012,
+    "causes": "Protein-Energy Malnutrition",
+    "deaths": 255541
+  },
+  {
+    "year": 2013,
+    "causes": "Protein-Energy Malnutrition",
+    "deaths": 249435
+  },
+  {
+    "year": 2014,
+    "causes": "Protein-Energy Malnutrition",
+    "deaths": 242956
+  },
+  {
+    "year": 2015,
+    "causes": "Protein-Energy Malnutrition",
+    "deaths": 237723
+  },
+  {
+    "year": 2016,
+    "causes": "Protein-Energy Malnutrition",
+    "deaths": 232544
+  },
+  {
+    "year": 2017,
+    "causes": "Protein-Energy Malnutrition",
+    "deaths": 227038
+  },
+  {
+    "year": 2018,
+    "causes": "Protein-Energy Malnutrition",
+    "deaths": 218222
+  },
+  {
+    "year": 2019,
+    "causes": "Protein-Energy Malnutrition",
+    "deaths": 212080
+  },
+  {
+    "year": 2000,
+    "causes": "Road Injuries",
+    "deaths": 1212355
+  },
+  {
+    "year": 2001,
+    "causes": "Road Injuries",
+    "deaths": 1224220
+  },
+  {
+    "year": 2002,
+    "causes": "Road Injuries",
+    "deaths": 1237109
+  },
+  {
+    "year": 2003,
+    "causes": "Road Injuries",
+    "deaths": 1248216
+  },
+  {
+    "year": 2004,
+    "causes": "Road Injuries",
+    "deaths": 1258547
+  },
+  {
+    "year": 2005,
+    "causes": "Road Injuries",
+    "deaths": 1269243
+  },
+  {
+    "year": 2006,
+    "causes": "Road Injuries",
+    "deaths": 1267492
+  },
+  {
+    "year": 2007,
+    "causes": "Road Injuries",
+    "deaths": 1273318
+  },
+  {
+    "year": 2008,
+    "causes": "Road Injuries",
+    "deaths": 1284333
+  },
+  {
+    "year": 2009,
+    "causes": "Road Injuries",
+    "deaths": 1281669
+  },
+  {
+    "year": 2010,
+    "causes": "Road Injuries",
+    "deaths": 1278839
+  },
+  {
+    "year": 2011,
+    "causes": "Road Injuries",
+    "deaths": 1267737
+  },
+  {
+    "year": 2012,
+    "causes": "Road Injuries",
+    "deaths": 1255450
+  },
+  {
+    "year": 2013,
+    "causes": "Road Injuries",
+    "deaths": 1232221
+  },
+  {
+    "year": 2014,
+    "causes": "Road Injuries",
+    "deaths": 1213989
+  },
+  {
+    "year": 2015,
+    "causes": "Road Injuries",
+    "deaths": 1201418
+  },
+  {
+    "year": 2016,
+    "causes": "Road Injuries",
+    "deaths": 1193556
+  },
+  {
+    "year": 2017,
+    "causes": "Road Injuries",
+    "deaths": 1188281
+  },
+  {
+    "year": 2018,
+    "causes": "Road Injuries",
+    "deaths": 1195919
+  },
+  {
+    "year": 2019,
+    "causes": "Road Injuries",
+    "deaths": 1197575
+  },
+  {
+    "year": 2000,
+    "causes": "Chronic Respiratory Diseases",
+    "deaths": 3450006
+  },
+  {
+    "year": 2001,
+    "causes": "Chronic Respiratory Diseases",
+    "deaths": 3465831
+  },
+  {
+    "year": 2002,
+    "causes": "Chronic Respiratory Diseases",
+    "deaths": 3490310
+  },
+  {
+    "year": 2003,
+    "causes": "Chronic Respiratory Diseases",
+    "deaths": 3491643
+  },
+  {
+    "year": 2004,
+    "causes": "Chronic Respiratory Diseases",
+    "deaths": 3462850
+  },
+  {
+    "year": 2005,
+    "causes": "Chronic Respiratory Diseases",
+    "deaths": 3479174
+  },
+  {
+    "year": 2006,
+    "causes": "Chronic Respiratory Diseases",
+    "deaths": 3461443
+  },
+  {
+    "year": 2007,
+    "causes": "Chronic Respiratory Diseases",
+    "deaths": 3467408
+  },
+  {
+    "year": 2008,
+    "causes": "Chronic Respiratory Diseases",
+    "deaths": 3510195
+  },
+  {
+    "year": 2009,
+    "causes": "Chronic Respiratory Diseases",
+    "deaths": 3498126
+  },
+  {
+    "year": 2010,
+    "causes": "Chronic Respiratory Diseases",
+    "deaths": 3509920
+  },
+  {
+    "year": 2011,
+    "causes": "Chronic Respiratory Diseases",
+    "deaths": 3539167
+  },
+  {
+    "year": 2012,
+    "causes": "Chronic Respiratory Diseases",
+    "deaths": 3558276
+  },
+  {
+    "year": 2013,
+    "causes": "Chronic Respiratory Diseases",
+    "deaths": 3610804
+  },
+  {
+    "year": 2014,
+    "causes": "Chronic Respiratory Diseases",
+    "deaths": 3651653
+  },
+  {
+    "year": 2015,
+    "causes": "Chronic Respiratory Diseases",
+    "deaths": 3690907
+  },
+  {
+    "year": 2016,
+    "causes": "Chronic Respiratory Diseases",
+    "deaths": 3740794
+  },
+  {
+    "year": 2017,
+    "causes": "Chronic Respiratory Diseases",
+    "deaths": 3795946
+  },
+  {
+    "year": 2018,
+    "causes": "Chronic Respiratory Diseases",
+    "deaths": 3886637
+  },
+  {
+    "year": 2019,
+    "causes": "Chronic Respiratory Diseases",
+    "deaths": 3972681
+  },
+  {
+    "year": 2000,
+    "causes": "Cirrhosis and Other Chronic Liver Diseases",
+    "deaths": 1177628
+  },
+  {
+    "year": 2001,
+    "causes": "Cirrhosis and Other Chronic Liver Diseases",
+    "deaths": 1200250
+  },
+  {
+    "year": 2002,
+    "causes": "Cirrhosis and Other Chronic Liver Diseases",
+    "deaths": 1227607
+  },
+  {
+    "year": 2003,
+    "causes": "Cirrhosis and Other Chronic Liver Diseases",
+    "deaths": 1251776
+  },
+  {
+    "year": 2004,
+    "causes": "Cirrhosis and Other Chronic Liver Diseases",
+    "deaths": 1266574
+  },
+  {
+    "year": 2005,
+    "causes": "Cirrhosis and Other Chronic Liver Diseases",
+    "deaths": 1293978
+  },
+  {
+    "year": 2006,
+    "causes": "Cirrhosis and Other Chronic Liver Diseases",
+    "deaths": 1300281
+  },
+  {
+    "year": 2007,
+    "causes": "Cirrhosis and Other Chronic Liver Diseases",
+    "deaths": 1311974
+  },
+  {
+    "year": 2008,
+    "causes": "Cirrhosis and Other Chronic Liver Diseases",
+    "deaths": 1330568
+  },
+  {
+    "year": 2009,
+    "causes": "Cirrhosis and Other Chronic Liver Diseases",
+    "deaths": 1330408
+  },
+  {
+    "year": 2010,
+    "causes": "Cirrhosis and Other Chronic Liver Diseases",
+    "deaths": 1340704
+  },
+  {
+    "year": 2011,
+    "causes": "Cirrhosis and Other Chronic Liver Diseases",
+    "deaths": 1348880
+  },
+  {
+    "year": 2012,
+    "causes": "Cirrhosis and Other Chronic Liver Diseases",
+    "deaths": 1354358
+  },
+  {
+    "year": 2013,
+    "causes": "Cirrhosis and Other Chronic Liver Diseases",
+    "deaths": 1359145
+  },
+  {
+    "year": 2014,
+    "causes": "Cirrhosis and Other Chronic Liver Diseases",
+    "deaths": 1363403
+  },
+  {
+    "year": 2015,
+    "causes": "Cirrhosis and Other Chronic Liver Diseases",
+    "deaths": 1384947
+  },
+  {
+    "year": 2016,
+    "causes": "Cirrhosis and Other Chronic Liver Diseases",
+    "deaths": 1404134
+  },
+  {
+    "year": 2017,
+    "causes": "Cirrhosis and Other Chronic Liver Diseases",
+    "deaths": 1425956
+  },
+  {
+    "year": 2018,
+    "causes": "Cirrhosis and Other Chronic Liver Diseases",
+    "deaths": 1447651
+  },
+  {
+    "year": 2019,
+    "causes": "Cirrhosis and Other Chronic Liver Diseases",
+    "deaths": 1471148
+  },
+  {
+    "year": 2000,
+    "causes": "Digestive Diseases",
+    "deaths": 2079551
+  },
+  {
+    "year": 2001,
+    "causes": "Digestive Diseases",
+    "deaths": 2107791
+  },
+  {
+    "year": 2002,
+    "causes": "Digestive Diseases",
+    "deaths": 2143976
+  },
+  {
+    "year": 2003,
+    "causes": "Digestive Diseases",
+    "deaths": 2173729
+  },
+  {
+    "year": 2004,
+    "causes": "Digestive Diseases",
+    "deaths": 2187927
+  },
+  {
+    "year": 2005,
+    "causes": "Digestive Diseases",
+    "deaths": 2226154
+  },
+  {
+    "year": 2006,
+    "causes": "Digestive Diseases",
+    "deaths": 2235326
+  },
+  {
+    "year": 2007,
+    "causes": "Digestive Diseases",
+    "deaths": 2251390
+  },
+  {
+    "year": 2008,
+    "causes": "Digestive Diseases",
+    "deaths": 2280070
+  },
+  {
+    "year": 2009,
+    "causes": "Digestive Diseases",
+    "deaths": 2279806
+  },
+  {
+    "year": 2010,
+    "causes": "Digestive Diseases",
+    "deaths": 2298319
+  },
+  {
+    "year": 2011,
+    "causes": "Digestive Diseases",
+    "deaths": 2316484
+  },
+  {
+    "year": 2012,
+    "causes": "Digestive Diseases",
+    "deaths": 2329472
+  },
+  {
+    "year": 2013,
+    "causes": "Digestive Diseases",
+    "deaths": 2348963
+  },
+  {
+    "year": 2014,
+    "causes": "Digestive Diseases",
+    "deaths": 2364063
+  },
+  {
+    "year": 2015,
+    "causes": "Digestive Diseases",
+    "deaths": 2404387
+  },
+  {
+    "year": 2016,
+    "causes": "Digestive Diseases",
+    "deaths": 2439649
+  },
+  {
+    "year": 2017,
+    "causes": "Digestive Diseases",
+    "deaths": 2478029
+  },
+  {
+    "year": 2018,
+    "causes": "Digestive Diseases",
+    "deaths": 2515213
+  },
+  {
+    "year": 2019,
+    "causes": "Digestive Diseases",
+    "deaths": 2556209
+  },
+  {
+    "year": 2000,
+    "causes": "Fire, Heat, and Hot Substances",
+    "deaths": 126659
+  },
+  {
+    "year": 2001,
+    "causes": "Fire, Heat, and Hot Substances",
+    "deaths": 126427
+  },
+  {
+    "year": 2002,
+    "causes": "Fire, Heat, and Hot Substances",
+    "deaths": 125532
+  },
+  {
+    "year": 2003,
+    "causes": "Fire, Heat, and Hot Substances",
+    "deaths": 125730
+  },
+  {
+    "year": 2004,
+    "causes": "Fire, Heat, and Hot Substances",
+    "deaths": 123651
+  },
+  {
+    "year": 2005,
+    "causes": "Fire, Heat, and Hot Substances",
+    "deaths": 124166
+  },
+  {
+    "year": 2006,
+    "causes": "Fire, Heat, and Hot Substances",
+    "deaths": 121265
+  },
+  {
+    "year": 2007,
+    "causes": "Fire, Heat, and Hot Substances",
+    "deaths": 119600
+  },
+  {
+    "year": 2008,
+    "causes": "Fire, Heat, and Hot Substances",
+    "deaths": 118269
+  },
+  {
+    "year": 2009,
+    "causes": "Fire, Heat, and Hot Substances",
+    "deaths": 116177
+  },
+  {
+    "year": 2010,
+    "causes": "Fire, Heat, and Hot Substances",
+    "deaths": 115329
+  },
+  {
+    "year": 2011,
+    "causes": "Fire, Heat, and Hot Substances",
+    "deaths": 113655
+  },
+  {
+    "year": 2012,
+    "causes": "Fire, Heat, and Hot Substances",
+    "deaths": 112090
+  },
+  {
+    "year": 2013,
+    "causes": "Fire, Heat, and Hot Substances",
+    "deaths": 111818
+  },
+  {
+    "year": 2014,
+    "causes": "Fire, Heat, and Hot Substances",
+    "deaths": 110102
+  },
+  {
+    "year": 2015,
+    "causes": "Fire, Heat, and Hot Substances",
+    "deaths": 110167
+  },
+  {
+    "year": 2016,
+    "causes": "Fire, Heat, and Hot Substances",
+    "deaths": 109840
+  },
+  {
+    "year": 2017,
+    "causes": "Fire, Heat, and Hot Substances",
+    "deaths": 109165
+  },
+  {
+    "year": 2018,
+    "causes": "Fire, Heat, and Hot Substances",
+    "deaths": 110642
+  },
+  {
+    "year": 2019,
+    "causes": "Fire, Heat, and Hot Substances",
+    "deaths": 111199
+  },
+  {
+    "year": 2000,
+    "causes": "Acute Hepatitis",
+    "deaths": 144124
+  },
+  {
+    "year": 2001,
+    "causes": "Acute Hepatitis",
+    "deaths": 140143
+  },
+  {
+    "year": 2002,
+    "causes": "Acute Hepatitis",
+    "deaths": 134941
+  },
+  {
+    "year": 2003,
+    "causes": "Acute Hepatitis",
+    "deaths": 130158
+  },
+  {
+    "year": 2004,
+    "causes": "Acute Hepatitis",
+    "deaths": 127953
+  },
+  {
+    "year": 2005,
+    "causes": "Acute Hepatitis",
+    "deaths": 128197
+  },
+  {
+    "year": 2006,
+    "causes": "Acute Hepatitis",
+    "deaths": 124737
+  },
+  {
+    "year": 2007,
+    "causes": "Acute Hepatitis",
+    "deaths": 120512
+  },
+  {
+    "year": 2008,
+    "causes": "Acute Hepatitis",
+    "deaths": 117273
+  },
+  {
+    "year": 2009,
+    "causes": "Acute Hepatitis",
+    "deaths": 112643
+  },
+  {
+    "year": 2010,
+    "causes": "Acute Hepatitis",
+    "deaths": 109556
+  },
+  {
+    "year": 2011,
+    "causes": "Acute Hepatitis",
+    "deaths": 106549
+  },
+  {
+    "year": 2012,
+    "causes": "Acute Hepatitis",
+    "deaths": 104589
+  },
+  {
+    "year": 2013,
+    "causes": "Acute Hepatitis",
+    "deaths": 98898
+  },
+  {
+    "year": 2014,
+    "causes": "Acute Hepatitis",
+    "deaths": 92845
+  },
+  {
+    "year": 2015,
+    "causes": "Acute Hepatitis",
+    "deaths": 88750
+  },
+  {
+    "year": 2016,
+    "causes": "Acute Hepatitis",
+    "deaths": 84726
+  },
+  {
+    "year": 2017,
+    "causes": "Acute Hepatitis",
+    "deaths": 82472
+  },
+  {
+    "year": 2018,
+    "causes": "Acute Hepatitis",
+    "deaths": 80894
+  },
+  {
+    "year": 2019,
+    "causes": "Acute Hepatitis",
+    "deaths": 79142
+  }
+]
