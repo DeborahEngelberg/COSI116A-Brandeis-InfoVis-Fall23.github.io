@@ -22,12 +22,11 @@ Our project focuses on visualizing and analyzing how alcohol consumption rates a
 
 ### Execution
 
-<ins> Step 1 - Brainsotrming Ideas  and Looking for Data</ins>
+#<ins> Step 1 - Brainsotrming Ideas  and Looking for Data</ins>
 
 As a group, we quickly decided that we wanted to implement a map visualization in our final project. Our initial idea was to show different types of transportation and their frequencies around the world. However, as we began searching for data, we quickly realized that it was very difficult to find free, accurate transportation data. As a result, we shifted our focus to another type of global data. While researching, we discovered data related to alcohol consumption and causes of death, and we became curious about whether there might be a correlation between the two. This led us to combine these two data sets for our final project.
-
 <br />
-<ins> Step 3 - Data Cleaning </ins>
+<ins> Step 2 - Data Cleaning </ins>
 
 <br />
 paragraph 1
