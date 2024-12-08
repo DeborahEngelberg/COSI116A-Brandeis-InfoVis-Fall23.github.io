@@ -1,6 +1,6 @@
 # Data Visualztion Final Project - COSI 116A - Group 13
 
-### Team Members
+## Team Members
 Debbie Engelberg, Cameron Sherman, Noam Reiner, Mackenzie Chung
 
 ### Teaching Staff
