@@ -26,16 +26,12 @@ Our project focuses on visualizing and analyzing how alcohol consumption rates a
 
 As a group, we quickly decided that we wanted to implement a map visualization in our final project. Our initial idea was to show different types of transportation and their frequencies around the world. However, as we began searching for data, we quickly realized that it was very difficult to find free, accurate transportation data. As a result, we shifted our focus to another type of global data. While researching, we discovered data related to alcohol consumption and causes of death, and we became curious about whether there might be a correlation between the two. This led us to combine these two data sets for our final project.
 <br />
-<ins> Step 2 - Data Cleaning </ins>
+#### <ins> Step 2 - Data Cleaning </ins>
 
+For the data cleaning we used Python's Panadas library. We combined four datasets: one on causes of death and three on alcohol consumption. For the cause of death data, we cleaned unnecessary columns, filled null cells, added a total count column, and standardized data types. The alcohol consumption datasets were reformatted and aligned, ensuring consistency for merging. After integrating the datasets by year and country. For interaction with the Json of the map, we added alpha-2 countries codes.
 <br />
-paragraph 1
-<br />
-
-<ins> Step 4 - Implemeting The Visualization </ins>
-
-<br />
-paragraph 1
+#### <ins> Step 4 - Implemeting The Visualization </ins>
+The main part of the project.
 <br />
 
 
