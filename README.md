@@ -4,19 +4,21 @@
 Debbie Engelberg, Cameron Sherman, Noam Reiner, Mackenzie Chung
 
 ### Teaching Staff
-
 Prof. Cashman and TA Aby Iberkleid Szainrok
 
-### Dependencies
+### Project's primary purpose
 
+Our project focuses on visualizing and analyzing how alcohol consumption rates across various countries influence death rates, comparing these impacts to other leading causes of death over multiple years. By highlighting the relationship between alcohol consumption and mortality, this project aims to support healthcare professionals and prevention practitioners in reducing drinking-related risks, offering valuable data to observe and compare global trends.
 
-* Describe any prerequisites, libraries, OS version, etc., needed before installing program.
-* ex. Windows 10
+### Languages and libraries used
 
-### Installing
-
-* How/where to download your program
-* Any modifications needed to be made to files/folders
+* JavaScript
+* HTML
+* CSS
+* Python
+* JSON
+* Pandas
+* D3.js
 
 ### Executing program
 
