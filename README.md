@@ -24,7 +24,6 @@ Our project focuses on visualizing and analyzing how alcohol consumption rates a
 
 <ins> Step 1 - Brainsotrming Ideas </ins>
 
-<br />
 paragraph 1
 <br />
 
