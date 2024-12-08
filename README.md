@@ -1,16 +1,16 @@
 # Data Visualztion Final Project - COSI 116A - Group 13
 
-### Team members
+### Team Members
 Debbie Engelberg, Cameron Sherman, Noam Reiner, Mackenzie Chung
 
 ### Teaching Staff
 Prof. Cashman and TA Aby Iberkleid Szainrok
 
-### Project's primary purpose
+### Project's Primary Purpose
 
 Our project focuses on visualizing and analyzing how alcohol consumption rates across various countries influence death rates, comparing these impacts to other leading causes of death over multiple years. By highlighting the relationship between alcohol consumption and mortality, this project aims to support healthcare professionals and prevention practitioners in reducing drinking-related risks, offering valuable data to observe and compare global trends.
 
-### Languages and libraries used
+### Languages and Libraries Used
 
 * JavaScript
 * HTML
@@ -20,13 +20,13 @@ Our project focuses on visualizing and analyzing how alcohol consumption rates a
 * Pandas
 * D3.js
 
-### Executing program
+### Execution
 
-* How to run the program
-* Step-by-step bullets
-```
-code blocks for commands
-```
+<ins> Step 1 - Brainsotrming Ideas </ins>
+<ins> Step 2 - Looking For Data </ins>
+<ins> Step 3 - Data Cleaning </ins>
+<ins> Step 4 - Implemeting The Visualization </ins>
+
 
 ## Help
 
