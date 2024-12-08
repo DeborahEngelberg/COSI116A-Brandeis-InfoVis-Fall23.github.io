@@ -38,5 +38,6 @@ at the bottom we should add the loom of the run through.
 <br />
 
 ## Links
-* Link to data clean (google collab): [[Link Text](https://colab.research.google.com/drive/1CXzDcB9EuiBlps0GL37_qgG_ykGpNrow?usp=sharing)](#Step 2 - Data Cleaning).
+* * Link to data clean (google collab): [Google Colab - Data Cleaning](https://colab.research.google.com/drive/1CXzDcB9EuiBlps0GL37_qgG_ykGpNrow?usp=sharing)
+
 
