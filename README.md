@@ -1,6 +1,6 @@
 # Data Visualztion Final Project - COSI 116A - Group 13
 
-## Team Members
+### Team Members
 Debbie Engelberg, Cameron Sherman, Noam Reiner, Mackenzie Chung
 
 ### Teaching Staff
@@ -23,9 +23,13 @@ Our project focuses on visualizing and analyzing how alcohol consumption rates a
 ### Execution
 
 <ins> Step 1 - Brainsotrming Ideas </ins>
+paragraph 1
 <ins> Step 2 - Looking For Data </ins>
+paragraph 1
 <ins> Step 3 - Data Cleaning </ins>
+paragraph 1
 <ins> Step 4 - Implemeting The Visualization </ins>
+paragraph 1
 
 
 ## Help
