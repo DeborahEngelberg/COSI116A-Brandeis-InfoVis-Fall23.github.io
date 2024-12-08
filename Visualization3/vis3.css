@@ -62,3 +62,10 @@
     opacity: 5;
   }
   
+  #summary-container {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 18px;
+    font-family: 'Raleway';
+    color: white; 
+}
