@@ -23,13 +23,29 @@ Our project focuses on visualizing and analyzing how alcohol consumption rates a
 ### Execution
 
 <ins> Step 1 - Brainsotrming Ideas </ins>
-paragraph 1<br />
+
+<br />
+paragraph 1
+<br />
+
 <ins> Step 2 - Looking For Data </ins>
-paragraph 1<br />
+
+<br />
+paragraph 1
+<br />
+
 <ins> Step 3 - Data Cleaning </ins>
-paragraph 1<br />
+
+<br />
+paragraph 1
+<br />
+
 <ins> Step 4 - Implemeting The Visualization </ins>
-paragraph 1<br />
+
+<br />
+paragraph 1
+<br />
+
 
 
 ## Help
