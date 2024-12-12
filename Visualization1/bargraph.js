@@ -18,161 +18,185 @@ function bargraph(){
       selectableElements = d3.select(null),
       dispatcher;
     
-    
-      function graph(selector, data){
+      function chart(selector, data){
         let svg = d3.select(selector)
         .append("svg")
           .attr("preserveAspectRatio", "xMidYMid meet")
           .attr("viewBox", [0, 0, width + margin.left + margin.right, height + margin.top + margin.bottom].join(' '))
           .classed("svg-content", true);
 
-       svg.append("rect")
-            .attr("width", width)
-            .attr("height", height)
-            .attr("fill", "white");
+        svg = svg.append("g")
+        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+        
 
-        //filter data for the death rate
-        data = data.filter(d => d.causes != "Total");
-
-
+        // Define scales
         xScale
-            .domain(data.map(data, xValue).keys())
-            .range([0, width])
-            .padding(0.1);
+          .domain(d3.map(data, xValue).keys())
+          .rangeRound([0, width])
+          .paddingInner(0.05);
 
         yScale
-            .domain([
-                d3.min(data, d => yValue(d)),
-                d3.max(data, d => yValue(d))
-            ])
-            .range([height, 0]);
+          .domain([
+            d3.min(data, d => yValue(d)),
+            d3.max(data, d => yValue(d))
+          ])
+          .rangeRound([height, 0]);
 
+        // X axis
         let xAxis = svg.append("g")
-            .attr("transform", "translate(0," + height + ")")
-            .call(d3.axisBottom(xScale));
+          .attr("transform", "translate(0," + (height) + ")")
+          .call(d3.axisBottom(xScale))
 
         xAxis.selectAll("text")
-            .style("text-anchor", "end")
-            .attr("dx", "-.8em")
-            .attr("dy", ".15em")
-            .attr("fill", "white")
-            .attr("transform", "rotate(-65)");
+        .style("text-anchor", "end")
+        .attr("dx", "-.8em")
+        .attr("dy", ".15em")
+        .attr("fill", "black")
+        .attr("transform", "rotate(-65)");
 
         xAxis.append("text")
-            .attr("class", "axisLabel")
-            .attr("transform", "translate(" + (width - 50) + ",-10)")
-            .text(xLabelText);
+        .attr("class", "axisLabel")
+        .text(xLabelText)
         
+
+
         let yAxis = svg.append("g")
-            .call(d3.axisLeft(yScale).tickFormat(d3.format(".2s")));
+        .call(d3.axisLeft(yScale).tickFormat(d3.format(".3s")));
 
+    
         yAxis.append("text")
-            .attr("class", "axisLabel")
-            .attr("transform", "translate(" + yLabelOffsetPx + ", -12)")
-            .text(yLabelText);
+        .attr("class", "axisLabel")
+        .attr("transform", "translate(" + yLabelOffsetPx + ", -10)")
+        .text(yLabelText);        
 
-        yAxis.selectAll("text")
-            .attr("fill", "white");
+        let bars = svg.selectAll(".bar")
+        .data(data)
+        .enter().append("rect")
+        .attr("class", "bar")
+        .attr("x", d => xScale(xValue(d)))
+        .attr("y", d => yScale(yValue(d)))
+        .attr("width", xScale.bandwidth())
+        .attr("height", d => height - yScale(yValue(d)))
+        .attr("fill", "steelblue")
 
-        let bars = svg.append("g")
-            .selectAll(".bar")
-            .data(data);
-        
-        bars.exit().remove();
+        selectableElements = bars;
+        svg.call(brush);
+         // Highlight points when brushed
 
-        bars = bars.enter()
-            .append("rect")
-            .merge(bars)
-            .attr("class", "bar")
-            .attr("x", d => xScale(xValue(d)))
-            .attr("y", d => yScale(yValue(d)))
-            .attr("width", xScale.bandwidth())
-            .attr("height", d => height - yScale(yValue(d)))
-            .attr("fill", "steelblue")
-            .on("click", function(d){
-                d3.select(this).classed("selected", true);
-                dispatcher.call("selectionChanged", this, d);
-            });
+      function brush(g) {
+      const brush = d3.brush()
+        .on("start brush", highlight)
+        .on("end", brushEnd)
+        .extent([
+          [-margin.left, -margin.bottom],
+          [width + margin.right, height + margin.top]
+        ]);
 
-            selectableElements = bars;
-            return graph;
+      ourBrush = brush;
+
+      g.call(brush); // Adds the brush to this element
+
+      // Highlight the selected circles.
+      function highlight() {
+        if (d3.event.selection === null) return;
+        const [
+          [x0, y0],
+          [x1, y1]
+        ] = d3.event.selection;
+        points.classed("selected", d =>
+          x0 <= X(d) && X(d) <= x1 && y0 <= Y(d) && Y(d) <= y1
+        );
+
+        // Get the name of our dispatcher's event
+        let dispatchString = Object.getOwnPropertyNames(dispatcher._)[0];
+
+        // Let other charts know
+        dispatcher.call(dispatchString, this, svg.selectAll(".selected").data());
+      }
+      
+      function brushEnd() {
+        // We don't want an infinite recursion
+        if (d3.event.sourceEvent.type != "end") {
+          d3.select(this).call(brush.move, null);
         }
-        function X(d) {
-            return xScale(xValue(d));
-          }
-        
-          // The y-accessor from the datum
-          function Y(d) {
-            return yScale(yValue(d));
-          }
-        
-          graph.margin = function (_) {
-            if (!arguments.length) return margin;
-            margin = _;
-            return graph;
-          };
-        
-          graph.width = function (_) {
-            if (!arguments.length) return width;
-            width = _;
-            return graph;
-          };
-        
-          graph.height = function (_) {
-            if (!arguments.length) return height;
-            height = _;
-            return graph;
-          };
-        
-          graph.x = function (_) {
-            if (!arguments.length) return xValue;
-            xValue = _;
-            return graph;
-          };
-        
-          graph.y = function (_) {
-            if (!arguments.length) return yValue;
-            yValue = _;
-            return graph;
-          };
-        
-          graph.xLabel = function (_) {
-            if (!arguments.length) return xLabelText;
-            xLabelText = _;
-            return graph;
-          };
-        
-          graph.yLabel = function (_) {
-            if (!arguments.length) return yLabelText;
-            yLabelText = _;
-            return graph;
-          };
-        
-          graph.yLabelOffset = function (_) {
-            if (!arguments.length) return yLabelOffsetPx;
-            yLabelOffsetPx = _;
-            return graph;
-          };
-        
-          // Gets or sets the dispatcher we use for selection events
-          graph.selectionDispatcher = function (_) {
-            if (!arguments.length) return dispatcher;
-            dispatcher = _;
-            return graph;
-          };
-        
-          // Given selected data from another visualization 
-          // select the relevant elements here (linking)
-          graph.updateSelection = function (selectedData) {
-            if (!arguments.length) return;
-        
-            // Select an element if its datum was selected
-            selectableElements.classed("selected", d => {
-              return selectedData.includes(d)
-            });
-          };
-        
-          return graph;
-        }
+      }
+    }
+    return chart;
+  }
+  function X(d) {
+    return xScale(xValue(d));
+  }
 
-        
+  // The y-accessor from the datum
+  function Y(d) {
+    return yScale(yValue(d));
+  }
+
+  chart.margin = function (_) {
+    if (!arguments.length) return margin;
+    margin = _;
+    return chart;
+  };
+
+  chart.width = function (_) {
+    if (!arguments.length) return width;
+    width = _;
+    return chart;
+  };
+
+  chart.height = function (_) {
+    if (!arguments.length) return height;
+    height = _;
+    return chart;
+  };
+
+  chart.x = function (_) {
+    if (!arguments.length) return xValue;
+    xValue = _;
+    return chart;
+  };
+
+  chart.y = function (_) {
+    if (!arguments.length) return yValue;
+    yValue = _;
+    return chart;
+  };
+
+  chart.xLabel = function (_) {
+    if (!arguments.length) return xLabelText;
+    xLabelText = _;
+    return chart;
+  };
+
+  chart.yLabel = function (_) {
+    if (!arguments.length) return yLabelText;
+    yLabelText = _;
+    return chart;
+  };
+
+  chart.yLabelOffset = function (_) {
+    if (!arguments.length) return yLabelOffsetPx;
+    yLabelOffsetPx = _;
+    return chart;
+  };
+
+  // Gets or sets the dispatcher we use for selection events
+  chart.selectionDispatcher = function (_) {
+    if (!arguments.length) return dispatcher;
+    dispatcher = _;
+    return chart;
+  };
+
+  // Given selected data from another visualization 
+  // select the relevant elements here (linking)
+  chart.updateSelection = function (selectedData) {
+    if (!arguments.length) return;
+
+    // Select an element if its datum was selected
+    selectableElements.classed("selected", d => {
+      return selectedData.includes(d)
+    });
+  };
+
+  return chart;
+}

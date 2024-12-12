@@ -37,14 +37,6 @@ function linechart() {
     svg = svg.append("g")
         .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-    // svg.append("rect")
-    //     .attr("width", width)
-    //     .attr("height", height)
-        // .attr("fill", "black");
-
-    // Filter data for the death rate
-    data = data.filter(d => d.causes === "Total");
-
     //Define scales
     xScale
       .domain(d3.map(data, xValue).keys())
