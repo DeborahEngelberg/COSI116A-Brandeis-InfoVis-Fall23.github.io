@@ -42,6 +42,20 @@ svg {
 } */
 
 /* BRUSHIING & LINKING CHARTS */
+/* Style for selected marks (circles) */
+circle.selected {
+    fill: pink;
+    stroke: red;
+    opacity: 5;
+  }
+  
+  /* Style for selected marks (rect) */
+rect.selected {
+    fill: red;
+    opacity: 0.5;
+}
+
+
 .chart-container {
     display: flex;
     /* flex-wrap: wrap; */
@@ -62,6 +76,8 @@ svg {
 }
 
 /* LINE CHART */
+
+
 .point {
     fill: white;
     stroke: #69b3a2;
