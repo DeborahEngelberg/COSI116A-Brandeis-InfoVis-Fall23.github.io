@@ -69,18 +69,20 @@ function bargraph(){
         .attr("transform", "translate(" + yLabelOffsetPx + ", -10)")
         .text(yLabelText);        
 
-        let bars = svg.selectAll(".bar")
+
+      let bars = svg.selectAll(".bar")
         .data(data)
         .enter().append("rect")
         .attr("class", "bar")
-        .attr("x", d => xScale(xValue(d)))
-        .attr("y", d => yScale(yValue(d)))
+        .attr("x",X)
+        .attr("y",Y)
         .attr("width", xScale.bandwidth())
         .attr("height", d => height - yScale(yValue(d)))
         .attr("fill", "steelblue")
 
-        selectableElements = bars;
-        svg.call(brush);
+      selectableElements = bars;
+      svg.call(brush);
+
          // Highlight points when brushed
 
       function brush(g) {
@@ -103,9 +105,13 @@ function bargraph(){
           [x0, y0],
           [x1, y1]
         ] = d3.event.selection;
-        points.classed("selected", d =>
-          x0 <= X(d) && X(d) <= x1 && y0 <= Y(d) && Y(d) <= y1
-        );
+        bars.classed("selected", d => {
+          const x = X(d);
+          const y = Y(d);
+          const barWidth = xScale.bandwidth();
+          const barHeight = height - y;
+          return x0 <= x + barWidth && x <= x1 && y0 <= y + barHeight && y <= y1;
+        });
 
         // Get the name of our dispatcher's event
         let dispatchString = Object.getOwnPropertyNames(dispatcher._)[0];
@@ -192,10 +198,18 @@ function bargraph(){
   chart.updateSelection = function (selectedData) {
     if (!arguments.length) return;
 
-    // Select an element if its datum was selected
-    selectableElements.classed("selected", d => {
-      return selectedData.includes(d)
-    });
+     // Check if selectedData is an array (from slider) or an object (from user interaction)
+     if (Array.isArray(selectedData)) {
+      // From slider
+      selectableElements.classed("selected", d => {
+          return selectedData.some(sd => sd.year === d.year);
+      });
+  } else {
+      // From user interaction
+      selectableElements.classed("selected", d => {
+          return d.year === selectedData.year;
+      });
+  }
   };
 
   return chart;

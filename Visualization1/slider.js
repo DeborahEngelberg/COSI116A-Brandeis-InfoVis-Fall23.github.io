@@ -1,22 +1,45 @@
 document.addEventListener('DOMContentLoaded', function() {
     const slider = document.getElementById('yearSlider');
-    const sliderTicks = document.getElementById('sliderTicks');
+    const playButton = document.getElementById('playButton');
     const minYear = parseInt(slider.min);
     const maxYear = parseInt(slider.max);
+    let isPlaying = false;
+    let interval;
 
-    for (let year = minYear; year <= maxYear; year++) {
-        const tick = document.createElement('span');
-        tick.textContent = year;
-        sliderTicks.appendChild(tick);
+    function updateCharts(year) {
+        if (window.updateLineChartSelection && window.updateBarGraphSelection) {
+            window.updateLineChartSelection(year);
+            window.updateBarGraphSelection(year);
+        }
     }
 
-    function adjustTickMarks() {
-        const tickWidth = sliderTicks.offsetWidth / (maxYear - minYear);
-        sliderTicks.childNodes.forEach((tick, index) => {
-            tick.style.left = `${index * tickWidth}px`;
-        });
+
+    function playSlider() {
+        if (isPlaying) {
+            clearInterval(interval);
+            playButton.textContent = 'Play';
+            slider.removeEventListener('input', sliderInputHandler);
+        } else {
+            interval = setInterval(() => {
+                let currentValue = parseInt(slider.value);
+                if (currentValue < maxYear) {
+                    slider.value = currentValue + 1;
+                    slider.dispatchEvent(new Event('input'));
+                } else {
+                    slider.value = minYear;
+                    slider.dispatchEvent(new Event('input'));
+                }
+                updateCharts(slider.value);
+            }, 700); // Adjust the interval time as needed
+            playButton.textContent = 'Pause';
+            slider.addEventListener('input', sliderInputHandler);
+        }
+        isPlaying = !isPlaying;
     }
 
-    window.addEventListener('resize', adjustTickMarks);
-    adjustTickMarks();
+    function sliderInputHandler() {
+        updateCharts(parseInt(slider.value));
+    }
+    
+    playButton.addEventListener('click', playSlider);
 });

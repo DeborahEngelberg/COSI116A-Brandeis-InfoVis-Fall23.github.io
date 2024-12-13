@@ -225,11 +225,19 @@ function linechart() {
   chart.updateSelection = function (selectedData) {
     if (!arguments.length) return;
 
-    // Select an element if its datum was selected
-    selectableElements.classed("selected", d => {
-      return selectedData.includes(d)
-    });
-  };
+    // Check if selectedData is an array (from slider) or an object (from user interaction)
+    if (Array.isArray(selectedData)) {
+      // From slider
+      selectableElements.classed("selected", d => {
+          return selectedData.some(sd => sd.year === d.year);
+      });
+  } else {
+      // From user interaction
+      selectableElements.classed("selected", d => {
+          return d.year === selectedData.year;
+      });
+  }
+};
 
   return chart;
 }
