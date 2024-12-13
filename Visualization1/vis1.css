@@ -14,13 +14,28 @@
 	align-items: center;
 	width: 100%;
 	height: 100%;
+    overflow: hidden;
+}
+
+#map {
+    width: 100%; /* Adjust width as needed */
+    height: 100%; /* Adjust height as needed */
+    /* background-color: #b1b0b0; */
+    /* border: 5px solid #ccc; */
 }
 
 /* LEGEND */
 .legend text {
-    stroke: #d5e7fe;
-    font-size: medium;
+    stroke: #ffffff;
+    fill: #ffffff;
+}
 
+.legend-title {
+    font-size: 25px;
+}
+
+.legend-axis {
+    font-size: medium;
 }
 
 /* OPTION BUTTON */
@@ -31,15 +46,9 @@
     border-radius: 10px;
 }
 
-/* .map-holder {
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
-}
-
 svg {
     display: block;
-} */
+} 
 
 /* BRUSHIING & LINKING CHARTS */
 /* Style for selected marks (circles) */
@@ -70,7 +79,8 @@ rect.selected {
 
 /* Optional: Add some styling to the charts */
 #bargraph, #linechart {
-    border: 1px solid #ccc;
+    border: 5px solid #ccc;
+    border-radius: 10px;
     padding: 10px;
     background-color: #f9f9f9;
 }
@@ -108,14 +118,8 @@ rect.selected {
     fill: #ffffff;
 }
 
-
-
-
-
-
-
-
 /* TIMELINE */
+
 /* Credit to W3 tutorials on Range Sliders: https://www.w3schools.com/howto/howto_js_rangeslider.asp */
 span {
     color: #2472bf;
@@ -123,10 +127,11 @@ span {
 }
 
 .slider {
+    flex: 1;
     -webkit-appearance: none;
     width: 50%;
     height: 5px;
-    /* border-radius: 5px;   */
+    border-radius: 5px;  
     background: #d3d3d3;
     outline: none;
     opacity: 0.7;
@@ -140,11 +145,15 @@ span {
   .slider::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
-    width: 25px;
-    height: 25px;
-    border-radius: 50%; 
-    background:#2171b5;
+    width: 20px;
+    height: 20px;
+    /* border-radius: 50%;  */
+    border-radius: 2px;
+    background:#062642;
+    border: 2px solid  #d3d3d3;;
     cursor: pointer;
+    transform: rotate(45deg);
+    /* transform-origin: 50% 50%; */
   }
   
   .slider::-moz-range-thumb {
@@ -154,32 +163,31 @@ span {
     cursor: pointer;
   }
 
-  /* Slider Ticks */
-
-  .slider-container {
-    position: relative;
-    width: 100%;
-    margin: 20px 0;
-}
-
-  .slider-ticks {
+ .slider-container {
+    margin: 2%;
+    width: 80%;
     display: flex;
-    justify-content: space-between;
-    position: absolute;
-    width: 100%;
-    top: 20px;
+    align-items: center;
+    position:relative;
+ }
+
+
+ /* PLAY BUTTON */
+#playButton {
+    margin-left: 20%;
+    margin-right: 5%;
+    width: 80px;
+    height: 40px;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 30px;
+    border: 2px solid #d3d3d3;
+    font-weight: bold;
+    color: #d3d3d3;
+    background-color:#062642;
 }
 
-.slider-ticks span {
-    font-size: 0.8em;
-    color: #2472bf;
+#playButton:hover {
+    background-color: #d3d3d3;
+    color: #062642;
 }
-
-/* .slider-ticks .tick {
-    width: 1px;
-    height: 10px;
-    background: #fff;
-    position: absolute;
-    bottom: 0;
-} */
-

@@ -1,10 +1,10 @@
-const width = 1000;
+const width = 1500;
 const height = 600;
 
 const svg = d3.select("#map")
   .append("svg")
   .attr("width", width)
-  .attr("height", height);
+  .attr("height", height - 110);
 
 const projection = d3.geoMercator()
   .translate([width / 2, height / 2]);
@@ -24,7 +24,7 @@ d3.queue()
   .defer(d3.csv, "../data/alc09-19.csv")
   .await(ready);
 
-function ready(error, geoData, data00_09, data09_19, data80_99) {
+function ready(error, geoData, data00_09, data09_19) {
   if (error) {
     console.error("Error loading the data:", error);
     return;
@@ -78,7 +78,6 @@ function ready(error, geoData, data00_09, data09_19, data80_99) {
       .attr("d", path)
       .style("fill", d => {
         const value = data[d.properties.name];
-        // console.log("Country:", d.properties.name, "Value:", value); 
         return value ? colorScale(value) : "#ccc";
       })
       .on("mouseover", function (d) {
@@ -96,19 +95,21 @@ function ready(error, geoData, data00_09, data09_19, data80_99) {
       });
 
     // Create a legend
-    const legendWidth = 25;
-    const legendHeight = 300;
+    const legendWidth = 15;
+    const legendHeight = 425;
 
     const legend = svg.append("g")
       .attr("class", "legend")
-      .attr("transform", `translate(${legendWidth },${legendHeight - 100})`);
+      .attr("transform", `translate(${legendWidth + 150},${legendHeight - 370})`);
+      
 
     // Title for the legend
     legend.append("text")
       .attr("class", "legend-title")
-      .attr("x", 0)
+      .attr("x", -40)
       .attr("y", -20)
-      .attr("text-anchor", "start")
+      .attr("text-anchor", "middle")
+      .attr("transform", "rotate(-90)")
       .text("Legend");
 
     // Create a scale for the legend
@@ -119,7 +120,7 @@ function ready(error, geoData, data00_09, data09_19, data80_99) {
 
     // Create an axis for the legend
     const legendAxis = d3.axisRight(legendScale)
-      .tickValues(d3.range(0, maxValue + 1, Math.floor(maxValue / 5))); //More customizable tick marks
+      .tickValues(d3.range(0, maxValue + 1, Math.floor(maxValue / 6))); //More customizable tick marks
 
     const legendData = colorScale.range().map(d => {
       const extent = colorScale.invertExtent(d);
@@ -147,7 +148,7 @@ function ready(error, geoData, data00_09, data09_19, data80_99) {
   updateMap("2000");
 
   // Update map with the range slider
-  d3.select("#yearRange").on("input", function () {
+  d3.select("#yearSlider").on("input", function () {
     const selectedYear = d3.select(this).property("value");
     svg.selectAll(".country").remove();
     svg.selectAll(".legend").remove();
