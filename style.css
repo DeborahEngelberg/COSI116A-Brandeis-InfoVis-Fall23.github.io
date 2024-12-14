@@ -17,6 +17,14 @@ body {
 	background-attachment: fixed;
 }
 
+body a{
+	color:#4292c6
+}
+
+body a:hover{
+	color: #a6d6f3
+}
+
 /* Title */
 #main-title {
 	font-family: 'Raleway', sans-serif;
@@ -30,12 +38,14 @@ body {
 
 
 /* NAVBAR */
-a {
-	color: #fff;
+.tabs a {
+	color: grey;
+    text-decoration: none;
+    transition: color 0.3s ease;
 }
 
-a:hover {
-	color: #ffffffb7;
+.tabs a:hover {
+	color: #fff;
 }
 
 
@@ -44,14 +54,7 @@ nav {
 	margin: 0;
 	display: flex;
 	justify-content: space-between;
-}
-
-[data-tab-content] {
-	display: none;
-}
-
-.active[data-tab-content] {
-	display: block;
+	z-index: 1000; /* Ensure the navbar is on top */
 }
 
 .tabs {
@@ -80,11 +83,6 @@ nav {
 
 }
 
-.tab.active {
-	text-decoration: underline;
-	color: white;
-}
-
 .tab:hover {
 	color: white;
 }
@@ -93,11 +91,14 @@ nav {
 /* Media query for smaller screens */
 @media (max-width: 768px) {
     .tabs {
-        position: static;
+		font-size: smaller;
+		display: block;
+		position: static;
+        /* position: static;
         display: block;
         text-align: center;
         margin: 0;
-        padding: 0;
+        padding: 0; */
     }
 
     .tab {
@@ -273,6 +274,8 @@ h3 {
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
 }
 
+
+/* VIS 2 STYLE */
 #year-container,
 #cause-container {
 	font-family: 'Kaisei Decol', sans-serif;
@@ -324,10 +327,41 @@ select {
 	border-radius: 5px;
 }
 
+/* LEGEND */
+#legend-container {
+	position: absolute;
+	bottom: 5%;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 500px;
+	height: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	font-family: 'Kaisei Decol', sans-serif;
+	color: white;
+}
 
+.legend-bar {
+	width: 80%;
+	height: 15px;
+	background: linear-gradient(to right, #ffffff, #4292c6);
+	/* Adjust colors dynamically in JavaScript */
+	margin: 0 10px;
+}
 
+.legend-label {
+	font-size: 14px;
+	text-align: center;
+}
 
-
+.tooltip {
+	font-size: 14px;
+	font-family: Arial, sans-serif;
+	line-height: 1.4;
+	z-index: 10;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
 
 /* Fork on GitHub ribbon via https://codepo8.github.io/css-fork-on-github-ribbon/# */
 #forkongithub a {
@@ -374,7 +408,7 @@ select {
 	width: 200px;
 	overflow: hidden;
 	height: 200px;
-	z-index: 9999;
+	z-index: 999;
 }
 
 #forkongithub a {
@@ -420,41 +454,5 @@ select {
 	#forkongithub {
 		display: block;
 	}
-}
-
-/* LEGEND */
-#legend-container {
-	position: absolute;
-	bottom: 5%;
-	left: 50%;
-	transform: translateX(-50%);
-	width: 500px;
-	height: 50px;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	font-family: 'Kaisei Decol', sans-serif;
-	color: white;
-}
-
-.legend-bar {
-	width: 80%;
-	height: 15px;
-	background: linear-gradient(to right, #ffffff, #4292c6);
-	/* Adjust colors dynamically in JavaScript */
-	margin: 0 10px;
-}
-
-.legend-label {
-	font-size: 14px;
-	text-align: center;
-}
-
-.tooltip {
-	font-size: 14px;
-	font-family: Arial, sans-serif;
-	line-height: 1.4;
-	z-index: 10;
-	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
 
