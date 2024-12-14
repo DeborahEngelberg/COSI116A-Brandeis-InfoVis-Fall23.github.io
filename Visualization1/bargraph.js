@@ -1,4 +1,11 @@
+/* The following code was heavily referenced from Assignment 4 and
+altered in a few places to create a bar graph*/
+
+// Initialize a line chart. Modeled after Mike Bostock's
+// Reusable Chart framework https://bost.ocks.org/mike/chart/
 function bargraph(){
+  // Based on Mike Bostock's margin convention
+  // https://bl.ocks.org/mbostock/3019563
     let margin = {
         top: 60,
         left: 50,
@@ -48,43 +55,40 @@ function bargraph(){
           .call(d3.axisBottom(xScale))
 
         xAxis.selectAll("text")
-        .style("text-anchor", "end")
-        .attr("dx", "-.8em")
-        .attr("dy", ".15em")
-        .attr("fill", "black")
-        .attr("transform", "rotate(-65)");
+            .style("text-anchor", "end")
+            .attr("dx", "-.8em")
+            .attr("dy", ".15em")
+            .attr("fill", "black")
+            .attr("transform", "rotate(-65)");
 
         xAxis.append("text")
-        .attr("class", "axisLabel")
-        .text(xLabelText)
-        
-
+            .attr("class", "axisLabel")
+            .text(xLabelText)
+            .attr("x", -25)
+            .attr("transform", "rotate(-65)");
 
         let yAxis = svg.append("g")
-        .call(d3.axisLeft(yScale).tickFormat(d3.format(".3s")));
-
+            .call(d3.axisLeft(yScale).tickFormat(d3.format(".3s")));
     
         yAxis.append("text")
-        .attr("class", "axisLabel")
-        .attr("transform", "translate(" + yLabelOffsetPx + ", -10)")
-        .text(yLabelText);        
-
+            .attr("class", "axisLabel")
+            .attr("transform", "translate(" + (yLabelOffsetPx + 170) + ", -12)")
+            .text(yLabelText);
 
       let bars = svg.selectAll(".bar")
         .data(data)
-        .enter().append("rect")
-        .attr("class", "bar")
-        .attr("x",X)
-        .attr("y",Y)
-        .attr("width", xScale.bandwidth())
-        .attr("height", d => height - yScale(yValue(d)))
-        .attr("fill", "steelblue")
+          .enter().append("rect")
+          .attr("class", "bar")
+          .attr("x",X)
+          .attr("y",Y)
+          .attr("width", xScale.bandwidth())
+          .attr("height", d => height - yScale(yValue(d)))
+          .attr("fill", "steelblue")
 
       selectableElements = bars;
       svg.call(brush);
 
-         // Highlight points when brushed
-
+       // Highlight bars when brushed
       function brush(g) {
       const brush = d3.brush()
         .on("start brush", highlight)
@@ -199,7 +203,7 @@ function bargraph(){
     if (!arguments.length) return;
 
      // Check if selectedData is an array (from slider) or an object (from user interaction)
-     if (Array.isArray(selectedData)) {
+    if (Array.isArray(selectedData)) {
       // From slider
       selectableElements.classed("selected", d => {
           return selectedData.some(sd => sd.year === d.year);

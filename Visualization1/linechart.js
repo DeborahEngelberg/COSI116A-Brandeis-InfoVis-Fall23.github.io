@@ -1,9 +1,8 @@
-/* global D3 */
+/* The following code was borrowed from Assignment 4*/
 
 // Initialize a line chart. Modeled after Mike Bostock's
 // Reusable Chart framework https://bost.ocks.org/mike/chart/
 function linechart() {
-
   // Based on Mike Bostock's margin convention
   // https://bl.ocks.org/mbostock/3019563
   let margin = {
@@ -25,7 +24,7 @@ function linechart() {
     selectableElements = d3.select(null),
     dispatcher;
 
-  // Create the chart by adding an svg to the div with the id 
+  // Create the chart by adding an svg to the div with the id
   // specified by the selector using the given data
   function chart(selector, data) {
     let svg = d3.select(selector)
@@ -55,7 +54,7 @@ function linechart() {
         .call(d3.axisBottom(xScale));
         
     // Put X axis tick labels at an angle
-    xAxis.selectAll("text") 
+    xAxis.selectAll("text")
         .style("text-anchor", "end")
         .attr("dx", "-.8em")
         .attr("dy", ".15em")
@@ -63,7 +62,7 @@ function linechart() {
         .attr("transform", "rotate(-65)");
         
     // X axis label
-    xAxis.append("text")        
+    xAxis.append("text")
         .attr("class", "axisLabel")
         .attr("transform", "translate(" + (width - 50) + ",-10)")
         .text(xLabelText);
@@ -77,7 +76,6 @@ function linechart() {
         .attr("class", "axisLabel")
         .attr("transform", "translate(" + yLabelOffsetPx + ", -12)")
         .text(yLabelText);
-        // .attr("transform", "rotate(-90)");
       
     yAxis.selectAll("text")
         .attr("fill", "black");
@@ -105,7 +103,7 @@ function linechart() {
         .attr("class", "point linePoint")
       .merge(points)
         .attr("cx", X)
-        .attr("cy", Y)        
+        .attr("cy", Y)
         .attr("r",5);
         
     selectableElements = points;
@@ -220,7 +218,7 @@ function linechart() {
     return chart;
   };
 
-  // Given selected data from another visualization 
+  // Given selected data from another visualization
   // select the relevant elements here (linking)
   chart.updateSelection = function (selectedData) {
     if (!arguments.length) return;

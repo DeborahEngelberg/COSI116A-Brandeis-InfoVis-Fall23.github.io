@@ -5,21 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="vis1.css">
-    <title>Visualization 1</title>
+    <title>Brush & Link</title>
 </head>
 <body>
     <div id="navbar-container"></div>
         <div class="map-title">
             <label for="year-select">Average Pure Alcohol Consumption Rate (in Liters per capita) in Year: <span id="yearTitle">2000</span></label>
-           
+            <p>(Drag the slider below to see how the alcohol consumption rate changes over the years.)</p>
         </div>
     <div class="worldmap-holder" id="map"></div>
     <div class="slider-container">
         <button id="playButton">Play</button>
         <input type="range" min="2000" max="2019" value="2000" class="slider" id="yearSlider">
-       
     </div>
-   
     <div class="chart-container">
         <div id="linechart" class="chart"></div>
         <div id="bargraph" class="chart"></div>
@@ -31,7 +29,6 @@
     <script src="linechart.js"></script>
     <script src="bargraph.js"></script>
     <script src="slider.js"></script>
-  
     <script src="visualization.js"></script>
     <script src="../Navbar/loadnavbar.js"></script>
 </body>

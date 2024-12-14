@@ -1,3 +1,9 @@
+p {
+    color: #d3d3d3;
+    font-size: small;
+    margin-top: -0.5%;
+}
+
 /* MAP */
 .map-title {
     text-align: center;
@@ -18,8 +24,8 @@
 }
 
 #map {
-    width: 100%; /* Adjust width as needed */
-    height: 100%; /* Adjust height as needed */
+    width: 100%;
+    height: 100%;
     /* background-color: #b1b0b0; */
     /* border: 5px solid #ccc; */
 }
@@ -48,7 +54,7 @@
 
 svg {
     display: block;
-} 
+}
 
 /* BRUSHIING & LINKING CHARTS */
 /* Style for selected marks (circles) */
@@ -56,8 +62,8 @@ circle.selected {
     fill: pink;
     stroke: red;
     opacity: 5;
-  }
-  
+}
+
   /* Style for selected marks (rect) */
 rect.selected {
     fill: red;
@@ -67,17 +73,16 @@ rect.selected {
 
 .chart-container {
     display: flex;
-    /* flex-wrap: wrap; */
     justify-content: space-between;
 }
 
 .chart {
-    width: 48%; /* Adjust the width as needed */
+    width: 48%;
     margin: 1%;
     min-width: 300px
 }
 
-/* Optional: Add some styling to the charts */
+/* Styling to the charts */
 #bargraph, #linechart {
     border: 5px solid #ccc;
     border-radius: 10px;
@@ -86,24 +91,22 @@ rect.selected {
 }
 
 /* LINE CHART */
-
-
 .point {
     fill: white;
     stroke: #69b3a2;
     stroke-width: 3;
-  }
-  
-  .linePath {
+}
+
+.linePath {
     fill: none;
     stroke: black;
     stroke-width: 1.5;
-  }
-  
-  .axisLabel {
+}
+
+.axisLabel {
     fill: #475d7c;
-  }
-  
+}
+
 .linechart-holder {
     width: 50%;
     height: 50%;
@@ -131,7 +134,7 @@ span {
     -webkit-appearance: none;
     width: 50%;
     height: 5px;
-    border-radius: 5px;  
+    border-radius: 5px;
     background: #d3d3d3;
     outline: none;
     opacity: 0.7;
@@ -140,36 +143,34 @@ span {
     display: block;
     margin-left: auto;
     margin-right: auto;
-  }
-  
-  .slider::-webkit-slider-thumb {
+}
+
+.slider::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
     width: 20px;
     height: 20px;
-    /* border-radius: 50%;  */
     border-radius: 2px;
     background:#062642;
     border: 2px solid  #d3d3d3;;
     cursor: pointer;
     transform: rotate(45deg);
-    /* transform-origin: 50% 50%; */
-  }
-  
-  .slider::-moz-range-thumb {
+}
+
+.slider::-moz-range-thumb {
     width: 25px;
     height: 25px;
     border-radius: 50%;
     cursor: pointer;
-  }
+}
 
- .slider-container {
+.slider-container {
     margin: 2%;
     width: 80%;
     display: flex;
     align-items: center;
     position:relative;
- }
+}
 
 
  /* PLAY BUTTON */
@@ -191,3 +192,4 @@ span {
     background-color: #d3d3d3;
     color: #062642;
 }
+
