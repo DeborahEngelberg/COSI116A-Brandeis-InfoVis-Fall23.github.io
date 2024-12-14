@@ -1,4 +1,5 @@
 # Data Visualztion Final Project - COSI 116A - Group 13
+Github Pages Website: https://deborahengelberg.github.io/COSI116A-Brandeis-InfoVis-Fall23.github.io/ 
 
 ### Team Members
 Debbie Engelberg, Cameron Sherman, Noam Reiner, Mackenzie Chung
@@ -40,5 +41,8 @@ need to fill with pictures and text :)
 at the bottom we should add the loom of the run through. 
 <br />
 
+## Visualization Demonstrations
+### Visualization 1: Brushing & Linking
+![Visualtion 1 Demo](Images/vis1demo.gif)
 
 
