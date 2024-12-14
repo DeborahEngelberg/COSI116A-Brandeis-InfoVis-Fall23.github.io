@@ -4,6 +4,9 @@ p {
     margin-top: -0.5%;
 }
 
+body, html {
+    overflow-x: hidden;
+}
 /* MAP */
 .map-title {
     text-align: center;
@@ -29,6 +32,40 @@ p {
     /* background-color: #b1b0b0; */
     /* border: 5px solid #ccc; */
 }
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+
+    #map {
+        width: 20%; /* Adjust width relative to the screen size */
+        height: auto;
+        max-width: 20px; /* Ensure the map does not exceed 90% of the container's width */
+        max-height: 300px; /* Adjust this value as needed to fit the legend */
+    }
+
+    .worldmap-holder {
+        flex-direction: column;
+        padding: 5px;
+    }
+
+    #map {
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+        max-height: 400px; /* Adjust this value as needed */
+    }
+
+    .chart-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin-top: 20px;
+    }
+}
+
 
 /* LEGEND */
 .legend text {

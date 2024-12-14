@@ -67,7 +67,6 @@ nav {
 	font-size: 20px;
 	margin-right: 10%;
 	display: absolute;
-
 }
 
 
@@ -90,6 +89,23 @@ nav {
 	color: white;
 }
 
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .tabs {
+        position: static;
+        display: block;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    .tab {
+        display: block;
+        margin: 10px 0;
+    }
+}
+
 .logo {
 	top: 2%;
 	left: 2%;
@@ -98,7 +114,6 @@ nav {
 	z-index: 1000;
 	margin-left: 10%;
 }
-
 
 .logo:hover {
 	cursor: pointer;
