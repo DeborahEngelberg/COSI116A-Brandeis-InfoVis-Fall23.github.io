@@ -18,12 +18,26 @@ body {
 }
 
 body a{
-	color:#4292c6
+	color:#3577a2;
 }
 
 body a:hover{
-	color: #a6d6f3
+	color: #a6d6f3;
 }
+
+
+img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+html {
+	/* SCROLLBAR STYLING (because why not?)*/
+    scrollbar-width:auto; /* Width of the scrollbar */
+    scrollbar-color: #484a49 #111111; /* Color of the scrollbar thumb and track */
+}
+
 
 /* Title */
 #main-title {

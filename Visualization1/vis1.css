@@ -39,8 +39,6 @@ body, html {
     #map {
         width: 20%; /* Adjust width relative to the screen size */
         height: auto;
-        max-width: 20px; /* Ensure the map does not exceed 90% of the container's width */
-        max-height: 300px; /* Adjust this value as needed to fit the legend */
     }
 
     .worldmap-holder {
@@ -65,7 +63,6 @@ body, html {
         margin-top: 20px;
     }
 }
-
 
 /* LEGEND */
 .legend text {
@@ -116,7 +113,7 @@ rect.selected {
 .chart {
     width: 48%;
     margin: 1%;
-    min-width: 300px
+    min-width: 300px;
 }
 
 /* Styling to the charts */
@@ -151,7 +148,7 @@ rect.selected {
 }
 
 .axisLabel {
-    stroke:#61a9e7
+    stroke:#61a9e7;
 }
 
 .text {
