@@ -52,9 +52,19 @@
     font-family: 'Raleway';
     
 }
-#map-container{
-    margin-top: 50px;
+#map {
+    width: 100%;
+    height: 100%;
 }
+
+#map-container {
+    position: relative;
+    width: 1000px;
+    height: 600px;
+    margin: auto;
+    background-color: transparent; /* Ensure no background is hiding the map */
+}
+
 
 .selected {
     fill: pink;
@@ -68,4 +78,8 @@
     font-size: 18px;
     font-family: 'Raleway';
     color: white; 
+    background-color: rgba(0, 0, 0, 0.5); /* Optional for visibility */
+    padding: 10px;
+    border-radius: 8px;
 }
+
