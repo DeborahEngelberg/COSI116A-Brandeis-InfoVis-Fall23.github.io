@@ -1,5 +1,6 @@
-# Data Visualztion Final Project - COSI 116A - Group 13
-Github Pages Website: https://deborahengelberg.github.io/COSI116A-Brandeis-InfoVis-Fall23.github.io/ 
+# Data Visualization Final Project - COSI 116A - Group 13
+### GitHub Pages Website
+https://deborahengelberg.github.io/COSI116A-Brandeis-InfoVis-Fall23.github.io/ 
 
 ### Team Members
 Debbie Engelberg, Cameron Sherman, Noam Reiner, Mackenzie Chung
@@ -11,6 +12,24 @@ Prof. Cashman and TA Aby Iberkleid Szainrok
 
 Our project focuses on visualizing and analyzing how alcohol consumption rates across various countries influence death rates, comparing these impacts to other leading causes of death over multiple years. By highlighting the relationship between alcohol consumption and mortality, this project aims to support healthcare professionals and prevention practitioners in reducing drinking-related risks, offering valuable data to observe and compare global trends.
 
+
+## SetUp
+1. Clone this repository to your local machine. E.g., in your terminal / command prompt `CD` to where you want this the folder for this activity to be. Then run `git clone <YOUR_REPO_URL>`
+
+1. `CD` or open a terminal / command prompt window into the cloned folder.
+
+1. Start a simple python webserver. E.g., one of these commands:
+    * `python -m http.server 8000`
+    * `python3 -m http.server 8000`
+    * `py -m http.server 8000`
+    
+    If you are using Python 2 you will need to use `python -m SimpleHTTPServer 8000` instead, but please switch to Python 3 as [Python 2 will be sunset on 2020.01.01](https://www.python.org/doc/sunset-python-2/).
+
+1. Wait for the output: `Serving HTTP on 0.0.0.0 port 8000 (http://0.0.0.0:8000/)`
+
+1. Now open your web browser (Firefox or Chrome) and navigate to the URL: http://localhost:8000
+
+## Execution
 ### Languages and Libraries Used
 
 * JavaScript
@@ -21,7 +40,7 @@ Our project focuses on visualizing and analyzing how alcohol consumption rates a
 * Pandas
 * D3.js
 
-### Execution
+
 
 #### <ins> Step 1 - Brainsotrming Ideas  and Looking for Data</ins>
 
