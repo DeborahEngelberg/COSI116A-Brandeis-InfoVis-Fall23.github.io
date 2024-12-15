@@ -29,8 +29,8 @@
 
             <label for="data-type-select">Data Type:</label>
             <select id="data-type-select">
-                <option value="Alcohol Consumption">Alcohol Consumption</option> 
-                <option value="Total Deaths">Total Deaths</option>
+                <option value="AlcoholConsumption">Alcohol Consumption</option> 
+                <option value="TotalDeaths">Total Deaths</option>
             </select>
 
             <div id="map-container">
@@ -45,7 +45,7 @@
         </div>
 
         <div id="summary-container" style="text-align: center; margin-top: 20px;">
-            <p id="summary-text" style="font-size: 18px; font-family: 'Raleway'; color: white;"></p>
+            <p id="summary-text" style="font-size: 18px; font-family: 'Raleway'; color: white; text-align: center;"></p>
         </div>
 
         <script src="https://unpkg.com/topojson-client@3"></script>
@@ -105,12 +105,12 @@
             const data = await response.text();
             const rows = data.split("\n").slice(1); // Remove headers
             return rows.map(row => {
-                const [Country, Year, AlcoholConsumption, TotalDeaths] = row.split(","); // Adjust based on your CSV headers
-                return {
-                    Country: Country.trim(),
-                    Year: Year.trim(),
-                    AlcoholConsumption: parseFloat(AlcoholConsumption.trim()),
-                    TotalDeaths: parseFloat(TotalDeaths.trim())
+                const [Country, Year, AlcoholConsumption, TotalDeaths] = row.split(",");
+                return { 
+                    Country, 
+                    Year, 
+                    AlcoholConsumption: parseFloat(AlcoholConsumption), 
+                    TotalDeaths: parseFloat(TotalDeaths) 
                 };
             });
         }
@@ -126,10 +126,10 @@
 
             const summaryText = document.getElementById("summary-text");
             if (filteredData) {
-                if (dataType === "Alcohol Consumption") {
+                if (dataType === "AlcoholConsumption") {
                     summaryText.textContent = `In ${year}, alcohol, recorded per capita (15+ years) consumption (in liters of pure alcohol) was ${filteredData.AlcoholConsumption}.`;
-                } else if (dataType === "Total Deaths") {
-                    summaryText.textContent = `In ${year}, the total number of deaths in ${country} was ${filteredData.TotalDeaths}.`;
+                } else if (dataType === "TotalDeaths") {
+                    summaryText.textContent = `In ${year}, the total number of deaths recorded was ${filteredData.TotalDeaths}.`;
                 } else {
                     summaryText.textContent = "Data type not supported yet.";
                 }
