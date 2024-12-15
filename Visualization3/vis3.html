@@ -12,7 +12,7 @@
 </head>
 <body>
     <div id="navbar-container"></div>
-    <div class="vis-holder">
+    <div class="vis-container">
         <div class="map-title">
             <label for="country-select">Country:</label>
             <select id="country-select"></select>
@@ -36,23 +36,16 @@
             <div id="map-container">
                 <div id="map"></div>
             </div>
-            <div class="map-holder" id="map-container">
+            <div class="map-holder">
                 <svg id="vis-svg"></svg>
             </div>
             <div id="data-summary" class="data-summary">
-                <p id="summary-text"></p> 
-            </div>            
+                <p id="summary-text"></p>
+            </div>
         </div>
-
-        <div id="summary-container" style="text-align: center; margin-top: 20px;">
-            <p id="summary-text" style="font-size: 18px; font-family: 'Raleway'; color: white; text-align: center;"></p>
-        </div>
-        
-
-        <script src="https://unpkg.com/topojson-client@3"></script>
-        <script src="../Worldmap/worldmap.js"></script>
     </div>
-
+    <script src="https://unpkg.com/topojson-client@3"></script>
+    <script src="Worldmap/worldmap.js"></script>
     <script>
         // Predefined list of countries
         const countries = [
@@ -99,6 +92,7 @@
 
         // File path to data
         const dataFilePath = "../data/vis3_data.csv";
+        const geoJsonFilePath = "Worldmap/geo.json";
 
         // Function to fetch data
         async function fetchData() {
@@ -106,18 +100,20 @@
             const data = await response.text();
             const rows = data.split("\n").slice(1); // Remove headers
             return rows.map(row => {
-                const [Country, Year, AlcoholConsumption, TotalDeaths] = row.split(",");
-                return { 
-                    Country, 
-                    Year, 
-                    AlcoholConsumption: parseFloat(AlcoholConsumption), 
-                    TotalDeaths: parseFloat(TotalDeaths) 
+                const [Country, Year, AlcoholConsumption, TotalDeaths] = row.split(","); // Adjust based on your CSV headers
+                ///console.log(Country, Year, AlcoholConsumption, TotalDeaths);
+                return {
+                    Country: Country,
+                    Year: Year,
+                    AlcoholConsumption: parseFloat(AlcoholConsumption),
+                    TotalDeaths: parseFloat(TotalDeaths)
                 };
             });
         }
 
         // Function to update the summary text
         async function updateSummary() {
+            console.log("Updating summary text...");
             const country = document.getElementById("country-select").value;
             const year = document.getElementById("year-select").value;
             const dataType = document.getElementById("data-type-select").value;
@@ -127,24 +123,75 @@
 
             const summaryText = document.getElementById("summary-text");
             if (filteredData) {
+                console.log("im in");
                 if (dataType === "AlcoholConsumption") {
+                    console.log("im in alcohol");
                     summaryText.textContent = `In ${year}, alcohol, recorded per capita (15+ years) consumption (in liters of pure alcohol) was ${filteredData.AlcoholConsumption}.`;
                 } else if (dataType === "TotalDeaths") {
-                    summaryText.textContent = `In ${year}, the total number of deaths recorded was ${filteredData.TotalDeaths}.`;
+                    console.log("im in deaths");
+                    summaryText.textContent = `In ${year}, the total number of deaths in ${country} was ${filteredData.TotalDeaths}.`;
                 } else {
+                    console.log("im in else");
                     summaryText.textContent = "Data type not supported yet.";
                 }
             } else {
+                console.log("im in other else");
                 summaryText.textContent = "No data available for the selected country and year.";
             }
         }
 
+        // Function to update the vis-svg element with the selected country
+    function updateVisSvg() {
+        console.log("Entering updateVisSvg...");
+        const country = document.getElementById("country-select").value;
+        const visSvg = document.getElementById("vis-svg");
+
+        // Clear previous content
+        visSvg.innerHTML = "";
+
+       // Load GeoJSON data
+        fetch(geoJsonFilePath)
+        .then(response => {
+            console.log("GeoJSON data fetched...");
+            return response.json();
+        })
+        .then(geoJsonData => {
+            console.log("GeoJSON data parsed...");
+            // Filter the GeoJSON data to include only the selected country
+            const countryData = geoJsonData.features.filter(d => d.properties.name === country);
+
+            if (countryData.length > 0) {
+                // Create a projection and path generator
+                const projection = d3.geoMercator().fitSize([400, 300], { type: "FeatureCollection", features: countryData });
+                const path = d3.geoPath().projection(projection);
+
+                // Draw the map
+                d3.select(visSvg).selectAll("path")
+                    .data(countryData)
+                    .enter().append("path")
+                    .attr("d", path)
+                    .attr("fill", "orange")
+                    .attr("stroke", "#333")
+                    .attr("stroke-width", 0.5);
+            } else {
+                console.log("Country not found in GeoJSON data.");
+            }
+        })
+        .catch(error => {
+            console.error("Error loading GeoJSON data:", error);
+        });
+    }
+
         // Event listeners for dropdown changes
-        document.getElementById("country-select").addEventListener("change", updateSummary);
+        document.getElementById("country-select").addEventListener("change", () => {
+            updateSummary();
+            updateVisSvg();
+        });
         document.getElementById("year-select").addEventListener("change", updateSummary);
         document.getElementById("data-type-select").addEventListener("change", updateSummary);
 
         // Initial call to display data when the page loads
+        updateVisSvg();
         updateSummary();
     </script>
 </body>

@@ -1,3 +1,7 @@
+body, html {
+    overflow-x: hidden;
+}
+
 /* MAP */
 .map-title {
     text-align: center;
@@ -7,6 +11,24 @@
     padding: 5px 10px;
     font-family: 'Raleway';
     gap: 10px;
+}
+
+/* COUNTRY SVG */
+#vis-svg {
+    margin-left: 40%;
+    margin-right: auto;
+    width:100%;
+    height: 100%;
+    
+}
+
+.map-holder {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 }
 
 /* LEGEND */
@@ -52,34 +74,40 @@
     font-family: 'Raleway';
     
 }
-#map {
-    width: 100%;
-    height: 100%;
+#map-container{
+    margin-top: 50px;
 }
-
-#map-container {
-    position: relative;
-    width: 1000px;
-    height: 600px;
-    margin: auto;
-    background-color: transparent; /* Ensure no background is hiding the map */
-}
-
 
 .selected {
     fill: pink;
     stroke: red;
     opacity: 5;
-  }
-  
-  #summary-container {
+}
+
+#summary-container {
     text-align: center;
     margin-top: 20px;
     font-size: 18px;
     font-family: 'Raleway';
-    color: white; 
-    background-color: rgba(0, 0, 0, 0.5); /* Optional for visibility */
-    padding: 10px;
-    border-radius: 8px;
+    color: white;
 }
 
+/* Style the summary text */
+#summary-text {
+    font-size: 18px;
+    font-family: 'Raleway', sans-serif;
+    color: white;
+    text-align: center;
+    margin-top: 20px; /* Add space between the map and the summary text */
+}
+
+/* Additional styling for the data summary container */
+.data-summary {
+    width: 100%;
+    max-width: 800px;
+    padding: 20px;
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    border-radius: 20px;
+    margin-top: 5%; /* Add space between the map and the summary text */
+}
