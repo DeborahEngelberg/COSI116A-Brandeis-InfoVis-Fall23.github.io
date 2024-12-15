@@ -124,16 +124,16 @@
             const summaryText = document.getElementById("summary-text");
             if (filteredData) {
                 console.log("im in");
+                const highlightColor = "orange"; // Match the country highlight color
+
                 if (dataType === "AlcoholConsumption") {
-                    console.log("im in alcohol");
-                    summaryText.textContent = `In ${year}, alcohol, recorded per capita (15+ years) consumption (in liters of pure alcohol) was ${filteredData.AlcoholConsumption}.`;
+                    summaryText.innerHTML = `In ${year}, Alcohol, recorded per capita (15+ years) consumption (in liters of pure Alcohol) in ${country} was <span style="color: ${highlightColor}; font-weight: bold;">${filteredData.AlcoholConsumption}</span>.`;
                 } else if (dataType === "TotalDeaths") {
-                    console.log("im in deaths");
-                    summaryText.textContent = `In ${year}, the total number of deaths in ${country} was ${filteredData.TotalDeaths}.`;
+                    summaryText.innerHTML = `In ${year}, the total number of deaths in ${country} was <span style="color: ${highlightColor}; font-weight: bold;">${filteredData.TotalDeaths}</span>.`;
                 } else {
-                    console.log("im in else");
                     summaryText.textContent = "Data type not supported yet.";
                 }
+
             } else {
                 console.log("im in other else");
                 summaryText.textContent = "No data available for the selected country and year.";

@@ -83,7 +83,7 @@ function updateSummary(country, year, dataType, data) {
 
   if (row) {
     const value = row.Value || "No data available";
-    const unit = dataType === "alcohol" ? "liters of pure alcohol" : "units";
+    const unit = dataType === "Alcohol" ? "liters of pure Alcohol" : "units";
     summaryText.textContent = `In ${year}, ${country} recorded ${value} ${unit} for ${dataType}.`;
   } else {
     summaryText.textContent = `No data available for ${country} in ${year} for ${dataType}.`;
