@@ -15,51 +15,7 @@
     <div class="vis-holder">
         <div class="map-title">
             <label for="country-select">Country:</label>
-            <select id="country-select">
-                <script>
-                    const countries = [
-                        'Afghanistan', 'Albania', 'Algeria', 'Angola', 'Argentina', 'Armenia', 
-                        'Australia', 'Austria', 'Azerbaijan', 'Bahamas', 'Bangladesh', 'Belarus', 
-                        'Belgium', 'Belize', 'Benin', 'Bhutan', 'Bolivia', 'Bosnia and Herz.', 
-                        'Botswana', 'Brazil', 'Brunei', 'Bulgaria', 'Burkina Faso', 'Burundi', 
-                        'Cambodia', 'Cameroon', 'Canada', 'Central African Rep.', 'Chad', 'Chile', 
-                        'China', 'Colombia', 'Congo', 'Costa Rica', 'Croatia', 'Cuba', 'Cyprus', 
-                        'Czechia', "Côte d'Ivoire", 'Dem. Rep. Congo', 'Denmark', 'Djibouti', 
-                        'Dominican Rep.', 'Ecuador', 'Egypt', 'El Salvador', 'Eq. Guinea', 
-                        'Eritrea', 'Estonia', 'Ethiopia', 'Falkland Is.', 'Fiji', 'Finland', 
-                        'France', 'Gabon', 'Gambia', 'Georgia', 'Germany', 'Ghana', 'Greece', 
-                        'Greenland', 'Guatemala', 'Guinea', 'Guinea-Bissau', 'Guyana', 'Haiti', 
-                        'Honduras', 'Hungary', 'Iceland', 'India', 'Indonesia', 'Iran', 'Iraq', 
-                        'Ireland', 'Israel', 'Italy', 'Jamaica', 'Japan', 'Jordan', 'Kazakhstan', 
-                        'Kenya', 'Kosovo', 'Kuwait', 'Kyrgyzstan', 'Laos', 'Latvia', 'Lebanon', 
-                        'Lesotho', 'Liberia', 'Libya', 'Lithuania', 'Luxembourg', 'Madagascar', 
-                        'Malawi', 'Malaysia', 'Mali', 'Mauritania', 'Mexico', 'Moldova', 
-                        'Mongolia', 'Montenegro', 'Morocco', 'Mozambique', 'Myanmar', 'N. Cyprus', 
-                        'Namibia', 'Nepal', 'Netherlands', 'New Caledonia', 'New Zealand', 
-                        'Nicaragua', 'Niger', 'Nigeria', 'North Korea', 'North Macedonia', 
-                        'Norway', 'Oman', 'Pakistan', 'Palestine', 'Panama', 'Papua New Guinea', 
-                        'Paraguay', 'Peru', 'Philippines', 'Poland', 'Portugal', 'Puerto Rico', 
-                        'Qatar', 'Romania', 'Russia', 'Rwanda', 'S. Sudan', 'Saudi Arabia', 
-                        'Senegal', 'Serbia', 'Sierra Leone', 'Slovakia', 'Slovenia', 'Solomon Is.', 
-                        'Somalia', 'Somaliland', 'South Africa', 'South Korea', 'Spain', 
-                        'Sri Lanka', 'Sudan', 'Suriname', 'Sweden', 'Switzerland', 'Syria', 
-                        'Taiwan', 'Tajikistan', 'Tanzania', 'Thailand', 'Timor-Leste', 'Togo', 
-                        'Trinidad and Tobago', 'Tunisia', 'Turkey', 'Turkmenistan', 'Uganda', 
-                        'Ukraine', 'United Arab Emirates', 'United Kingdom', 'United States of America', 
-                        'Uruguay', 'Uzbekistan', 'Vanuatu', 'Venezuela', 'Vietnam', 'W. Sahara', 
-                        'Yemen', 'Zambia', 'Zimbabwe', 'eSwatini'
-                        ];
-
-
-                    const countrySelect = document.getElementById("country-select");
-                    countries.forEach(country => {
-                        const option = document.createElement("option");
-                        option.value = country;
-                        option.textContent = country;
-                        countrySelect.appendChild(option);
-                    });
-                </script>
-            </select>
+            <select id="country-select"></select>
 
             <label for="year-select">Year:</label>
             <select id="year-select">
@@ -73,9 +29,8 @@
 
             <label for="data-type-select">Data Type:</label>
             <select id="data-type-select">
-                <option value="alcohol">Alcohol Consumption</option> 
-                <option value="birth-death">Total Deaths</option>
-                
+                <option value="Alcohol Consumption">Alcohol Consumption</option> 
+                <option value="Total Deaths">Total Deaths</option>
             </select>
 
             <div id="map-container">
@@ -92,11 +47,104 @@
         <div id="summary-container" style="text-align: center; margin-top: 20px;">
             <p id="summary-text" style="font-size: 18px; font-family: 'Raleway'; color: white;"></p>
         </div>
-        
-        
 
         <script src="https://unpkg.com/topojson-client@3"></script>
         <script src="Worldmap/worldmap.js"></script>
     </div>
+
+    <script>
+        // Predefined list of countries
+        const countries = [
+            'Afghanistan', 'Albania', 'Algeria', 'Angola', 'Argentina', 'Armenia', 
+            'Australia', 'Austria', 'Azerbaijan', 'Bahamas', 'Bangladesh', 'Belarus', 
+            'Belgium', 'Belize', 'Benin', 'Bhutan', 'Bolivia', 'Bosnia and Herz.', 
+            'Botswana', 'Brazil', 'Brunei', 'Bulgaria', 'Burkina Faso', 'Burundi', 
+            'Cambodia', 'Cameroon', 'Canada', 'Central African Rep.', 'Chad', 'Chile', 
+            'China', 'Colombia', 'Congo', 'Costa Rica', 'Croatia', 'Cuba', 'Cyprus', 
+            'Czechia', "Côte d'Ivoire", 'Dem. Rep. Congo', 'Denmark', 'Djibouti', 
+            'Dominican Rep.', 'Ecuador', 'Egypt', 'El Salvador', 'Eq. Guinea', 
+            'Eritrea', 'Estonia', 'Ethiopia', 'Falkland Is.', 'Fiji', 'Finland', 
+            'France', 'Gabon', 'Gambia', 'Georgia', 'Germany', 'Ghana', 'Greece', 
+            'Greenland', 'Guatemala', 'Guinea', 'Guinea-Bissau', 'Guyana', 'Haiti', 
+            'Honduras', 'Hungary', 'Iceland', 'India', 'Indonesia', 'Iran', 'Iraq', 
+            'Ireland', 'Israel', 'Italy', 'Jamaica', 'Japan', 'Jordan', 'Kazakhstan', 
+            'Kenya', 'Kosovo', 'Kuwait', 'Kyrgyzstan', 'Laos', 'Latvia', 'Lebanon', 
+            'Lesotho', 'Liberia', 'Libya', 'Lithuania', 'Luxembourg', 'Madagascar', 
+            'Malawi', 'Malaysia', 'Mali', 'Mauritania', 'Mexico', 'Moldova', 
+            'Mongolia', 'Montenegro', 'Morocco', 'Mozambique', 'Myanmar', 'N. Cyprus', 
+            'Namibia', 'Nepal', 'Netherlands', 'New Caledonia', 'New Zealand', 
+            'Nicaragua', 'Niger', 'Nigeria', 'North Korea', 'North Macedonia', 
+            'Norway', 'Oman', 'Pakistan', 'Palestine', 'Panama', 'Papua New Guinea', 
+            'Paraguay', 'Peru', 'Philippines', 'Poland', 'Portugal', 'Puerto Rico', 
+            'Qatar', 'Romania', 'Russia', 'Rwanda', 'S. Sudan', 'Saudi Arabia', 
+            'Senegal', 'Serbia', 'Sierra Leone', 'Slovakia', 'Slovenia', 'Solomon Is.', 
+            'Somalia', 'Somaliland', 'South Africa', 'South Korea', 'Spain', 
+            'Sri Lanka', 'Sudan', 'Suriname', 'Sweden', 'Switzerland', 'Syria', 
+            'Taiwan', 'Tajikistan', 'Tanzania', 'Thailand', 'Timor-Leste', 'Togo', 
+            'Trinidad and Tobago', 'Tunisia', 'Turkey', 'Turkmenistan', 'Uganda', 
+            'Ukraine', 'United Arab Emirates', 'United Kingdom', 'United States of America', 
+            'Uruguay', 'Uzbekistan', 'Vanuatu', 'Venezuela', 'Vietnam', 'W. Sahara', 
+            'Yemen', 'Zambia', 'Zimbabwe', 'eSwatini'
+        ];
+
+        // Populate country dropdown
+        const countrySelect = document.getElementById("country-select");
+        countries.forEach(country => {
+            const option = document.createElement("option");
+            option.value = country;
+            option.textContent = country;
+            countrySelect.appendChild(option);
+        });
+
+        // File path to data
+        const dataFilePath = "../data/vis3_data.csv";
+
+        // Function to fetch data
+        async function fetchData() {
+            const response = await fetch(dataFilePath);
+            const data = await response.text();
+            const rows = data.split("\n").slice(1); // Remove headers
+            return rows.map(row => {
+                const [Country, Year, AlcoholConsumption, TotalDeaths] = row.split(","); // Adjust based on your CSV headers
+                return {
+                    Country: Country.trim(),
+                    Year: Year.trim(),
+                    AlcoholConsumption: parseFloat(AlcoholConsumption.trim()),
+                    TotalDeaths: parseFloat(TotalDeaths.trim())
+                };
+            });
+        }
+
+        // Function to update the summary text
+        async function updateSummary() {
+            const country = document.getElementById("country-select").value;
+            const year = document.getElementById("year-select").value;
+            const dataType = document.getElementById("data-type-select").value;
+
+            const data = await fetchData();
+            const filteredData = data.find(d => d.Country === country && d.Year === year);
+
+            const summaryText = document.getElementById("summary-text");
+            if (filteredData) {
+                if (dataType === "Alcohol Consumption") {
+                    summaryText.textContent = `In ${year}, alcohol, recorded per capita (15+ years) consumption (in liters of pure alcohol) was ${filteredData.AlcoholConsumption}.`;
+                } else if (dataType === "Total Deaths") {
+                    summaryText.textContent = `In ${year}, the total number of deaths in ${country} was ${filteredData.TotalDeaths}.`;
+                } else {
+                    summaryText.textContent = "Data type not supported yet.";
+                }
+            } else {
+                summaryText.textContent = "No data available for the selected country and year.";
+            }
+        }
+
+        // Event listeners for dropdown changes
+        document.getElementById("country-select").addEventListener("change", updateSummary);
+        document.getElementById("year-select").addEventListener("change", updateSummary);
+        document.getElementById("data-type-select").addEventListener("change", updateSummary);
+
+        // Initial call to display data when the page loads
+        updateSummary();
+    </script>
 </body>
 </html>
