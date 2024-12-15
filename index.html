@@ -31,9 +31,30 @@
 </head>
 
 <!-- Main page content -->
+<nav>
+  <a data-tab-target="#about" class="logo">
+    <img src="SVG_logo/WHITE.svg" alt="Logo" width="125" height="125">
+  </a>
+  <ul class="tabs">
+    <li class="tab active">
+      <a href="../index.html">ABOUT</a>
+    </li>
+    <li class="tab dropdown">
+      VISUALIZATION
+      <ul class="dropdown-menu">
+        <li><a href="../Visualization1/vis1.html">Brush & Link</a></li>
+        <li><a href="../visualization2/vis2.html">Visualization 2</a></li>
+        <li><a href="../Visualization3/vis3.html">Visualization 3</a></li>
+      </ul>
+    </li>
+    <li class="tab">
+      <a href="../TeamPage/teampage.html">TEAM</a>
+    </li>
+  </ul>
+</nav>
+
 
 <body>
-  <div id="navbar-container"></div>
   <div class="tab-content">
     <div id="about" data-tab-content class="active">
       <div class="content-column">
@@ -175,7 +196,6 @@
     <!-- Scripts at the end avoid need for dealing with async, defer, or onload event handlers -->
     <script src="lib/d3.v4/d3.v4.js"></script>
     <script src="js/visualization.js"></script>
-    <script src="Navbar/loadnavbar.js"></script>
 </body>
 
 </html>
