@@ -117,6 +117,10 @@
                 };
             });
         }
+        //format numbers with commas
+        function formatNumber(num) {
+            return new Intl.NumberFormat('en-US').format(num);
+        }
 
         //  update the summary text
         async function updateSummary() {
@@ -134,18 +138,18 @@
                 const highlightColor = "#F2B15F"; // match the country highlight color
 
                 if (dataType === "AlcoholConsumption") {
-                    summaryText.innerHTML = `In ${year}, Alcohol, recorded per capita (15+ years) consumption (in liters of pure Alcohol) in ${country} was <span style="color: ${highlightColor}; font-weight: bold;">${filteredData.AlcoholConsumption}</span>.`;
+                    summaryText.innerHTML = `In ${year}, Alcohol, recorded per capita (15+ years) consumption (in liters of pure Alcohol) in ${country} was <span style="color: ${highlightColor}; font-weight: bold;">${formatNumber(filteredData.AlcoholConsumption)}</span>.`;
                 } else if (dataType === "TotalDeaths") {
-                    summaryText.innerHTML = `In ${year}, the total number of deaths in ${country} was <span style="color: ${highlightColor}; font-weight: bold;">${filteredData.TotalDeaths}</span>.`;
+                    summaryText.innerHTML = `In ${year}, the total number of deaths in ${country} was <span style="color: ${highlightColor}; font-weight: bold;">${formatNumber(filteredData.TotalDeaths)}</span>.`;
                 } else {
                     summaryText.textContent = "Data type not supported yet.";
                 }
-
             } else {
                 console.log("im in other else");
                 summaryText.textContent = "No data available for the selected country and year.";
             }
         }
+
         async function updateBarChart() {
     console.log("Updating bar chart...");
     const country = document.getElementById("country-select").value;
@@ -157,12 +161,12 @@
         d.Country === country && (d.Year == year || d.Year == year - 1 || d.Year == year + 1)
     );
 
-    //  data by year for consistent bar chart display
+    // sort data by year for consistent bar chart display
     filteredData.sort((a, b) => a.Year - b.Year);
 
-    //  SVG
+    //set up the SVG
     const svg = d3.select("#bar-chart-svg");
-    svg.selectAll("*").remove(); // clear existing content
+    svg.selectAll("*").remove(); // Clear existing content
 
     const margin = { top: 60, right: 30, bottom: 70, left: 80 };
     const width = +svg.attr("width") - margin.left - margin.right;
@@ -170,7 +174,7 @@
 
     const g = svg.append("g").attr("transform", `translate(${margin.left},${margin.top})`);
 
-    // title inside the container
+    //add a title inside the container
     d3.select("#bar-chart-container").select(".chart-title").remove();
     d3.select("#bar-chart-container").insert("h3", ":first-child")
         .attr("class", "chart-title")
@@ -179,18 +183,18 @@
         .style("margin", "0 0 10px 0")
         .text("Yearly Data Comparison");
 
-    // scales
+    //set up scales
     const x = d3.scaleBand()
         .domain(filteredData.map(d => d.Year))
         .range([0, width])
-        .padding(0.5); //  bars with increased padding
+        .padding(0.5); 
 
     const y = d3.scaleLinear()
         .domain([0, d3.max(filteredData, d => dataType === "AlcoholConsumption" ? d.AlcoholConsumption : d.TotalDeaths)])
         .nice()
         .range([height, 0]);
 
-    //  X axis
+    // Add X axis
     g.append("g")
         .attr("transform", `translate(0,${height})`)
         .call(d3.axisBottom(x))
@@ -200,23 +204,23 @@
         .style("font-size", "12px")
         .style("fill", "white");
 
-    //  X axis line
+    // Style X axis line
     g.selectAll(".domain, .tick line")
         .style("stroke", "white");
 
-    // Add Y axis
+    // add Y axis
     g.append("g")
-        .call(d3.axisLeft(y))
+        .call(d3.axisLeft(y).tickFormat(d3.format(","))) // Format Y axis numbers with commas
         .selectAll("text")
         .style("font-family", "'Raleway', sans-serif")
         .style("font-size", "12px")
         .style("fill", "white");
 
-    //  Y axis line
+    // Style Y axis line
     g.selectAll(".domain, .tick line")
         .style("stroke", "white");
 
-    // X axis label
+    // Add X axis label
     g.append("text")
         .attr("text-anchor", "middle")
         .attr("x", width / 2)
@@ -226,7 +230,7 @@
         .style("fill", "white")
         .text("Year");
 
-    // Y axis label
+    // Add Y axis label
     g.append("text")
         .attr("text-anchor", "middle")
         .attr("x", -height / 2)
@@ -237,7 +241,7 @@
         .style("fill", "white")
         .text(dataType === "AlcoholConsumption" ? "Alcohol Consumption (Liters)" : "Total Deaths");
 
-    // bars with rounded edges
+    // Add bars with rounded edges
     g.selectAll(".bar")
         .data(filteredData)
         .enter().append("rect")
@@ -250,7 +254,8 @@
         .attr("rx", 10) // Rounded corners on bars
         .attr("ry", 10);
 
-    // labels above the bars
+    // Add labels above the bars
+    // Add labels above the bars
     g.selectAll(".label")
         .data(filteredData)
         .enter().append("text")
@@ -261,8 +266,10 @@
         .style("font-family", "'Raleway', sans-serif")
         .style("font-size", "12px")
         .style("fill", "white")
-        .text(d => dataType === "AlcoholConsumption" ? d.AlcoholConsumption : d.TotalDeaths);
+        .text(d => formatNumber(dataType === "AlcoholConsumption" ? d.AlcoholConsumption : d.TotalDeaths));
+
 }
+
 
 
         
