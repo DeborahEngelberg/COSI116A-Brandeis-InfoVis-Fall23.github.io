@@ -53,7 +53,7 @@ async function drawBarChart(country, dataType) {
       .attr("y", d => y(d[dataType]))
       .attr("width", x.bandwidth())
       .attr("height", d => height - y(d[dataType]))
-      .attr("fill", "orange");
+      .attr("fill", "#F2B15F");
 
   // Add labels
   chart.selectAll(".label")
