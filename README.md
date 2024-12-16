@@ -73,4 +73,4 @@ Additionally, the map includes a play feature that cycles through the years at s
 
 
 ### Visualization 3: Brushing & Linking
-![Visualtion 1 Demo](Images/vis3_gif.gif)
+![Visualtion 1 Demo](Images/gif-3.gif)
