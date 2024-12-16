@@ -67,9 +67,9 @@ This is our first visualization, which uses three types of charts: a map, a line
 When a user selects a year on the map, the corresponding year is highlighted in both the line chart and the bar chart. Similarly, selecting multiple years in the line chart or bar chart highlights them in the other chart through brushing and linking.
 Additionally, the map includes a play feature that cycles through the years at set intervals, dynamically updating the highlights in the line and bar charts to reflect the current year.
 
-### Visualization 2: PLACEHOLDER
+### Visualization 2: Deaths by Cause with Zooming & Panning
 <img src="Images/vis2demo.gif" alt="Visualization 2 Demo" width="600" />
-
+This is our second visualization, which features an interactive map based on user inputs: year, color, and the selected cause of death. Users can choose a year and cause of death from two dropdown menus, and the map dynamically updates to display the data. Countries are shaded according to the number of reported deaths for the selected cause in the chosen year. The shading intensity aligns with the user-selected color: the closer a country's shade is to the chosen color, the higher the number of deaths. The map also includes zoom and pan functionality, allowing users to focus on specific regions or hover over countries to view detailed death counts. This feature is particularly useful for exploring smaller countries more closely.
 
 ### Visualization 3: Brushing & Linking
 <img src="Images/vis3demo.gif" alt="Visualization 3 Demo" width="600" />
