@@ -59,4 +59,12 @@ For the data cleaning we used Python's Panadas library. We combined four dataset
 ### Visualization 1: Brushing & Linking
 ![Visualtion 1 Demo](Images/vis1demo.gif)
 
-This is our first visualization. 
+This is our first visualization, which uses three types of charts: a map, a line chart, and a bar chart, all connected through linking and brushing.
+
+* The map displays the distribution of alcohol consumption across the world for a selected year.
+* The line chart examines death rates over the years.
+* The bar chart shows alcohol consumption trends over the years.
+  
+When a user selects a year on the map, the corresponding year is highlighted in both the line chart and the bar chart. Similarly, selecting multiple years in the line chart or bar chart highlights them in the other chart through brushing and linking.
+Additionally, the map includes a play feature that cycles through the years at set intervals, dynamically updating the highlights in the line and bar charts to reflect the current year.
+
