@@ -57,7 +57,7 @@ For the data cleaning we used Python's Panadas library. We combined four dataset
 
 ## Visualization Demonstrations
 ### Visualization 1: Brushing & Linking
-![Visualtion 1 Demo](Images/vis1demo.gif)
+<img src="Images/vis1demo.gif" alt="Visualization 1 Demo" width="600" />
 
 This is our first visualization, which uses three types of charts: a map, a line chart, and a bar chart, all connected through linking and brushing.
 
@@ -73,4 +73,4 @@ Additionally, the map includes a play feature that cycles through the years at s
 
 
 ### Visualization 3: Brushing & Linking
-![Visualtion 1 Demo](Images/gif-3.gif)
+<img src="Images/gif-3.gif" alt="Visualization 3 Demo" width="600" />
