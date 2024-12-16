@@ -63,5 +63,7 @@ at the bottom we should add the loom of the run through.
 ## Visualization Demonstrations
 ### Visualization 1: Brushing & Linking
 ![Visualtion 1 Demo](Images/vis1demo.gif)
+### Visualization 2: Deaths by Cause with Zooming & Panning
+![Visualization 2 Demo](Images/vis2demo.gif)
 
 
