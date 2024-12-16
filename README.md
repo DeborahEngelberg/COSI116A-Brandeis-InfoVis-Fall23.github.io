@@ -69,7 +69,7 @@ When a user selects a year on the map, the corresponding year is highlighted in 
 Additionally, the map includes a play feature that cycles through the years at set intervals, dynamically updating the highlights in the line and bar charts to reflect the current year.
 
 ### Visualization 2: PLACEHOLDER
-![Visualtion 1 Demo](Images/vis1demo.gif)
+<img src="Images/gif-3.gif" alt="Visualization 3 Demo" width="600" />
 
 
 ### Visualization 3: Brushing & Linking
