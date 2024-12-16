@@ -39,21 +39,15 @@ function ready(error, geoData, data00_09, data09_19) {
       for (const d of data09_19) {
         if (d["Beverage Types"] && d["Beverage Types"].trim() === "All types") {
           data[d["Countries, territories and areas"].trim()] = +d[` ${year}`];
-
-          console.log("In the 2010-2019 area");
         }
       }
     } else if (year >= 2000 && year <= 2009) {
       for (const d of data00_09) {
         if (d["Beverage Types"] && d["Beverage Types"].trim() === "All types") {
           data[d["Countries, territories and areas"].trim()] = +d[` ${year}`];
-
-          console.log("In the 2000-2009 area");
         }
       }
-    } 
-
-    // console.log("Processed Data:", data);
+    }
 
     // Create a color scale
     const colorScale = d3.scaleQuantize()

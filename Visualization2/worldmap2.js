@@ -32,8 +32,6 @@ const zoom = d3.zoom()
 // Apply zoom behavior to the SVG
 svg.call(zoom);
 
-
-
 // Create a tooltip div that is hidden by default
 const tooltip = d3.select("body").append("div")
   .attr("class", "tooltip")

@@ -285,7 +285,6 @@
 
         // update the vis-svg element with the selected country
     function updateVisSvg() {
-        console.log("Entering updateVisSvg...");
         const country = document.getElementById("country-select").value;
         const visSvg = document.getElementById("vis-svg");
 
@@ -295,11 +294,9 @@
        //  GeoJSON data
         fetch(geoJsonFilePath)
         .then(response => {
-            console.log("GeoJSON data fetched...");
             return response.json();
         })
         .then(geoJsonData => {
-            console.log("GeoJSON data parsed...");
             // filter the GeoJSON data to include only the selected country
             const countryData = geoJsonData.features.filter(d => d.properties.name === country);
 
@@ -316,16 +313,12 @@
                     .attr("fill", "#F2B15F")
                     .attr("stroke", "#333")
                     .attr("stroke-width", 0.5);
-            } else {
-                console.log("Country not found in GeoJSON data.");
             }
         })
         .catch(error => {
             console.error("Error loading GeoJSON data:", error);
         });
     }
-
-        // 
         document.getElementById("country-select").addEventListener("change", () => {
             updateSummary();
             updateVisSvg();
