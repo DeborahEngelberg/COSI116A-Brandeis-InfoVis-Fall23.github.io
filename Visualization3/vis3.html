@@ -54,7 +54,7 @@
     <script src="https://unpkg.com/topojson-client@3"></script>
     <script src="Worldmap/worldmap.js"></script>
     <script>
-        // Predefined list of countries
+        //list of countries
         const countries = [
             'Afghanistan', 'Albania', 'Algeria', 'Angola', 'Argentina', 'Armenia', 
             'Australia', 'Austria', 'Azerbaijan', 'Bahamas', 'Bangladesh', 'Belarus', 
@@ -88,7 +88,7 @@
             'Yemen', 'Zambia', 'Zimbabwe', 'eSwatini'
         ];
 
-        // Populate country dropdown
+        //country dropdown
         const countrySelect = document.getElementById("country-select");
         countries.forEach(country => {
             const option = document.createElement("option");
@@ -97,11 +97,11 @@
             countrySelect.appendChild(option);
         });
 
-        // File path to data
+        // path to data
         const dataFilePath = "../data/vis3_data.csv";
         const geoJsonFilePath = "Worldmap/geo.json";
 
-        // Function to fetch data
+        // to fetch data
         async function fetchData() {
             const response = await fetch(dataFilePath);
             const data = await response.text();
@@ -118,7 +118,7 @@
             });
         }
 
-        // Function to update the summary text
+        //  update the summary text
         async function updateSummary() {
             console.log("Updating summary text...");
             const country = document.getElementById("country-select").value;
@@ -131,7 +131,7 @@
             const summaryText = document.getElementById("summary-text");
             if (filteredData) {
                 console.log("im in");
-                const highlightColor = "#F2B15F"; // Match the country highlight color
+                const highlightColor = "#F2B15F"; // match the country highlight color
 
                 if (dataType === "AlcoholConsumption") {
                     summaryText.innerHTML = `In ${year}, Alcohol, recorded per capita (15+ years) consumption (in liters of pure Alcohol) in ${country} was <span style="color: ${highlightColor}; font-weight: bold;">${filteredData.AlcoholConsumption}</span>.`;
@@ -157,12 +157,12 @@
         d.Country === country && (d.Year == year || d.Year == year - 1 || d.Year == year + 1)
     );
 
-    // Sort data by year for consistent bar chart display
+    //  data by year for consistent bar chart display
     filteredData.sort((a, b) => a.Year - b.Year);
 
-    // Set up the SVG
+    //  SVG
     const svg = d3.select("#bar-chart-svg");
-    svg.selectAll("*").remove(); // Clear existing content
+    svg.selectAll("*").remove(); // clear existing content
 
     const margin = { top: 60, right: 30, bottom: 70, left: 80 };
     const width = +svg.attr("width") - margin.left - margin.right;
@@ -170,7 +170,7 @@
 
     const g = svg.append("g").attr("transform", `translate(${margin.left},${margin.top})`);
 
-    // Add a title inside the container
+    // title inside the container
     d3.select("#bar-chart-container").select(".chart-title").remove();
     d3.select("#bar-chart-container").insert("h3", ":first-child")
         .attr("class", "chart-title")
@@ -179,18 +179,18 @@
         .style("margin", "0 0 10px 0")
         .text("Yearly Data Comparison");
 
-    // Set up scales
+    // scales
     const x = d3.scaleBand()
         .domain(filteredData.map(d => d.Year))
         .range([0, width])
-        .padding(0.5); // Narrower bars with increased padding
+        .padding(0.5); //  bars with increased padding
 
     const y = d3.scaleLinear()
         .domain([0, d3.max(filteredData, d => dataType === "AlcoholConsumption" ? d.AlcoholConsumption : d.TotalDeaths)])
         .nice()
         .range([height, 0]);
 
-    // Add X axis
+    //  X axis
     g.append("g")
         .attr("transform", `translate(0,${height})`)
         .call(d3.axisBottom(x))
@@ -200,7 +200,7 @@
         .style("font-size", "12px")
         .style("fill", "white");
 
-    // Style X axis line
+    //  X axis line
     g.selectAll(".domain, .tick line")
         .style("stroke", "white");
 
@@ -212,11 +212,11 @@
         .style("font-size", "12px")
         .style("fill", "white");
 
-    // Style Y axis line
+    //  Y axis line
     g.selectAll(".domain, .tick line")
         .style("stroke", "white");
 
-    // Add X axis label
+    // X axis label
     g.append("text")
         .attr("text-anchor", "middle")
         .attr("x", width / 2)
@@ -226,7 +226,7 @@
         .style("fill", "white")
         .text("Year");
 
-    // Add Y axis label
+    // Y axis label
     g.append("text")
         .attr("text-anchor", "middle")
         .attr("x", -height / 2)
@@ -237,7 +237,7 @@
         .style("fill", "white")
         .text(dataType === "AlcoholConsumption" ? "Alcohol Consumption (Liters)" : "Total Deaths");
 
-    // Add bars with rounded edges
+    // bars with rounded edges
     g.selectAll(".bar")
         .data(filteredData)
         .enter().append("rect")
@@ -250,7 +250,7 @@
         .attr("rx", 10) // Rounded corners on bars
         .attr("ry", 10);
 
-    // Add labels above the bars
+    // labels above the bars
     g.selectAll(".label")
         .data(filteredData)
         .enter().append("text")
@@ -267,25 +267,25 @@
 
         
 
-        // Update the bar chart when relevant dropdowns change
+        // update bar chart when relevant dropdowns change
         document.getElementById("country-select").addEventListener("change", updateBarChart);
         document.getElementById("year-select").addEventListener("change", updateBarChart);
         document.getElementById("data-type-select").addEventListener("change", updateBarChart);
 
-        // Initial call to render the bar chart on page load
+        //  call to render the bar chart on page load
         updateBarChart();
 
 
-        // Function to update the vis-svg element with the selected country
+        // update the vis-svg element with the selected country
     function updateVisSvg() {
         console.log("Entering updateVisSvg...");
         const country = document.getElementById("country-select").value;
         const visSvg = document.getElementById("vis-svg");
 
-        // Clear previous content
+        // clear previous content
         visSvg.innerHTML = "";
 
-       // Load GeoJSON data
+       //  GeoJSON data
         fetch(geoJsonFilePath)
         .then(response => {
             console.log("GeoJSON data fetched...");
@@ -293,15 +293,15 @@
         })
         .then(geoJsonData => {
             console.log("GeoJSON data parsed...");
-            // Filter the GeoJSON data to include only the selected country
+            // filter the GeoJSON data to include only the selected country
             const countryData = geoJsonData.features.filter(d => d.properties.name === country);
 
             if (countryData.length > 0) {
-                // Create a projection and path generator
+                //  projection and path generator
                 const projection = d3.geoMercator().fitSize([400, 300], { type: "FeatureCollection", features: countryData });
                 const path = d3.geoPath().projection(projection);
 
-                // Draw the map
+                // draw  map
                 d3.select(visSvg).selectAll("path")
                     .data(countryData)
                     .enter().append("path")
@@ -318,7 +318,7 @@
         });
     }
 
-        // Event listeners for dropdown changes
+        // 
         document.getElementById("country-select").addEventListener("change", () => {
             updateSummary();
             updateVisSvg();
@@ -326,7 +326,7 @@
         document.getElementById("year-select").addEventListener("change", updateSummary);
         document.getElementById("data-type-select").addEventListener("change", updateSummary);
 
-        // Initial call to display data when the page loads
+        // call to display data when the page loads
         updateVisSvg();
         updateSummary();
     </script>
