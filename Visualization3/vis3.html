@@ -43,10 +43,12 @@
             <div id="data-summary" class="data-summary">
                 <p id="summary-text"></p>
             </div>
-            <div id="bar-chart-container">
-            <h3>Yearly Data Comparison</h3>
-            <svg id="bar-chart"></svg>
+            
+        <div id="bar-chart-container" class="data-summary">
+            <svg id="bar-chart-svg" width="600" height="400"></svg>
         </div>
+        
+        
         </div>
     </div>
     <script src="https://unpkg.com/topojson-client@3"></script>
@@ -129,7 +131,7 @@
             const summaryText = document.getElementById("summary-text");
             if (filteredData) {
                 console.log("im in");
-                const highlightColor = "orange"; // Match the country highlight color
+                const highlightColor = "#F2B15F"; // Match the country highlight color
 
                 if (dataType === "AlcoholConsumption") {
                     summaryText.innerHTML = `In ${year}, Alcohol, recorded per capita (15+ years) consumption (in liters of pure Alcohol) in ${country} was <span style="color: ${highlightColor}; font-weight: bold;">${filteredData.AlcoholConsumption}</span>.`;
@@ -144,6 +146,135 @@
                 summaryText.textContent = "No data available for the selected country and year.";
             }
         }
+        async function updateBarChart() {
+    console.log("Updating bar chart...");
+    const country = document.getElementById("country-select").value;
+    const year = parseInt(document.getElementById("year-select").value);
+    const dataType = document.getElementById("data-type-select").value;
+
+    const data = await fetchData();
+    const filteredData = data.filter(d =>
+        d.Country === country && (d.Year == year || d.Year == year - 1 || d.Year == year + 1)
+    );
+
+    // Sort data by year for consistent bar chart display
+    filteredData.sort((a, b) => a.Year - b.Year);
+
+    // Set up the SVG
+    const svg = d3.select("#bar-chart-svg");
+    svg.selectAll("*").remove(); // Clear existing content
+
+    const margin = { top: 60, right: 30, bottom: 70, left: 80 };
+    const width = +svg.attr("width") - margin.left - margin.right;
+    const height = +svg.attr("height") - margin.top - margin.bottom;
+
+    const g = svg.append("g").attr("transform", `translate(${margin.left},${margin.top})`);
+
+    // Add a title inside the container
+    d3.select("#bar-chart-container").select(".chart-title").remove();
+    d3.select("#bar-chart-container").insert("h3", ":first-child")
+        .attr("class", "chart-title")
+        .style("text-align", "center")
+        .style("color", "white")
+        .style("margin", "0 0 10px 0")
+        .text("Yearly Data Comparison");
+
+    // Set up scales
+    const x = d3.scaleBand()
+        .domain(filteredData.map(d => d.Year))
+        .range([0, width])
+        .padding(0.5); // Narrower bars with increased padding
+
+    const y = d3.scaleLinear()
+        .domain([0, d3.max(filteredData, d => dataType === "AlcoholConsumption" ? d.AlcoholConsumption : d.TotalDeaths)])
+        .nice()
+        .range([height, 0]);
+
+    // Add X axis
+    g.append("g")
+        .attr("transform", `translate(0,${height})`)
+        .call(d3.axisBottom(x))
+        .selectAll("text")
+        .style("text-anchor", "middle")
+        .style("font-family", "'Raleway', sans-serif")
+        .style("font-size", "12px")
+        .style("fill", "white");
+
+    // Style X axis line
+    g.selectAll(".domain, .tick line")
+        .style("stroke", "white");
+
+    // Add Y axis
+    g.append("g")
+        .call(d3.axisLeft(y))
+        .selectAll("text")
+        .style("font-family", "'Raleway', sans-serif")
+        .style("font-size", "12px")
+        .style("fill", "white");
+
+    // Style Y axis line
+    g.selectAll(".domain, .tick line")
+        .style("stroke", "white");
+
+    // Add X axis label
+    g.append("text")
+        .attr("text-anchor", "middle")
+        .attr("x", width / 2)
+        .attr("y", height + 50)
+        .style("font-family", "'Raleway', sans-serif")
+        .style("font-size", "14px")
+        .style("fill", "white")
+        .text("Year");
+
+    // Add Y axis label
+    g.append("text")
+        .attr("text-anchor", "middle")
+        .attr("x", -height / 2)
+        .attr("y", -60)
+        .attr("transform", "rotate(-90)")
+        .style("font-family", "'Raleway', sans-serif")
+        .style("font-size", "14px")
+        .style("fill", "white")
+        .text(dataType === "AlcoholConsumption" ? "Alcohol Consumption (Liters)" : "Total Deaths");
+
+    // Add bars with rounded edges
+    g.selectAll(".bar")
+        .data(filteredData)
+        .enter().append("rect")
+        .attr("class", "bar")
+        .attr("x", d => x(d.Year))
+        .attr("y", d => y(dataType === "AlcoholConsumption" ? d.AlcoholConsumption : d.TotalDeaths))
+        .attr("width", x.bandwidth())
+        .attr("height", d => height - y(dataType === "AlcoholConsumption" ? d.AlcoholConsumption : d.TotalDeaths))
+        .attr("fill", "#F2B15F")
+        .attr("rx", 10) // Rounded corners on bars
+        .attr("ry", 10);
+
+    // Add labels above the bars
+    g.selectAll(".label")
+        .data(filteredData)
+        .enter().append("text")
+        .attr("class", "label")
+        .attr("x", d => x(d.Year) + x.bandwidth() / 2)
+        .attr("y", d => y(dataType === "AlcoholConsumption" ? d.AlcoholConsumption : d.TotalDeaths) - 10)
+        .attr("text-anchor", "middle")
+        .style("font-family", "'Raleway', sans-serif")
+        .style("font-size", "12px")
+        .style("fill", "white")
+        .text(d => dataType === "AlcoholConsumption" ? d.AlcoholConsumption : d.TotalDeaths);
+}
+
+
+        
+
+        // Update the bar chart when relevant dropdowns change
+        document.getElementById("country-select").addEventListener("change", updateBarChart);
+        document.getElementById("year-select").addEventListener("change", updateBarChart);
+        document.getElementById("data-type-select").addEventListener("change", updateBarChart);
+
+        // Initial call to render the bar chart on page load
+        updateBarChart();
+
 
         // Function to update the vis-svg element with the selected country
     function updateVisSvg() {
@@ -175,7 +306,7 @@
                     .data(countryData)
                     .enter().append("path")
                     .attr("d", path)
-                    .attr("fill", "orange")
+                    .attr("fill", "#F2B15F")
                     .attr("stroke", "#333")
                     .attr("stroke-width", 0.5);
             } else {

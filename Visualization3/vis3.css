@@ -112,3 +112,24 @@ body, html {
     margin-top: 5%; /* Add space between the map and the summary text */
 }
 
+#bar-chart-container {
+    margin: 20px auto;
+    max-width: 600px;
+    background-color: rgba(0, 0, 0, 0.7); /* Match the summary container style */
+    padding: 20px;
+    border-radius: 20px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Add subtle shadow for depth */
+}
+
+#bar-chart-svg {
+    display: block;
+    margin: 0 auto;
+}
+
+/* Styling for the chart title */
+.chart-title {
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
