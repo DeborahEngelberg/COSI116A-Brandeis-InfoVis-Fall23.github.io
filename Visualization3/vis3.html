@@ -13,6 +13,7 @@
 <body>
     <div id="navbar-container"></div>
     <div class="vis-container">
+        
         <div class="map-title">
             <label for="country-select">Country:</label>
             <select id="country-select"></select>
@@ -42,6 +43,10 @@
             <div id="data-summary" class="data-summary">
                 <p id="summary-text"></p>
             </div>
+            <div id="bar-chart-container">
+            <h3>Yearly Data Comparison</h3>
+            <svg id="bar-chart"></svg>
+        </div>
         </div>
     </div>
     <script src="https://unpkg.com/topojson-client@3"></script>
