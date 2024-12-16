@@ -83,4 +83,8 @@ This is our final visualization, which uses a map and a bar chart. It employs th
 - [infoVizGroup8](https://github.com/aiberk/infoVizGroup8) by TA Aby and Team 8 (From 2023).
 - COSI 116A - Homework 4 - Brushing and Linking.
 - [Downloadable GeoJSON](https://geojson-maps.kyd.au/?utm_source=self&utm_medium=redirect).
+- [Dataset for Alcohol Consumption Rate (Liters per Capita)](https://apps.who.int/gho/data/view.main.52395) by The World Health Organization.
+- [Dataset for Causes of Deaths Around the World](https://www.kaggle.com/datasets/iamsouravbanerjee/cause-of-deaths-around-the-world) by Sourav Banerjee.
+- [Dataset for Global Births and Deaths Projections](https://www.kaggle.com/datasets/shreyasur965/births-and-deaths) by Shreya Sur965.
+
 
