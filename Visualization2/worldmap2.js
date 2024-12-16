@@ -73,7 +73,7 @@ d3.queue()
     data = loadedData;
 
     // Extract years and causes
-    years = Array.from(new Set(data.map(d => d.Year)));
+    years = Array.from(new Set(data.map(d => d.Year).filter(year => !isNaN(year))));
     causes = Object.keys(data[0]).slice(4);
 
     // Initialize dropdown menus and map
