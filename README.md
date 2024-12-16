@@ -54,14 +54,9 @@ For the data cleaning we used Python's Panadas library. We combined four dataset
 * Link to data cleanning: [Google Colab - Data Cleaning](https://colab.research.google.com/drive/1CXzDcB9EuiBlps0GL37_qgG_ykGpNrow?usp=sharing)
 <br />
 
-#### <ins> Step 3 - Implemeting The Visualization </ins>
-need to fill with pictures and text :)
-
-at the bottom we should add the loom of the run through. 
-<br />
 
 ## Visualization Demonstrations
 ### Visualization 1: Brushing & Linking
 ![Visualtion 1 Demo](Images/vis1demo.gif)
 
-
+This is our first visualization. 
