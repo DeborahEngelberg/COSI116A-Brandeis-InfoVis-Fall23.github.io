@@ -75,3 +75,12 @@ This is our second visualization, which features an interactive map based on use
 <img src="Images/vis3demo.gif" alt="Visualization 3 Demo" width="600" />
 
 This is our final visualization, which uses a map and a bar chart. It employs three parameters to display the data: a specific country, year, and data type. Once a country is chosen, it is highlighted on the map, and shows a larger representation of its borders below the map. At the bottom, there is a recap of the total for the selected data type that year. Below that, the visualization compares the chosen year with the prior year and the year after.
+
+## Acknowledgments
+- [D3: Data-Driven Documents](https://d3js.org/) by Mike Bostock.
+- [Let's Make a Map](https://bost.ocks.org/mike/map/) by Mike Bostock.
+- [Pure CSS responsive "Fork me on GitHub" ribbon](https://codepo8.github.io/css-fork-on-github-ribbon/#) by Chris Heilmann.
+- [infoVizGroup8](https://github.com/aiberk/infoVizGroup8) by TA Aby and Team 8 (From 2023).
+- COSI 116A - Homework 4 - Brushing and Linking.
+- [Downloadable GeoJSON](https://geojson-maps.kyd.au/?utm_source=self&utm_medium=redirect).
+
