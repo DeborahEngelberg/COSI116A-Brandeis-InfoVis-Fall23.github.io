@@ -14,15 +14,15 @@ const path = d3.geoPath().projection(projection);
 
 let selectedCountry = null;
 
-// Placeholder for the summary
+//for summary
 const dataSummary = d3.select("#data-summary");
 
-// Create a tooltip
+//tooltip
 const tooltip = d3.select("body").append("div")
   .attr("class", "tooltip")
   .style("opacity", 0);
 
-// Load the data
+//load data
 d3.queue()
   .defer(d3.json, "../Visualization3/Worldmap/geo.json")
   .defer(d3.csv, "../data/combined_data.csv") // Load the dataset
@@ -34,7 +34,7 @@ function ready(error, geoData, data) {
     return;
   }
 
-  // Draw the map
+  //to draw the map
   svg.selectAll(".country")
     .data(geoData.features)
     .enter().append("path")
@@ -57,7 +57,7 @@ function ready(error, geoData, data) {
         .style("opacity", 0);
     });
 
-  // Update map when dropdown changes
+  //update map when dropdown changes
   d3.selectAll("#country-select, #year-select, #data-type-select").on("change", function () {
     const country = d3.select("#country-select").property("value");
     const year = d3.select("#year-select").property("value"); //i think we need to change it to match the data cols
@@ -67,13 +67,13 @@ function ready(error, geoData, data) {
   });
 }
 
-// Function to highlight the selected country
+//highlight the selected country
 function updateHighlight(country, geoData) {
   svg.selectAll(".country")
     .style("fill", d => (d.properties.name === country ? "#F2B15F" : "#ccc"));
 }
 
-// Function to update the data summary
+//update the data summary
 function updateSummary(country, year, dataType, data) {
   // Find the corresponding data row
   const row = data.find(d => d.Country === country && d.Year === year && d.DataType === dataType);
