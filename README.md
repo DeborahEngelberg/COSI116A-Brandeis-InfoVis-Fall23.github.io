@@ -68,10 +68,10 @@ When a user selects a year on the map, the corresponding year is highlighted in 
 Additionally, the map includes a play feature that cycles through the years at set intervals, dynamically updating the highlights in the line and bar charts to reflect the current year.
 
 ### Visualization 2: PLACEHOLDER
-<img src="Images/gif-3.gif" alt="Visualization 3 Demo" width="600" />
+<img src="Images/vis2demo.gif" alt="Visualization 2 Demo" width="600" />
 
 
 ### Visualization 3: Brushing & Linking
-<img src="Images/gif-3.gif" alt="Visualization 3 Demo" width="600" />
+<img src="Images/vis3demo.gif" alt="Visualization 3 Demo" width="600" />
 
 This is our final visualization, which uses a map and a bar chart. It employs three parameters to display the data: a specific country, year, and data type. Once a country is chosen, it is highlighted on the map, and shows a larger representation of its borders below the map. At the bottom, there is a recap of the total for the selected data type that year. Below that, the visualization compares the chosen year with the prior year and the year after.
