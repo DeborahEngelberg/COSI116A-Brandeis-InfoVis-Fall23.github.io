@@ -68,3 +68,9 @@ This is our first visualization, which uses three types of charts: a map, a line
 When a user selects a year on the map, the corresponding year is highlighted in both the line chart and the bar chart. Similarly, selecting multiple years in the line chart or bar chart highlights them in the other chart through brushing and linking.
 Additionally, the map includes a play feature that cycles through the years at set intervals, dynamically updating the highlights in the line and bar charts to reflect the current year.
 
+### Visualization 2: PLACEHOLDER
+![Visualtion 1 Demo](Images/vis1demo.gif)
+
+
+### Visualization 3: Brushing & Linking
+![Visualtion 1 Demo](Images/vis3_gif.gif)
