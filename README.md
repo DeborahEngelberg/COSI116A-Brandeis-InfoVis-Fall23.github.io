@@ -37,10 +37,9 @@ Our project focuses on visualizing and analyzing how alcohol consumption rates a
 * CSS
 * Python
 * JSON
+* TopoJSON
 * Pandas
 * D3.js
-
-
 
 #### <ins> Step 1 - Brainsotrming Ideas  and Looking for Data</ins>
 
@@ -74,3 +73,5 @@ Additionally, the map includes a play feature that cycles through the years at s
 
 ### Visualization 3: Brushing & Linking
 <img src="Images/gif-3.gif" alt="Visualization 3 Demo" width="600" />
+
+This is our final visualization, which uses a map and a bar chart. It employs three parameters to display the data: a specific country, year, and data type. Once a country is chosen, it is highlighted on the map, and shows a larger representation of its borders below the map. At the bottom, there is a recap of the total for the selected data type that year. Below that, the visualization compares the chosen year with the prior year and the year after.
