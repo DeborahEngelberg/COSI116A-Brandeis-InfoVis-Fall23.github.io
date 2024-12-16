@@ -60,7 +60,7 @@
     <div id="about" data-tab-content class="active">
       <div class="content-column">
 
-        <h1>Project Team 13: Topic: Worldwide Deaths, COSI 116A F23</h1>
+        <h1>Project Team 13: Topic: Global Patterns in Alcohol and Mortality, COSI 116A F24</h1>
 
         <p><strong>Mackenzie Chung</strong>, <strong>Debbie Engelberg</strong>, <strong>Noam
             Reiner</strong>, <strong>Cameron Sherman</strong></p>
@@ -93,6 +93,19 @@
           of death interactively. Users can observe patterns across different years and regions, enabling them to draw
           informed conclusions. Through this experience, we hope to provide valuable insights into the complex and
           often overlooked impact of alcohol on global health.
+        </p>
+
+        <h1>Data Analysis and Cleaning</h1>
+
+        <p>For the data cleaning we used Python's Panadas library. We combined four datasets: one on causes of death
+          and three on alcohol consumption. For the cause of death data, we cleaned unnecessary columns, filled null
+          cells, added a total count column, and standardized data types. The alcohol consumption datasets were reformatted
+          and aligned, ensuring consistency for merging. After integrating the datasets by year and country. For interaction
+          with the Json of the map, we added alpha-2 countries codes.
+
+          <p>Link to data cleanning: <a href="https://colab.research.google.com/drive/1CXzDcB9EuiBlps0GL37_qgG_ykGpNrow?usp=sharing">Google Colab</a></p>
+
+
         </p>
 
 
@@ -165,7 +178,7 @@
             select Austria for the country, 2019 for the year, and Alcohol Consumption for the data type, they would see
             a
             message below the highlighted country in a black box that says "In 2019, alcohol, recorded per capita (15+
-            years) consumption (in liters of pure alcohol) was 11.9.
+            years) consumption (in liters of pure alcohol) was 11.9".
             <ul><em><a href="Visualization3/vis3.html">View Visualization 3</a></em></ul>
           </p>
 
@@ -195,11 +208,11 @@
           <img src="Images/vis1Draft.png" alt="Brushing & Linking Draft" style="width: 300px; object-fit: cover;">
           <img src="Images/vis1Final.png" alt="Brushing & Linking Final" style="width: 300px; object-fit: cover;">
 
-          <p><em>Visualization 2: Add more info later...</em></p>
+          <p><em>Visualization 2: Deaths by Cause with Zooming & Panning</em></p>
           <img src="Images/vis2Draft.png" alt="Brushing & Linking Draft" style="width: 300px; object-fit: cover;">
           <img src="Images/vis2Final.png" alt="Brushing & Linking Final" style="width: 300px; object-fit: cover;">
 
-          <p><em>Visualization 3: Add more info later...</em></p>
+          <p><em>Visualization 3: Individual Country Facts</em></p>
           <img src="Images/vis3Draft.png" alt="Brushing & Linking Draft" style="width: 300px; object-fit: cover;">
           <img src="Images/vis3Final.png" alt="Brushing & Linking Final" style="width: 300px; object-fit: cover;">
 
