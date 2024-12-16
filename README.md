@@ -1,6 +1,6 @@
 # Data Visualization Final Project - COSI 116A - Group 13
 ### GitHub Pages Website
-https://deborahengelberg.github.io/COSI116A-Brandeis-InfoVis-Fall23.github.io/ 
+https://deborahengelberg.github.io/COSI116A-Brandeis-InfoVis-Fall24.github.io/ 
 
 ### Team Members
 Debbie Engelberg, Cameron Sherman, Noam Reiner, Mackenzie Chung
