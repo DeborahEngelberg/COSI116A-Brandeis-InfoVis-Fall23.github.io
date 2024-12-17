@@ -104,22 +104,17 @@
 
           <h1>Demo Video</h1>
 
-          <p>Embedded MP4 demo video using the HTML5 &lt;video&gt; tag. For example, this screen recording Prof.
-              Cody
-              Dunne made of Mike Bostock's flexible transitions in D3 slide:</p>
-
-          <video controls width="100%">
-            <source src="http://www.ccs.neu.edu/home/cody/courses/shared/d3-flexible-transitions.mp4" type="video/mp4">
-            <p>Your browser doesn't support HTML5 video. Here is
-              a <a href="http://www.ccs.neu.edu/home/cody/courses/shared/d3-flexible-transitions.mp4">link to the
-                video</a> instead.</p>
-          </video>
+          <p>The video below walks through the process of creating our project: From planning out what issues we aim to research and tackle,
+            to gathering the data and drafting up sketches for our final designs. It also shows the final product of our visualizations and how users can interact with them.
+            <br> <em>**The actual demonstration for each visualization starts at 5:16.</em>
+          </p>
+              <iframe width="600" height="400" src="https://www.youtube.com/embed/J_1BuFKUVuw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
           <h1>Explanation of Visualizations</h1>
 
           <p><em>There are 3 different visualizations that users can explore which are all found under the drop-down
-              menu
-              for "Visualizations."</em></p>
+              menu for "Visualizations:</em></p>
+
           <p>
           <h3>Brushing & Linking </h3>
             In this visualization, users can observe how alcohol consumption rate (per capita) compares to the number
@@ -180,14 +175,42 @@
             and aligned, ensuring consistency for merging. After integrating the datasets by year and country. For interaction
             with the Json of the map, we added alpha-2 countries codes.
   
-            <p>Link to data cleanning: <a href="https://colab.research.google.com/drive/1CXzDcB9EuiBlps0GL37_qgG_ykGpNrow?usp=sharing">Google Colab</a></p>
+            <p>Link to data cleaning: <a href="https://colab.research.google.com/drive/1CXzDcB9EuiBlps0GL37_qgG_ykGpNrow?usp=sharing">Google Colab</a></p>
 
           <h1>Task Analysis</h1>
 
-          <p><em>Summary of task table.</em></p>
-
-          <p><em>Expectation: Clearly describes domain tasks, processes, goals and abstract tasks for domain
-              problems.</em></p>
+          <p>Here are the following tasks that our team prioritized:</p>
+          <ol>
+            <li>Comparing the alcohol consumption rates to the death rates across different years and countries.</li>
+                <ul>
+                  <li>We tried incorportating this exploration in our brushing and linking, as seen with our first visualization where the user can 
+                    highlight certain point on either graphs and have it reflected in the other for easier observation.
+                  </li>
+                  <li>
+                    The goal was for the user to be able to explore and come up with their own conclusion of the correlation they noticed in the visualization while making 
+                    it an interactive and engaging experience for users of all backgrounds.
+                  </li>
+                </ul>
+              <li>Observing how different years impact the results of the data collected.</li>
+                <ul>
+                    <li>Our goal was to include a interactive button or slider that allows the user to explore the data for different years in an engaging and user-friendly way. 
+                      This was implemented in our brushing and linking visualization where the user can play the slider to go through the data for all the available years (2000 to 2019)
+                      and the graphs below will highlight each point and bar for the current year it is being iterated through.
+                    </li>
+                    <li>
+                      This was also seen with visualization 2 for observing the differences for causes of death across the years, and in visualization 3 for comparing how the chosen year
+                      affects the comparison between the chosen country and the world data results.
+                    </li>
+                </ul>
+              <li>Observing how different countries vary in terms of death rates, alcohol consumptions, and leading causes of deaths.</li>
+                <ul>
+                    <li>
+                      Each visualization included a world map where, when hovered over, will display some form of data. This was to allow the user to explore the data for different countries
+                      and the heatmap of the world map makes it easier and more visually engaging for the user to see the differences between countries.
+                    </li>
+                </ul>
+          </ol>
+        
 
           <h1>Design Process</h1>
 
@@ -213,7 +236,6 @@
 
           <h1>Conclusion</h1>
 
-          <p><em>Short summary of work completed and areas for improvement/future-work.</em></p>
           <p>At the end of our project, we were able to somewhat recreate our top 3 visualization sketches and successfully connected
             the datasets to our maps and graphs. For visualization 1 (Brushing & Linking), all the main components were implemented, including the timeline slider,
             the line chart, and the bar graph -- However, the style for the slider and legend was a bit off from the original sketch. It also got a bit messy when 
@@ -228,9 +250,6 @@
 
 
           <h1>Acknowledgments</h1>
-
-          <p><em>List here where any code, packages/libraries, text, images, designs, etc. that you leverage come
-              from.</em></p>
 
           <ul>
             <li><a href="https://d3js.org/">D3: Data-Driven Documents</a> by Mike Bostock.</li>
